@@ -8,9 +8,9 @@ namespace Nankira.Devices
     /// </summary>
     public sealed class MaskDevice
     {
-        private List<Vibrator> _vibrators;
-        private ReactiveProperty<float> _pressureLeft;
-        private ReactiveProperty<float> _pressureRight;
+        private List<Vibrator> _vibrators = new();
+        private ReactiveProperty<float> _pressureLeft = new();
+        private ReactiveProperty<float> _pressureRight = new();
 
         /// <summary>
         /// 左の圧力 .Valueで値を取得

@@ -7,7 +7,7 @@ namespace Nankira.Devices
     /// </summary>
     public sealed class HeadbandDevice
     {
-        private List<Vibrator> _vibrators;
+        private List<Vibrator> _vibrators = new();
 
         // Singleton
         private static readonly HeadbandDevice _instance = new();
