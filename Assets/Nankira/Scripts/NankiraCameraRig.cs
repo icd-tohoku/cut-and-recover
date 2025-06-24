@@ -18,15 +18,16 @@ namespace Nankira
 
         protected override void Awake()
         {
-            // カメラを設定する（シリアライズフィールドのnullチェック）
+            // カメラがインスペクターに設定されているか確認する
+            // base.Awake()の前に行い，Nullチェックを回避する
             if (_centerEyeCamera == null)
                 _centerEyeCamera = transform.Find(centerEyeAnchorName)
                     .GetComponentInChildren<Camera>(true);
             if (_leftEyeCamera == null)
-                _leftEyeCamera = transform.Find(leftControllerAnchorName)
+                _leftEyeCamera = transform.Find(leftEyeAnchorName)
                     .GetComponentInChildren<Camera>(true);
             if (_rightEyeCamera == null)
-                _rightEyeCamera = transform.Find(rightControllerAnchorName)
+                _rightEyeCamera = transform.Find(rightEyeAnchorName)
                     .GetComponentInChildren<Camera>(true);
 
             base.Awake();
