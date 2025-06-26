@@ -216,23 +216,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &593674975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5546747315237514756, guid: 3d0fcf7171fc9e048a4b708e02dce6a8, type: 3}
-  m_PrefabInstance: {fileID: 1489245631}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &593674977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593674975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b43ed3c2333044498b9bd2ecbd3268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1489245631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,15 +298,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3537172756073253907, guid: 3d0fcf7171fc9e048a4b708e02dce6a8, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[0]'
-      value: 0
+      value: 99.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -5546747315237514756, guid: 3d0fcf7171fc9e048a4b708e02dce6a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 593674977}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d0fcf7171fc9e048a4b708e02dce6a8, type: 3}
 --- !u!1 &1723853194
 GameObject:
