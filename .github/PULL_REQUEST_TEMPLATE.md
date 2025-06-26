@@ -7,7 +7,7 @@
 - close #?
 
 ## PR作成時のルール
-- Reviewrsにryotan1ffかYugo0716を設定
+- Reviewersにryotan1ffかYugo0716を設定
 - Assigneesに自分を設定
 - 「やったこと」と「関連Issue」を書き込み
 
