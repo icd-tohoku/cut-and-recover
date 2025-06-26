@@ -1,9 +1,15 @@
 <!-- I want to review in Japanese. -->
-## 要件
-xxxの改修をしました。
+## やったこと
+【ここを編集】
 
-## レビュー希望日
-mm/dd(曜日) までにレビューお願いします！
+## 関連Issue
+【対応するIssue番号に変更】
+- close #?
+
+## PR作成時のルール
+- Reviewrsにryotan1ffかYugo0716を設定
+- Assigneesに自分を設定
+- 「やったこと」と「関連Issue」を書き込み
 
 ## レビューに関して
 レビューする際には、以下のprefix(接頭辞)を付けましょう。
@@ -15,9 +21,4 @@ mm/dd(曜日) までにレビューお願いします！
 [fyi] → 参考情報(for your information)
 <!-- for GitHub Copilot review  rule-->
 
-## PRのルール
-- まずはDraftでPRを作成する。
-- レビューに出せる状態になったらOpenにする。
-- レビュワーにryotan1ffを設定する。
-- レビューなしでのmainブランチへのマージは原則禁止
 <!-- I want to review in Japanese. -->
