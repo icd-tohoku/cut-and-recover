@@ -19,10 +19,10 @@ public class CutEffectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ƒXƒ‰ƒCƒ_[’l‚ğ0~1‚É³‹K‰»
+        // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼å€¤ã‚’0~1ã«æ­£è¦åŒ–
         float t = _ratio / 100f;
 
-        // YÀ•W‚ğ•âŠÔi¶–Ú‚Æ‰E–Ú‚Ìƒ}ƒXƒNƒIƒuƒWƒFƒNƒg‚ÌÀ•W‚ª“¯ˆê‚Å‚ ‚é‘O’ñj
+        // Yåº§æ¨™ã‚’è£œé–“ï¼ˆå·¦ç›®ã¨å³ç›®ã®ãƒã‚¹ã‚¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åº§æ¨™ãŒåŒä¸€ã§ã‚ã‚‹å‰æï¼‰
         Vector3 targetPos = _leftMaskObj.transform.localPosition;
         targetPos.y = Mathf.Lerp(_beforePosY, _afterPosY, t);
         _leftMaskObj.transform.localPosition = targetPos;
