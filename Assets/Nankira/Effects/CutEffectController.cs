@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CutEffectController : MonoBehaviour
 {
@@ -10,13 +8,6 @@ public class CutEffectController : MonoBehaviour
     [SerializeField] float _beforePosY;
     [SerializeField] float _afterPosY;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // スライダー値を0~1に正規化
