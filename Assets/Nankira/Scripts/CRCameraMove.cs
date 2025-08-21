@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class CamraMove : MonoBehaviour
+public class CRCamraMove : MonoBehaviour
 {
-    [Range(0f, 100f)] public float percent = 0f;
+    [SerializeField] CRAnimationSyncronizer syncronizer;
+
+    [SerializeField] [Range(0f, 100f)] float _percent = 0f;
+    [SerializeField] AnimationCurve _curve = AnimationCurve.Linear(0, 0, 1, 1);
 
     [SerializeField] GameObject _leftCameraObj;
     [SerializeField] GameObject _rightCameraObj;
@@ -20,8 +23,10 @@ public class CamraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _percent = syncronizer.percent;
         // 0〜1に正規化
-        float t = percent / 100f;
+        float t = _percent / 100f;
+        t = Mathf.Clamp01(_curve.Evaluate(t));
 
         // 位置補間
         _leftCameraObj.transform.localPosition = Vector3.Lerp(_startPoint.position, _leftEndPoint.position, t);
