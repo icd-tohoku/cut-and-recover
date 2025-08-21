@@ -4,14 +4,14 @@ public class CutEffectController : MonoBehaviour
 {
     [SerializeField] GameObject _leftMaskObj;
     [SerializeField] GameObject _rightMaskObj;
-    [SerializeField, Range(0f, 100f)] float _ratio;
+    [SerializeField, Range(0f, 100f)] float _percent;
     [SerializeField] float _beforePosY;
     [SerializeField] float _afterPosY;
 
     void Update()
     {
         // スライダー値を0~1に正規化
-        float t = _ratio / 100f;
+        float t = _percent / 100f;
 
         // Y座標を補間（左目と右目のマスクオブジェクトの座標が同一である前提）
         Vector3 targetPos = _leftMaskObj.transform.localPosition;
