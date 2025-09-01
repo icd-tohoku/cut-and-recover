@@ -30,6 +30,11 @@ public class CRAnimationSyncronizer : MonoBehaviour
         
     }
 
+    public void StartCut()
+    {
+        _speed = 300f;
+    }
+
     // 任意イベント用のヘルパ
     public void GoTo100() => _target = 100f;
     public void GoTo0() => _target = 0f;
