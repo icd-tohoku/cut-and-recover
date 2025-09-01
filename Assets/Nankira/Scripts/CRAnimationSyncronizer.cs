@@ -32,7 +32,7 @@ public class CRAnimationSyncronizer : MonoBehaviour
 
     public void StartCut()
     {
-        _speed = 300f;
+        _speed = 600f;
     }
 
     // 任意イベント用のヘルパ

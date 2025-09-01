@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: -203655887218126122, guid: 24069c379590e6d4fa0913ed7ca721a0, type: 3}
-  m_Position: {x: -1.4480371, y: 0, z: 3.4282699}
-  m_EulerAngles: {x: 0, y: 0, z: 0}
+  m_Position: {x: -0.6178387, y: 0.09894192, z: 4.752591}
+  m_EulerAngles: {x: 0, y: 180, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
   m_RemoveStartOffset: 1
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 2.283333333333333
+  m_Time: 2.3333333333333335
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
