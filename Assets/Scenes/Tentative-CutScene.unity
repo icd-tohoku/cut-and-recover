@@ -7046,6 +7046,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.09894199, z: 1}
   m_Center: {x: 0, y: 0.049470995, z: 0}
+--- !u!1 &1064249691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bbe10a60ddb7c8343aca473dafc8d14f, type: 3}
+  m_PrefabInstance: {fileID: 1899733769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072176702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7059397099395267229, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
@@ -13024,6 +13029,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1203733893}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: gameState
       value: 0
       objectReference: {fileID: 0}
@@ -13031,6 +13040,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _cutManObj
+      value: 
+      objectReference: {fileID: 1064249691}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: cutTimeline
       value: 
