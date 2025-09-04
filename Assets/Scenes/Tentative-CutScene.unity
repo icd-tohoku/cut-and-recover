@@ -11254,7 +11254,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 443988357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!65 &1894524261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11330,7 +11329,6 @@ MeshFilter:
   m_GameObject: {fileID: 1894524259}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1899733769
-
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13546,4 +13544,3 @@ SceneRoots:
   - {fileID: 979751084}
   - {fileID: 1678829196}
   - {fileID: 1899733769}
-
