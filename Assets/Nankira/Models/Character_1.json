@@ -1,0 +1,4579 @@
+{
+    "name": "Character_1",
+    "config": {
+        "version": 0.01,
+        "coordinateSpace": {
+            "up": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "forward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            },
+            "right": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        }
+    },
+    "source": {
+        "joints": [
+            "Root",
+            "Hips",
+            "SpineLower",
+            "SpineMiddle",
+            "SpineUpper",
+            "Chest",
+            "Neck",
+            "Head",
+            "LeftShoulder",
+            "LeftScapula",
+            "LeftArmUpper",
+            "LeftArmLower",
+            "LeftHandWristTwist",
+            "RightShoulder",
+            "RightScapula",
+            "RightArmUpper",
+            "RightArmLower",
+            "RightHandWristTwist",
+            "LeftHandPalm",
+            "LeftHandWrist",
+            "LeftHandThumbMetacarpal",
+            "LeftHandThumbProximal",
+            "LeftHandThumbDistal",
+            "LeftHandThumbTip",
+            "LeftHandIndexMetacarpal",
+            "LeftHandIndexProximal",
+            "LeftHandIndexIntermediate",
+            "LeftHandIndexDistal",
+            "LeftHandIndexTip",
+            "LeftHandMiddleMetacarpal",
+            "LeftHandMiddleProximal",
+            "LeftHandMiddleIntermediate",
+            "LeftHandMiddleDistal",
+            "LeftHandMiddleTip",
+            "LeftHandRingMetacarpal",
+            "LeftHandRingProximal",
+            "LeftHandRingIntermediate",
+            "LeftHandRingDistal",
+            "LeftHandRingTip",
+            "LeftHandLittlePinkyMetacarpal",
+            "LeftHandLittlePinkyProximal",
+            "LeftHandLittlePinkyIntermediate",
+            "LeftHandLittlePinkyDistal",
+            "LeftHandLittlePinkyTip",
+            "RightHandPalm",
+            "RightHandWrist",
+            "RightHandThumbMetacarpal",
+            "RightHandThumbProximal",
+            "RightHandThumbDistal",
+            "RightHandThumbTip",
+            "RightHandIndexMetacarpal",
+            "RightHandIndexProximal",
+            "RightHandIndexIntermediate",
+            "RightHandIndexDistal",
+            "RightHandIndexTip",
+            "RightHandMiddleMetacarpal",
+            "RightHandMiddleProximal",
+            "RightHandMiddleIntermediate",
+            "RightHandMiddleDistal",
+            "RightHandMiddleTip",
+            "RightHandRingMetacarpal",
+            "RightHandRingProximal",
+            "RightHandRingIntermediate",
+            "RightHandRingDistal",
+            "RightHandRingTip",
+            "RightHandLittlePinkyMetacarpal",
+            "RightHandLittlePinkyProximal",
+            "RightHandLittlePinkyIntermediate",
+            "RightHandLittlePinkyDistal",
+            "RightHandLittlePinkyTip",
+            "LeftUpperLeg",
+            "LeftLowerLeg",
+            "LeftFootAnkleTwist",
+            "LeftFootAnkle",
+            "LeftFootSubtalar",
+            "LeftFootTransverse",
+            "LeftFootBall",
+            "RightUpperLeg",
+            "RightLowerLeg",
+            "RightFootAnkleTwist",
+            "RightFootAnkle",
+            "RightFootSubtalar",
+            "RightFootTransverse",
+            "RightFootBall"
+        ],
+        "manifestations": {
+            "halfbody": [
+                "Root",
+                "Hips",
+                "SpineLower",
+                "SpineMiddle",
+                "SpineUpper",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftScapula",
+                "LeftArmUpper",
+                "LeftArmLower",
+                "LeftHandWristTwist",
+                "RightShoulder",
+                "RightScapula",
+                "RightArmUpper",
+                "RightArmLower",
+                "RightHandWristTwist",
+                "LeftHandPalm",
+                "LeftHandWrist",
+                "LeftHandThumbMetacarpal",
+                "LeftHandThumbProximal",
+                "LeftHandThumbDistal",
+                "LeftHandThumbTip",
+                "LeftHandIndexMetacarpal",
+                "LeftHandIndexProximal",
+                "LeftHandIndexIntermediate",
+                "LeftHandIndexDistal",
+                "LeftHandIndexTip",
+                "LeftHandMiddleMetacarpal",
+                "LeftHandMiddleProximal",
+                "LeftHandMiddleIntermediate",
+                "LeftHandMiddleDistal",
+                "LeftHandMiddleTip",
+                "LeftHandRingMetacarpal",
+                "LeftHandRingProximal",
+                "LeftHandRingIntermediate",
+                "LeftHandRingDistal",
+                "LeftHandRingTip",
+                "LeftHandLittlePinkyMetacarpal",
+                "LeftHandLittlePinkyProximal",
+                "LeftHandLittlePinkyIntermediate",
+                "LeftHandLittlePinkyDistal",
+                "LeftHandLittlePinkyTip",
+                "RightHandPalm",
+                "RightHandWrist",
+                "RightHandThumbMetacarpal",
+                "RightHandThumbProximal",
+                "RightHandThumbDistal",
+                "RightHandThumbTip",
+                "RightHandIndexMetacarpal",
+                "RightHandIndexProximal",
+                "RightHandIndexIntermediate",
+                "RightHandIndexDistal",
+                "RightHandIndexTip",
+                "RightHandMiddleMetacarpal",
+                "RightHandMiddleProximal",
+                "RightHandMiddleIntermediate",
+                "RightHandMiddleDistal",
+                "RightHandMiddleTip",
+                "RightHandRingMetacarpal",
+                "RightHandRingProximal",
+                "RightHandRingIntermediate",
+                "RightHandRingDistal",
+                "RightHandRingTip",
+                "RightHandLittlePinkyMetacarpal",
+                "RightHandLittlePinkyProximal",
+                "RightHandLittlePinkyIntermediate",
+                "RightHandLittlePinkyDistal",
+                "RightHandLittlePinkyTip"
+            ]
+        },
+        "autoMappingExcludedJoints": [
+            "LeftHandPalm",
+            "LeftHandWristTwist",
+            "RightHandPalm",
+            "RightHandWristTwist"
+        ],
+        "knownJoints": {
+            "root": "Root",
+            "hips": "Hips",
+            "rightUpperArm": "RightArmUpper",
+            "leftUpperArm": "LeftArmUpper",
+            "rightWrist": "RightHandWrist",
+            "leftWrist": "LeftHandWrist",
+            "chest": "Chest",
+            "neck": "Neck",
+            "rightUpperLeg": "RightUpperLeg",
+            "leftUpperLeg": "LeftUpperLeg",
+            "rightAnkle": "RightFootAnkle",
+            "leftAnkle": "LeftFootAnkle"
+        },
+        "hierarchy": {
+            "Hips": "Root",
+            "SpineLower": "Hips",
+            "SpineMiddle": "SpineLower",
+            "SpineUpper": "SpineMiddle",
+            "Chest": "SpineUpper",
+            "Neck": "Chest",
+            "Head": "Neck",
+            "LeftShoulder": "Chest",
+            "LeftScapula": "LeftShoulder",
+            "LeftArmUpper": "LeftScapula",
+            "LeftArmLower": "LeftArmUpper",
+            "LeftHandWristTwist": "LeftArmLower",
+            "RightShoulder": "Chest",
+            "RightScapula": "RightShoulder",
+            "RightArmUpper": "RightScapula",
+            "RightArmLower": "RightArmUpper",
+            "RightHandWristTwist": "RightArmLower",
+            "LeftHandPalm": "LeftHandWrist",
+            "LeftHandWrist": "LeftArmLower",
+            "LeftHandThumbMetacarpal": "LeftHandWrist",
+            "LeftHandThumbProximal": "LeftHandThumbMetacarpal",
+            "LeftHandThumbDistal": "LeftHandThumbProximal",
+            "LeftHandThumbTip": "LeftHandThumbDistal",
+            "LeftHandIndexMetacarpal": "LeftHandWrist",
+            "LeftHandIndexProximal": "LeftHandIndexMetacarpal",
+            "LeftHandIndexIntermediate": "LeftHandIndexProximal",
+            "LeftHandIndexDistal": "LeftHandIndexIntermediate",
+            "LeftHandIndexTip": "LeftHandIndexDistal",
+            "LeftHandMiddleMetacarpal": "LeftHandWrist",
+            "LeftHandMiddleProximal": "LeftHandMiddleMetacarpal",
+            "LeftHandMiddleIntermediate": "LeftHandMiddleProximal",
+            "LeftHandMiddleDistal": "LeftHandMiddleIntermediate",
+            "LeftHandMiddleTip": "LeftHandMiddleDistal",
+            "LeftHandRingMetacarpal": "LeftHandWrist",
+            "LeftHandRingProximal": "LeftHandRingMetacarpal",
+            "LeftHandRingIntermediate": "LeftHandRingProximal",
+            "LeftHandRingDistal": "LeftHandRingIntermediate",
+            "LeftHandRingTip": "LeftHandRingDistal",
+            "LeftHandLittlePinkyMetacarpal": "LeftHandWrist",
+            "LeftHandLittlePinkyProximal": "LeftHandLittlePinkyMetacarpal",
+            "LeftHandLittlePinkyIntermediate": "LeftHandLittlePinkyProximal",
+            "LeftHandLittlePinkyDistal": "LeftHandLittlePinkyIntermediate",
+            "LeftHandLittlePinkyTip": "LeftHandLittlePinkyDistal",
+            "RightHandPalm": "RightHandWrist",
+            "RightHandWrist": "RightArmLower",
+            "RightHandThumbMetacarpal": "RightHandWrist",
+            "RightHandThumbProximal": "RightHandThumbMetacarpal",
+            "RightHandThumbDistal": "RightHandThumbProximal",
+            "RightHandThumbTip": "RightHandThumbDistal",
+            "RightHandIndexMetacarpal": "RightHandWrist",
+            "RightHandIndexProximal": "RightHandIndexMetacarpal",
+            "RightHandIndexIntermediate": "RightHandIndexProximal",
+            "RightHandIndexDistal": "RightHandIndexIntermediate",
+            "RightHandIndexTip": "RightHandIndexDistal",
+            "RightHandMiddleMetacarpal": "RightHandWrist",
+            "RightHandMiddleProximal": "RightHandMiddleMetacarpal",
+            "RightHandMiddleIntermediate": "RightHandMiddleProximal",
+            "RightHandMiddleDistal": "RightHandMiddleIntermediate",
+            "RightHandMiddleTip": "RightHandMiddleDistal",
+            "RightHandRingMetacarpal": "RightHandWrist",
+            "RightHandRingProximal": "RightHandRingMetacarpal",
+            "RightHandRingIntermediate": "RightHandRingProximal",
+            "RightHandRingDistal": "RightHandRingIntermediate",
+            "RightHandRingTip": "RightHandRingDistal",
+            "RightHandLittlePinkyMetacarpal": "RightHandWrist",
+            "RightHandLittlePinkyProximal": "RightHandLittlePinkyMetacarpal",
+            "RightHandLittlePinkyIntermediate": "RightHandLittlePinkyProximal",
+            "RightHandLittlePinkyDistal": "RightHandLittlePinkyIntermediate",
+            "RightHandLittlePinkyTip": "RightHandLittlePinkyDistal",
+            "LeftUpperLeg": "Hips",
+            "LeftLowerLeg": "LeftUpperLeg",
+            "LeftFootAnkleTwist": "LeftLowerLeg",
+            "LeftFootAnkle": "LeftFootAnkleTwist",
+            "LeftFootSubtalar": "LeftFootAnkle",
+            "LeftFootTransverse": "LeftFootSubtalar",
+            "LeftFootBall": "LeftFootTransverse",
+            "RightUpperLeg": "Hips",
+            "RightLowerLeg": "RightUpperLeg",
+            "RightFootAnkleTwist": "RightLowerLeg",
+            "RightFootAnkle": "RightFootAnkleTwist",
+            "RightFootSubtalar": "RightFootAnkle",
+            "RightFootTransverse": "RightFootSubtalar",
+            "RightFootBall": "RightFootTransverse"
+        },
+        "tposeMin": {
+            "Root": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                }
+            },
+            "Hips": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.5937895774841309,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.5,
+                    "y": -0.5,
+                    "z": -0.5,
+                    "w": 0.5
+                }
+            },
+            "SpineLower": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.6068753004074097,
+                    "z": -0.02105611190199852
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "SpineMiddle": {
+                "position": {
+                    "x": -1.4901161193847657e-8,
+                    "y": 0.6783303618431091,
+                    "z": -0.01391264796257019
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "SpineUpper": {
+                "position": {
+                    "x": 1.862645149230957e-9,
+                    "y": 0.7491097450256348,
+                    "z": -0.030708596110343934
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "Chest": {
+                "position": {
+                    "x": 6.332993507385254e-8,
+                    "y": 0.8684027194976807,
+                    "z": -0.02402949333190918
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "Neck": {
+                "position": {
+                    "x": 6.426125764846802e-8,
+                    "y": 0.9466992616653442,
+                    "z": 0.009754503145813942
+                },
+                "rotation": {
+                    "x": 0.5675042271614075,
+                    "y": -0.42182812094688418,
+                    "z": -0.5675042271614075,
+                    "w": 0.42182809114456179
+                }
+            },
+            "Head": {
+                "position": {
+                    "x": 3.5390257835388186e-8,
+                    "y": 0.9905052185058594,
+                    "z": 0.02294093742966652
+                },
+                "rotation": {
+                    "x": 0.5000000596046448,
+                    "y": -0.49999991059303286,
+                    "z": -0.5000001192092896,
+                    "w": 0.49999991059303286
+                }
+            },
+            "LeftShoulder": {
+                "position": {
+                    "x": -0.018261626362800599,
+                    "y": 0.9054162502288818,
+                    "z": 0.04113508015871048
+                },
+                "rotation": {
+                    "x": 0.6892679333686829,
+                    "y": -0.18287616968154908,
+                    "z": 0.1578282117843628,
+                    "w": 0.683049201965332
+                }
+            },
+            "LeftScapula": {
+                "position": {
+                    "x": -0.10386413335800171,
+                    "y": 0.9333673715591431,
+                    "z": -0.020730972290039064
+                },
+                "rotation": {
+                    "x": 0.6759026646614075,
+                    "y": -0.15498125553131104,
+                    "z": 0.019424259662628175,
+                    "w": 0.7202494144439697
+                }
+            },
+            "LeftArmUpper": {
+                "position": {
+                    "x": -0.11632563173770905,
+                    "y": 0.9159740805625916,
+                    "z": -0.021568775177001954
+                },
+                "rotation": {
+                    "x": 0.49326494336128237,
+                    "y": 0.014670044183731079,
+                    "z": 0.029270261526107789,
+                    "w": 0.8692628741264343
+                }
+            },
+            "LeftArmLower": {
+                "position": {
+                    "x": -0.2824350595474243,
+                    "y": 0.9049376845359802,
+                    "z": -0.02238672971725464
+                },
+                "rotation": {
+                    "x": 0.4927775263786316,
+                    "y": 0.026378929615020753,
+                    "z": 0.00862044095993042,
+                    "w": 0.8697128891944885
+                }
+            },
+            "LeftHandWristTwist": {
+                "position": {
+                    "x": -0.4284951686859131,
+                    "y": 0.8991925716400147,
+                    "z": -0.019193828105926515
+                },
+                "rotation": {
+                    "x": 0.5256003141403198,
+                    "y": 0.05980750918388367,
+                    "z": 0.04725494980812073,
+                    "w": 0.8473103046417236
+                }
+            },
+            "RightShoulder": {
+                "position": {
+                    "x": 0.018261730670928956,
+                    "y": 0.9054132699966431,
+                    "z": 0.04113510623574257
+                },
+                "rotation": {
+                    "x": 0.683049201965332,
+                    "y": -0.15782809257507325,
+                    "z": -0.18287628889083863,
+                    "w": -0.6892679333686829
+                }
+            },
+            "RightScapula": {
+                "position": {
+                    "x": 0.10386405885219574,
+                    "y": 0.9333698749542236,
+                    "z": -0.020730935037136079
+                },
+                "rotation": {
+                    "x": 0.7202494144439697,
+                    "y": -0.019424162805080415,
+                    "z": -0.154981330037117,
+                    "w": -0.6759027242660523
+                }
+            },
+            "RightArmUpper": {
+                "position": {
+                    "x": 0.11632642149925232,
+                    "y": 0.9159717559814453,
+                    "z": -0.021568767726421357
+                },
+                "rotation": {
+                    "x": 0.8692628145217896,
+                    "y": -0.02927028387784958,
+                    "z": 0.014670021831989289,
+                    "w": -0.4932650327682495
+                }
+            },
+            "RightArmLower": {
+                "position": {
+                    "x": 0.28243350982666018,
+                    "y": 0.9049378633499146,
+                    "z": -0.022386938333511354
+                },
+                "rotation": {
+                    "x": 0.8697128295898438,
+                    "y": -0.008620388805866242,
+                    "z": 0.026378922164440156,
+                    "w": -0.49277761578559878
+                }
+            },
+            "RightHandWristTwist": {
+                "position": {
+                    "x": 0.4284933805465698,
+                    "y": 0.899193525314331,
+                    "z": -0.019193798303604127
+                },
+                "rotation": {
+                    "x": 0.8856129050254822,
+                    "y": -0.051762260496616366,
+                    "z": 0.055952154099941257,
+                    "w": -0.45812660455703738
+                }
+            },
+            "LeftHandPalm": {
+                "position": {
+                    "x": -0.4444209337234497,
+                    "y": 0.9004863500595093,
+                    "z": -0.007547199726104736
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandWrist": {
+                "position": {
+                    "x": -0.4444209337234497,
+                    "y": 0.9004863500595093,
+                    "z": -0.007547199726104736
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandThumbMetacarpal": {
+                "position": {
+                    "x": -0.4628731608390808,
+                    "y": 0.8883280754089356,
+                    "z": 0.013778358697891236
+                },
+                "rotation": {
+                    "x": 0.6919509768486023,
+                    "y": -0.02315257489681244,
+                    "z": -0.4553295075893402,
+                    "w": -0.5597703456878662
+                }
+            },
+            "LeftHandThumbProximal": {
+                "position": {
+                    "x": -0.4751672148704529,
+                    "y": 0.8782761096954346,
+                    "z": 0.02758258581161499
+                },
+                "rotation": {
+                    "x": 0.7644479870796204,
+                    "y": -0.08651232719421387,
+                    "z": -0.4465092122554779,
+                    "w": -0.4569079577922821
+                }
+            },
+            "LeftHandThumbDistal": {
+                "position": {
+                    "x": -0.4879893660545349,
+                    "y": 0.8722453713417053,
+                    "z": 0.04424121975898743
+                },
+                "rotation": {
+                    "x": 0.6866224408149719,
+                    "y": -0.13800612092018128,
+                    "z": -0.5123411417007446,
+                    "w": -0.4970017075538635
+                }
+            },
+            "LeftHandThumbTip": {
+                "position": {
+                    "x": -0.49440044164657595,
+                    "y": 0.8692299127578735,
+                    "z": 0.05257058143615723
+                },
+                "rotation": {
+                    "x": 0.6866224408149719,
+                    "y": -0.13800612092018128,
+                    "z": -0.5123411417007446,
+                    "w": -0.4970017075538635
+                }
+            },
+            "LeftHandIndexMetacarpal": {
+                "position": {
+                    "x": -0.46536463499069216,
+                    "y": 0.8923178315162659,
+                    "z": 0.007945001125335694
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandIndexProximal": {
+                "position": {
+                    "x": -0.5028770565986633,
+                    "y": 0.89063560962677,
+                    "z": 0.0156593918800354
+                },
+                "rotation": {
+                    "x": 0.9931374192237854,
+                    "y": 0.10449613630771637,
+                    "z": -0.04646998643875122,
+                    "w": 0.024476096034049989
+                }
+            },
+            "LeftHandIndexIntermediate": {
+                "position": {
+                    "x": -0.5267803072929382,
+                    "y": 0.8855969905853272,
+                    "z": 0.018050551414489747
+                },
+                "rotation": {
+                    "x": 0.9921289682388306,
+                    "y": 0.10910382866859436,
+                    "z": -0.03676500916481018,
+                    "w": 0.04924556612968445
+                }
+            },
+            "LeftHandIndexDistal": {
+                "position": {
+                    "x": -0.542091965675354,
+                    "y": 0.8822489976882935,
+                    "z": 0.019366919994354249
+                },
+                "rotation": {
+                    "x": 0.9971232414245606,
+                    "y": 0.039226263761520389,
+                    "z": -0.004416942596435547,
+                    "w": 0.06470899283885956
+                }
+            },
+            "LeftHandIndexTip": {
+                "position": {
+                    "x": -0.5497477054595947,
+                    "y": 0.8805749416351318,
+                    "z": 0.020025193691253663
+                },
+                "rotation": {
+                    "x": 0.9971232414245606,
+                    "y": 0.039226263761520389,
+                    "z": -0.004416942596435547,
+                    "w": 0.06470899283885956
+                }
+            },
+            "LeftHandMiddleMetacarpal": {
+                "position": {
+                    "x": -0.4846913814544678,
+                    "y": 0.8903257846832275,
+                    "z": 0.0014263689517974854
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandMiddleProximal": {
+                "position": {
+                    "x": -0.5047091245651245,
+                    "y": 0.891859769821167,
+                    "z": 0.0016071796417236329
+                },
+                "rotation": {
+                    "x": 0.9911282658576965,
+                    "y": 0.11727233231067658,
+                    "z": -0.011999249458312989,
+                    "w": 0.06138645112514496
+                }
+            },
+            "LeftHandMiddleIntermediate": {
+                "position": {
+                    "x": -0.5317179560661316,
+                    "y": 0.8854426145553589,
+                    "z": 0.0026679635047912599
+                },
+                "rotation": {
+                    "x": 0.9906495809555054,
+                    "y": 0.11570638418197632,
+                    "z": -0.0062201619148254398,
+                    "w": 0.0720207691192627
+                }
+            },
+            "LeftHandMiddleDistal": {
+                "position": {
+                    "x": -0.5490684509277344,
+                    "y": 0.881371259689331,
+                    "z": 0.003184795379638672
+                },
+                "rotation": {
+                    "x": 0.9940773844718933,
+                    "y": 0.02354341745376587,
+                    "z": 0.009048759937286377,
+                    "w": 0.1057085394859314
+                }
+            },
+            "LeftHandMiddleTip": {
+                "position": {
+                    "x": -0.5577436685562134,
+                    "y": 0.8793357014656067,
+                    "z": 0.003443300724029541
+                },
+                "rotation": {
+                    "x": 0.9940773844718933,
+                    "y": 0.02354341745376587,
+                    "z": 0.009048759937286377,
+                    "w": 0.1057085394859314
+                }
+            },
+            "LeftHandRingMetacarpal": {
+                "position": {
+                    "x": -0.46692198514938357,
+                    "y": 0.8928987979888916,
+                    "z": -0.01372462511062622
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandRingProximal": {
+                "position": {
+                    "x": -0.5014333724975586,
+                    "y": 0.888296365737915,
+                    "z": -0.010785341262817383
+                },
+                "rotation": {
+                    "x": 0.9854880571365356,
+                    "y": 0.12169161438941956,
+                    "z": 0.06256887316703797,
+                    "w": 0.10044856369495392
+                }
+            },
+            "LeftHandRingIntermediate": {
+                "position": {
+                    "x": -0.525725245475769,
+                    "y": 0.8819260597229004,
+                    "z": -0.01328057050704956
+                },
+                "rotation": {
+                    "x": 0.9806670546531677,
+                    "y": 0.1253899782896042,
+                    "z": 0.06880411505699158,
+                    "w": 0.1335497945547104
+                }
+            },
+            "LeftHandRingDistal": {
+                "position": {
+                    "x": -0.5422192811965942,
+                    "y": 0.8773804903030396,
+                    "z": -0.01502537727355957
+                },
+                "rotation": {
+                    "x": 0.9846179485321045,
+                    "y": 0.09661565721035004,
+                    "z": 0.04391619563102722,
+                    "w": 0.13879743218421937
+                }
+            },
+            "LeftHandRingTip": {
+                "position": {
+                    "x": -0.5504661798477173,
+                    "y": 0.8751078248023987,
+                    "z": -0.015897750854492189
+                },
+                "rotation": {
+                    "x": 0.9846179485321045,
+                    "y": 0.09661565721035004,
+                    "z": 0.04391619563102722,
+                    "w": 0.13879743218421937
+                }
+            },
+            "LeftHandLittlePinkyMetacarpal": {
+                "position": {
+                    "x": -0.466535747051239,
+                    "y": 0.8902772068977356,
+                    "z": -0.018474340438842775
+                },
+                "rotation": {
+                    "x": 0.9578835964202881,
+                    "y": 0.09939375519752503,
+                    "z": 0.09247499704360962,
+                    "w": 0.25303876399993899
+                }
+            },
+            "LeftHandLittlePinkyProximal": {
+                "position": {
+                    "x": -0.49499064683914187,
+                    "y": 0.8832693099975586,
+                    "z": -0.02222079038619995
+                },
+                "rotation": {
+                    "x": 0.9741464853286743,
+                    "y": 0.1332799643278122,
+                    "z": 0.07197922468185425,
+                    "w": 0.16761398315429688
+                }
+            },
+            "LeftHandLittlePinkyIntermediate": {
+                "position": {
+                    "x": -0.5139596462249756,
+                    "y": 0.8776271343231201,
+                    "z": -0.024120569229125978
+                },
+                "rotation": {
+                    "x": 0.9648469686508179,
+                    "y": 0.1245977133512497,
+                    "z": 0.12092356383800507,
+                    "w": 0.19729094207286836
+                }
+            },
+            "LeftHandLittlePinkyDistal": {
+                "position": {
+                    "x": -0.5263119339942932,
+                    "y": 0.8738393783569336,
+                    "z": -0.02654165029525757
+                },
+                "rotation": {
+                    "x": 0.9724667072296143,
+                    "y": 0.09161356091499329,
+                    "z": 0.07795852422714234,
+                    "w": 0.199595108628273
+                }
+            },
+            "LeftHandLittlePinkyTip": {
+                "position": {
+                    "x": -0.5324881672859192,
+                    "y": 0.8719455003738403,
+                    "z": -0.027752161026000978
+                },
+                "rotation": {
+                    "x": 0.9724667072296143,
+                    "y": 0.09161356091499329,
+                    "z": 0.07795852422714234,
+                    "w": 0.199595108628273
+                }
+            },
+            "RightHandPalm": {
+                "position": {
+                    "x": 0.4442814588546753,
+                    "y": 0.900486946105957,
+                    "z": -0.007561057806015015
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandWrist": {
+                "position": {
+                    "x": 0.4442814588546753,
+                    "y": 0.900486946105957,
+                    "z": -0.007561057806015015
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandThumbMetacarpal": {
+                "position": {
+                    "x": 0.46273356676101687,
+                    "y": 0.8883286118507385,
+                    "z": 0.013764441013336182
+                },
+                "rotation": {
+                    "x": -0.5597705841064453,
+                    "y": 0.4553295373916626,
+                    "z": -0.023152485489845277,
+                    "w": -0.6919510364532471
+                }
+            },
+            "RightHandThumbProximal": {
+                "position": {
+                    "x": 0.47502756118774416,
+                    "y": 0.8782767057418823,
+                    "z": 0.02756863832473755
+                },
+                "rotation": {
+                    "x": -0.45690810680389407,
+                    "y": 0.4465092718601227,
+                    "z": -0.08651229739189148,
+                    "w": -0.7644479274749756
+                }
+            },
+            "RightHandThumbDistal": {
+                "position": {
+                    "x": 0.4878495931625366,
+                    "y": 0.8722459673881531,
+                    "z": 0.04422730207443237
+                },
+                "rotation": {
+                    "x": -0.497001975774765,
+                    "y": 0.5123413801193237,
+                    "z": -0.1380060315132141,
+                    "w": -0.6866223812103272
+                }
+            },
+            "RightHandThumbTip": {
+                "position": {
+                    "x": 0.4942605495452881,
+                    "y": 0.8692305088043213,
+                    "z": 0.05255669355392456
+                },
+                "rotation": {
+                    "x": -0.4970019459724426,
+                    "y": 0.5123413801193237,
+                    "z": -0.13800594210624696,
+                    "w": -0.6866223812103272
+                }
+            },
+            "RightHandIndexMetacarpal": {
+                "position": {
+                    "x": 0.46522510051727297,
+                    "y": 0.8923184871673584,
+                    "z": 0.007931053638458252
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandIndexProximal": {
+                "position": {
+                    "x": 0.5027374029159546,
+                    "y": 0.8906363248825073,
+                    "z": 0.01564544439315796
+                },
+                "rotation": {
+                    "x": 0.02447599172592163,
+                    "y": 0.04647010564804077,
+                    "z": 0.10449612140655518,
+                    "w": -0.9931375980377197
+                }
+            },
+            "RightHandIndexIntermediate": {
+                "position": {
+                    "x": 0.5266408324241638,
+                    "y": 0.8855975866317749,
+                    "z": 0.01803654432296753
+                },
+                "rotation": {
+                    "x": 0.04924541711807251,
+                    "y": 0.03676491975784302,
+                    "z": 0.10910390317440033,
+                    "w": -0.9921289682388306
+                }
+            },
+            "RightHandIndexDistal": {
+                "position": {
+                    "x": 0.54195237159729,
+                    "y": 0.8822495937347412,
+                    "z": 0.019353091716766359
+                },
+                "rotation": {
+                    "x": 0.06470885872840882,
+                    "y": 0.004416987299919128,
+                    "z": 0.03922627866268158,
+                    "w": -0.9971234798431397
+                }
+            },
+            "RightHandIndexTip": {
+                "position": {
+                    "x": 0.549608051776886,
+                    "y": 0.8805755376815796,
+                    "z": 0.02001124620437622
+                },
+                "rotation": {
+                    "x": 0.06470885872840882,
+                    "y": 0.004416987299919128,
+                    "z": 0.03922627866268158,
+                    "w": -0.9971234798431397
+                }
+            },
+            "RightHandMiddleMetacarpal": {
+                "position": {
+                    "x": 0.4845515489578247,
+                    "y": 0.8903264403343201,
+                    "z": 0.0014124810695648194
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandMiddleProximal": {
+                "position": {
+                    "x": 0.5045694708824158,
+                    "y": 0.8918603658676148,
+                    "z": 0.0015932321548461915
+                },
+                "rotation": {
+                    "x": 0.06138619780540466,
+                    "y": 0.011999279260635376,
+                    "z": 0.11727242171764374,
+                    "w": -0.9911282062530518
+                }
+            },
+            "RightHandMiddleIntermediate": {
+                "position": {
+                    "x": 0.5315784215927124,
+                    "y": 0.8854432106018066,
+                    "z": 0.0026540756225585939
+                },
+                "rotation": {
+                    "x": 0.07202041149139404,
+                    "y": 0.006220102310180664,
+                    "z": 0.1157064437866211,
+                    "w": -0.9906495809555054
+                }
+            },
+            "RightHandMiddleDistal": {
+                "position": {
+                    "x": 0.5489287376403809,
+                    "y": 0.8813718557357788,
+                    "z": 0.003170907497406006
+                },
+                "rotation": {
+                    "x": 0.10570833086967468,
+                    "y": -0.009048789739608765,
+                    "z": 0.023543447256088258,
+                    "w": -0.9940773248672485
+                }
+            },
+            "RightHandMiddleTip": {
+                "position": {
+                    "x": 0.5576038956642151,
+                    "y": 0.8793362379074097,
+                    "z": 0.0034293532371520998
+                },
+                "rotation": {
+                    "x": 0.10570842027664185,
+                    "y": -0.009048700332641602,
+                    "z": 0.02354341745376587,
+                    "w": -0.9940773248672485
+                }
+            },
+            "RightHandRingMetacarpal": {
+                "position": {
+                    "x": 0.4667823314666748,
+                    "y": 0.8928995132446289,
+                    "z": -0.013738453388214112
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandRingProximal": {
+                "position": {
+                    "x": 0.5012936592102051,
+                    "y": 0.8882970809936523,
+                    "z": -0.01079908013343811
+                },
+                "rotation": {
+                    "x": 0.10044831037521362,
+                    "y": -0.06256884336471558,
+                    "z": 0.12169162929058075,
+                    "w": -0.9854881167411804
+                }
+            },
+            "RightHandRingIntermediate": {
+                "position": {
+                    "x": 0.5255857110023499,
+                    "y": 0.8819267749786377,
+                    "z": -0.013294339179992676
+                },
+                "rotation": {
+                    "x": 0.13354957103729249,
+                    "y": -0.06880420446395874,
+                    "z": 0.12538999319076539,
+                    "w": -0.980667233467102
+                }
+            },
+            "RightHandRingDistal": {
+                "position": {
+                    "x": 0.5420796871185303,
+                    "y": 0.8773813843727112,
+                    "z": -0.015039205551147461
+                },
+                "rotation": {
+                    "x": 0.13879723846912385,
+                    "y": -0.04391618072986603,
+                    "z": 0.09661565721035004,
+                    "w": -0.9846178889274597
+                }
+            },
+            "RightHandRingTip": {
+                "position": {
+                    "x": 0.5503266453742981,
+                    "y": 0.875108540058136,
+                    "z": -0.01591169834136963
+                },
+                "rotation": {
+                    "x": 0.13879723846912385,
+                    "y": -0.04391618072986603,
+                    "z": 0.09661565721035004,
+                    "w": -0.9846178889274597
+                }
+            },
+            "RightHandLittlePinkyMetacarpal": {
+                "position": {
+                    "x": 0.4663962721824646,
+                    "y": 0.8902779817581177,
+                    "z": -0.018488198518753053
+                },
+                "rotation": {
+                    "x": 0.253038614988327,
+                    "y": -0.092475026845932,
+                    "z": 0.0993937999010086,
+                    "w": -0.9578836560249329
+                }
+            },
+            "RightHandLittlePinkyProximal": {
+                "position": {
+                    "x": 0.49485117197036745,
+                    "y": 0.8832698464393616,
+                    "z": -0.02223452925682068
+                },
+                "rotation": {
+                    "x": 0.16761374473571778,
+                    "y": -0.07197922468185425,
+                    "z": 0.1332799643278122,
+                    "w": -0.9741466641426086
+                }
+            },
+            "RightHandLittlePinkyIntermediate": {
+                "position": {
+                    "x": 0.5138199329376221,
+                    "y": 0.8776275515556336,
+                    "z": -0.02413424849510193
+                },
+                "rotation": {
+                    "x": 0.19729089736938477,
+                    "y": -0.12092363834381104,
+                    "z": 0.1245976984500885,
+                    "w": -0.9648473262786865
+                }
+            },
+            "RightHandLittlePinkyDistal": {
+                "position": {
+                    "x": 0.526172399520874,
+                    "y": 0.8738398551940918,
+                    "z": -0.02655532956123352
+                },
+                "rotation": {
+                    "x": 0.19959503412246705,
+                    "y": -0.07795840501785279,
+                    "z": 0.0916135311126709,
+                    "w": -0.9724668264389038
+                }
+            },
+            "RightHandLittlePinkyTip": {
+                "position": {
+                    "x": 0.5323485732078552,
+                    "y": 0.8719459772109985,
+                    "z": -0.02776581048965454
+                },
+                "rotation": {
+                    "x": 0.19959503412246705,
+                    "y": -0.07795840501785279,
+                    "z": 0.0916135311126709,
+                    "w": -0.9724668264389038
+                }
+            },
+            "LeftUpperLeg": {
+                "position": {
+                    "x": -0.05168884992599487,
+                    "y": 0.577287495136261,
+                    "z": -0.003418978303670883
+                },
+                "rotation": {
+                    "x": -0.4807193875312805,
+                    "y": -0.533578097820282,
+                    "z": 0.4822108745574951,
+                    "w": 0.5016732215881348
+                }
+            },
+            "LeftLowerLeg": {
+                "position": {
+                    "x": -0.04245772212743759,
+                    "y": 0.30570921301841738,
+                    "z": -0.017943210899829866
+                },
+                "rotation": {
+                    "x": -0.4727208912372589,
+                    "y": -0.5409671068191528,
+                    "z": 0.4764903783798218,
+                    "w": 0.5068004727363586
+                }
+            },
+            "LeftFootAnkleTwist": {
+                "position": {
+                    "x": -0.031739868223667148,
+                    "y": 0.03503870964050293,
+                    "z": -0.04457160830497742
+                },
+                "rotation": {
+                    "x": -0.4387589395046234,
+                    "y": -0.5572835803031921,
+                    "z": 0.5060506463050842,
+                    "w": 0.4907529950141907
+                }
+            },
+            "LeftFootAnkle": {
+                "position": {
+                    "x": -0.03173985332250595,
+                    "y": 0.03503841161727905,
+                    "z": -0.04457167536020279
+                },
+                "rotation": {
+                    "x": 0.11906759440898895,
+                    "y": -0.736628532409668,
+                    "z": 0.12348806113004685,
+                    "w": 0.6541807055473328
+                }
+            },
+            "LeftFootSubtalar": {
+                "position": {
+                    "x": -0.03405988588929176,
+                    "y": 0.012493729591369629,
+                    "z": -0.041033048182725909
+                },
+                "rotation": {
+                    "x": -0.15458747744560243,
+                    "y": -0.7640056610107422,
+                    "z": 0.3335089087486267,
+                    "w": 0.530254602432251
+                }
+            },
+            "LeftFootTransverse": {
+                "position": {
+                    "x": -0.03602336347103119,
+                    "y": 0.01930069923400879,
+                    "z": -0.002133425325155258
+                },
+                "rotation": {
+                    "x": -0.022499680519104005,
+                    "y": -0.7621172070503235,
+                    "z": 0.1550586223602295,
+                    "w": 0.6281944513320923
+                }
+            },
+            "LeftFootBall": {
+                "position": {
+                    "x": -0.03701357915997505,
+                    "y": -5.960464477539063e-8,
+                    "z": 0.04435576871037483
+                },
+                "rotation": {
+                    "x": 0.06520262360572815,
+                    "y": -0.7850521802902222,
+                    "z": 0.05479457974433899,
+                    "w": 0.6135467886924744
+                }
+            },
+            "RightUpperLeg": {
+                "position": {
+                    "x": 0.05168895423412323,
+                    "y": 0.577287495136261,
+                    "z": -0.0034189894795417787
+                },
+                "rotation": {
+                    "x": 0.5016732215881348,
+                    "y": -0.4822108745574951,
+                    "z": -0.5335781574249268,
+                    "w": 0.48071932792663576
+                }
+            },
+            "RightLowerLeg": {
+                "position": {
+                    "x": 0.04245777428150177,
+                    "y": 0.3057093620300293,
+                    "z": -0.017943259328603746
+                },
+                "rotation": {
+                    "x": 0.5068003535270691,
+                    "y": -0.4764903783798218,
+                    "z": -0.5409671664237976,
+                    "w": 0.4727208912372589
+                }
+            },
+            "RightFootAnkleTwist": {
+                "position": {
+                    "x": 0.03173983842134476,
+                    "y": 0.03503894805908203,
+                    "z": -0.04457163065671921
+                },
+                "rotation": {
+                    "x": 0.4907529950141907,
+                    "y": -0.5060506463050842,
+                    "z": -0.5572836399078369,
+                    "w": 0.43875885009765627
+                }
+            },
+            "RightFootAnkle": {
+                "position": {
+                    "x": 0.03173983097076416,
+                    "y": 0.035038650035858157,
+                    "z": -0.04457169026136398
+                },
+                "rotation": {
+                    "x": 0.654180645942688,
+                    "y": -0.12348805367946625,
+                    "z": -0.736628532409668,
+                    "w": -0.11906777322292328
+                }
+            },
+            "RightFootSubtalar": {
+                "position": {
+                    "x": 0.034059807658195499,
+                    "y": 0.012493789196014405,
+                    "z": -0.04103308171033859
+                },
+                "rotation": {
+                    "x": 0.5302547216415405,
+                    "y": -0.33350884914398196,
+                    "z": -0.7640057802200317,
+                    "w": 0.15458714962005616
+                }
+            },
+            "RightFootTransverse": {
+                "position": {
+                    "x": 0.03602328896522522,
+                    "y": 0.019300878047943116,
+                    "z": -0.0021334849298000337
+                },
+                "rotation": {
+                    "x": 0.6281945705413818,
+                    "y": -0.15505866706371308,
+                    "z": -0.762117326259613,
+                    "w": 0.022499576210975648
+                }
+            },
+            "RightFootBall": {
+                "position": {
+                    "x": 0.03701348230242729,
+                    "y": 0.0,
+                    "z": 0.044355858117341998
+                },
+                "rotation": {
+                    "x": 0.6135469675064087,
+                    "y": -0.054794490337371829,
+                    "z": -0.7850522398948669,
+                    "w": -0.06520295143127442
+                }
+            }
+        },
+        "tposeMax": {
+            "Root": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                }
+            },
+            "Hips": {
+                "position": {
+                    "x": 0.0,
+                    "y": 1.2289737462997437,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.5,
+                    "y": -0.5,
+                    "z": -0.5,
+                    "w": 0.5
+                }
+            },
+            "SpineLower": {
+                "position": {
+                    "x": 0.0,
+                    "y": 1.254268765449524,
+                    "z": -0.040701866149902347
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "SpineMiddle": {
+                "position": {
+                    "x": -3.166496753692627e-8,
+                    "y": 1.3923931121826172,
+                    "z": -0.026893438771367074
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "SpineUpper": {
+                "position": {
+                    "x": -2.9802322387695315e-8,
+                    "y": 1.5292109251022339,
+                    "z": -0.0593603253364563
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "Chest": {
+                "position": {
+                    "x": 1.1920928955078126e-7,
+                    "y": 1.7598068714141846,
+                    "z": -0.04644954204559326
+                },
+                "rotation": {
+                    "x": 0.4899310767650604,
+                    "y": -0.509870171546936,
+                    "z": -0.4899310767650604,
+                    "w": 0.509870171546936
+                }
+            },
+            "Neck": {
+                "position": {
+                    "x": 5.774199962615967e-8,
+                    "y": 1.911156177520752,
+                    "z": 0.018855750560760499
+                },
+                "rotation": {
+                    "x": 0.5675042271614075,
+                    "y": -0.42182812094688418,
+                    "z": -0.5675042271614075,
+                    "w": 0.42182809114456179
+                }
+            },
+            "Head": {
+                "position": {
+                    "x": 6.332993507385254e-8,
+                    "y": 1.9958338737487794,
+                    "z": 0.04434557259082794
+                },
+                "rotation": {
+                    "x": 0.5000000596046448,
+                    "y": -0.49999991059303286,
+                    "z": -0.5000001192092896,
+                    "w": 0.49999991059303286
+                }
+            },
+            "LeftShoulder": {
+                "position": {
+                    "x": -0.035300225019454959,
+                    "y": 1.8313548564910889,
+                    "z": 0.07951498031616211
+                },
+                "rotation": {
+                    "x": 0.6892679333686829,
+                    "y": -0.18287616968154908,
+                    "z": 0.1578282117843628,
+                    "w": 0.683049201965332
+                }
+            },
+            "LeftScapula": {
+                "position": {
+                    "x": -0.20077139139175416,
+                    "y": 1.8853850364685059,
+                    "z": -0.040073394775390628
+                },
+                "rotation": {
+                    "x": 0.6759026646614075,
+                    "y": -0.15498125553131104,
+                    "z": 0.019424259662628175,
+                    "w": 0.7202494144439697
+                }
+            },
+            "LeftArmUpper": {
+                "position": {
+                    "x": -0.2248598039150238,
+                    "y": 1.8517632484436036,
+                    "z": -0.04169279336929321
+                },
+                "rotation": {
+                    "x": 0.49326494336128237,
+                    "y": 0.014670044183731079,
+                    "z": 0.029270261526107789,
+                    "w": 0.8692628741264343
+                }
+            },
+            "LeftArmLower": {
+                "position": {
+                    "x": -0.5423374772071838,
+                    "y": 1.83066987991333,
+                    "z": -0.04325646162033081
+                },
+                "rotation": {
+                    "x": 0.4927775263786316,
+                    "y": 0.026378929615020753,
+                    "z": 0.00862044095993042,
+                    "w": 0.8697128891944885
+                }
+            },
+            "LeftHandWristTwist": {
+                "position": {
+                    "x": -0.8459566235542297,
+                    "y": 1.8187274932861329,
+                    "z": -0.03661924600601196
+                },
+                "rotation": {
+                    "x": 0.5256003141403198,
+                    "y": 0.05980750918388367,
+                    "z": 0.04725494980812073,
+                    "w": 0.8473103046417236
+                }
+            },
+            "RightShoulder": {
+                "position": {
+                    "x": 0.03530029207468033,
+                    "y": 1.8313491344451905,
+                    "z": 0.07951504737138748
+                },
+                "rotation": {
+                    "x": 0.683049201965332,
+                    "y": -0.15782809257507325,
+                    "z": -0.18287628889083863,
+                    "w": -0.6892679333686829
+                }
+            },
+            "RightScapula": {
+                "position": {
+                    "x": 0.20077118277549745,
+                    "y": 1.8853893280029297,
+                    "z": -0.04007294774055481
+                },
+                "rotation": {
+                    "x": 0.7202494144439697,
+                    "y": -0.019424162805080415,
+                    "z": -0.154981330037117,
+                    "w": -0.6759027242660523
+                }
+            },
+            "RightArmUpper": {
+                "position": {
+                    "x": 0.22486114501953126,
+                    "y": 1.851758599281311,
+                    "z": -0.04169265925884247
+                },
+                "rotation": {
+                    "x": 0.8692628145217896,
+                    "y": -0.02927028387784958,
+                    "z": 0.014670021831989289,
+                    "w": -0.4932650327682495
+                }
+            },
+            "RightArmLower": {
+                "position": {
+                    "x": 0.5423343777656555,
+                    "y": 1.8306701183319092,
+                    "z": -0.04325634241104126
+                },
+                "rotation": {
+                    "x": 0.8697128295898438,
+                    "y": -0.008620388805866242,
+                    "z": 0.026378922164440156,
+                    "w": -0.49277761578559878
+                }
+            },
+            "RightHandWristTwist": {
+                "position": {
+                    "x": 0.8459522128105164,
+                    "y": 1.8187291622161866,
+                    "z": -0.03661888837814331
+                },
+                "rotation": {
+                    "x": 0.8856129050254822,
+                    "y": -0.051762260496616366,
+                    "z": 0.055952154099941257,
+                    "w": -0.45812660455703738
+                }
+            },
+            "LeftHandPalm": {
+                "position": {
+                    "x": -0.8766531348228455,
+                    "y": 1.8214832544326783,
+                    "z": -0.012629687786102295
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandWrist": {
+                "position": {
+                    "x": -0.8766531348228455,
+                    "y": 1.8214832544326783,
+                    "z": -0.012629687786102295
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandThumbMetacarpal": {
+                "position": {
+                    "x": -0.9134696125984192,
+                    "y": 1.797224521636963,
+                    "z": 0.029919981956481935
+                },
+                "rotation": {
+                    "x": 0.6919509768486023,
+                    "y": -0.02315257489681244,
+                    "z": -0.4553295075893402,
+                    "w": -0.5597703456878662
+                }
+            },
+            "LeftHandThumbProximal": {
+                "position": {
+                    "x": -0.937234103679657,
+                    "y": 1.7777940034866334,
+                    "z": 0.05660361051559448
+                },
+                "rotation": {
+                    "x": 0.7644479870796204,
+                    "y": -0.08651232719421387,
+                    "z": -0.4465092122554779,
+                    "w": -0.4569079577922821
+                }
+            },
+            "LeftHandThumbDistal": {
+                "position": {
+                    "x": -0.9620193839073181,
+                    "y": 1.7661361694335938,
+                    "z": 0.08880555629730225
+                },
+                "rotation": {
+                    "x": 0.6866224408149719,
+                    "y": -0.13800612092018128,
+                    "z": -0.5123411417007446,
+                    "w": -0.4970017075538635
+                }
+            },
+            "LeftHandThumbTip": {
+                "position": {
+                    "x": -0.9744123816490173,
+                    "y": 1.7603074312210084,
+                    "z": 0.10490632057189942
+                },
+                "rotation": {
+                    "x": 0.6866224408149719,
+                    "y": -0.13800612092018128,
+                    "z": -0.5123411417007446,
+                    "w": -0.4970017075538635
+                }
+            },
+            "LeftHandIndexMetacarpal": {
+                "position": {
+                    "x": -0.9175875782966614,
+                    "y": 1.8055179119110108,
+                    "z": 0.017649829387664796
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandIndexProximal": {
+                "position": {
+                    "x": -0.9901484847068787,
+                    "y": 1.8022639751434327,
+                    "z": 0.03257185220718384
+                },
+                "rotation": {
+                    "x": 0.9931374192237854,
+                    "y": 0.10449613630771637,
+                    "z": -0.04646998643875122,
+                    "w": 0.024476096034049989
+                }
+            },
+            "LeftHandIndexIntermediate": {
+                "position": {
+                    "x": -1.0363543033599854,
+                    "y": 1.7925240993499756,
+                    "z": 0.03719407320022583
+                },
+                "rotation": {
+                    "x": 0.9921289682388306,
+                    "y": 0.10910382866859436,
+                    "z": -0.03676500916481018,
+                    "w": 0.04924556612968445
+                }
+            },
+            "LeftHandIndexDistal": {
+                "position": {
+                    "x": -1.0659514665603638,
+                    "y": 1.7860522270202637,
+                    "z": 0.03973865509033203
+                },
+                "rotation": {
+                    "x": 0.9971232414245606,
+                    "y": 0.039226263761520389,
+                    "z": -0.004416942596435547,
+                    "w": 0.06470899283885956
+                }
+            },
+            "LeftHandIndexTip": {
+                "position": {
+                    "x": -1.0807502269744874,
+                    "y": 1.7828161716461182,
+                    "z": 0.04101097583770752
+                },
+                "rotation": {
+                    "x": 0.9971232414245606,
+                    "y": 0.039226263761520389,
+                    "z": -0.004416942596435547,
+                    "w": 0.06470899283885956
+                }
+            },
+            "LeftHandMiddleMetacarpal": {
+                "position": {
+                    "x": -0.9544963240623474,
+                    "y": 1.8018426895141602,
+                    "z": 0.004716396331787109
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandMiddleProximal": {
+                "position": {
+                    "x": -0.9931910634040833,
+                    "y": 1.8048079013824463,
+                    "z": 0.005065858364105225
+                },
+                "rotation": {
+                    "x": 0.9911282658576965,
+                    "y": 0.11727233231067658,
+                    "z": -0.011999249458312989,
+                    "w": 0.06138645112514496
+                }
+            },
+            "LeftHandMiddleIntermediate": {
+                "position": {
+                    "x": -1.0453999042510987,
+                    "y": 1.7924034595489503,
+                    "z": 0.0071163177490234379
+                },
+                "rotation": {
+                    "x": 0.9906495809555054,
+                    "y": 0.11570638418197632,
+                    "z": -0.0062201619148254398,
+                    "w": 0.0720207691192627
+                }
+            },
+            "LeftHandMiddleDistal": {
+                "position": {
+                    "x": -1.0789384841918946,
+                    "y": 1.7845335006713868,
+                    "z": 0.008115530014038086
+                },
+                "rotation": {
+                    "x": 0.9940773844718933,
+                    "y": 0.02354341745376587,
+                    "z": 0.009048759937286377,
+                    "w": 0.1057085394859314
+                }
+            },
+            "LeftHandMiddleTip": {
+                "position": {
+                    "x": -1.0957080125808716,
+                    "y": 1.7805982828140259,
+                    "z": 0.00861513614654541
+                },
+                "rotation": {
+                    "x": 0.9940773844718933,
+                    "y": 0.02354341745376587,
+                    "z": 0.009048759937286377,
+                    "w": 0.1057085394859314
+                }
+            },
+            "LeftHandRingMetacarpal": {
+                "position": {
+                    "x": -0.920221745967865,
+                    "y": 1.8067917823791505,
+                    "z": -0.024591147899627687
+                },
+                "rotation": {
+                    "x": 0.9944576621055603,
+                    "y": 0.062310218811035159,
+                    "z": -0.060857027769088748,
+                    "w": 0.058891430497169498
+                }
+            },
+            "LeftHandRingProximal": {
+                "position": {
+                    "x": -0.9869330525398254,
+                    "y": 1.7978951930999756,
+                    "z": -0.01890939474105835
+                },
+                "rotation": {
+                    "x": 0.9854880571365356,
+                    "y": 0.12169161438941956,
+                    "z": 0.06256887316703797,
+                    "w": 0.10044856369495392
+                }
+            },
+            "LeftHandRingIntermediate": {
+                "position": {
+                    "x": -1.0338897705078126,
+                    "y": 1.785581111907959,
+                    "z": -0.023732781410217286
+                },
+                "rotation": {
+                    "x": 0.9806670546531677,
+                    "y": 0.1253899782896042,
+                    "z": 0.06880411505699158,
+                    "w": 0.1335497945547104
+                }
+            },
+            "LeftHandRingDistal": {
+                "position": {
+                    "x": -1.0657726526260377,
+                    "y": 1.77679443359375,
+                    "z": -0.027105331420898439
+                },
+                "rotation": {
+                    "x": 0.9846179485321045,
+                    "y": 0.09661565721035004,
+                    "z": 0.04391619563102722,
+                    "w": 0.13879743218421937
+                }
+            },
+            "LeftHandRingTip": {
+                "position": {
+                    "x": -1.0817139148712159,
+                    "y": 1.772400975227356,
+                    "z": -0.02879178524017334
+                },
+                "rotation": {
+                    "x": 0.9846179485321045,
+                    "y": 0.09661565721035004,
+                    "z": 0.04391619563102722,
+                    "w": 0.13879743218421937
+                }
+            },
+            "LeftHandLittlePinkyMetacarpal": {
+                "position": {
+                    "x": -0.919940173625946,
+                    "y": 1.8015003204345704,
+                    "z": -0.03401827812194824
+                },
+                "rotation": {
+                    "x": 0.9578835964202881,
+                    "y": 0.09939375519752503,
+                    "z": 0.09247499704360962,
+                    "w": 0.25303876399993899
+                }
+            },
+            "LeftHandLittlePinkyProximal": {
+                "position": {
+                    "x": -0.9749440550804138,
+                    "y": 1.787953495979309,
+                    "z": -0.04126006364822388
+                },
+                "rotation": {
+                    "x": 0.9741464853286743,
+                    "y": 0.1332799643278122,
+                    "z": 0.07197922468185425,
+                    "w": 0.16761398315429688
+                }
+            },
+            "LeftHandLittlePinkyIntermediate": {
+                "position": {
+                    "x": -1.011610984802246,
+                    "y": 1.777047038078308,
+                    "z": -0.04493248462677002
+                },
+                "rotation": {
+                    "x": 0.9648469686508179,
+                    "y": 0.1245977133512497,
+                    "z": 0.12092356383800507,
+                    "w": 0.19729094207286836
+                }
+            },
+            "LeftHandLittlePinkyDistal": {
+                "position": {
+                    "x": -1.0354883670806885,
+                    "y": 1.7697255611419678,
+                    "z": -0.04961240291595459
+                },
+                "rotation": {
+                    "x": 0.9724667072296143,
+                    "y": 0.09161356091499329,
+                    "z": 0.07795852422714234,
+                    "w": 0.199595108628273
+                }
+            },
+            "LeftHandLittlePinkyTip": {
+                "position": {
+                    "x": -1.0474270582199097,
+                    "y": 1.7660644054412842,
+                    "z": -0.051952362060546878
+                },
+                "rotation": {
+                    "x": 0.9724667072296143,
+                    "y": 0.09161356091499329,
+                    "z": 0.07795852422714234,
+                    "w": 0.199595108628273
+                }
+            },
+            "RightHandPalm": {
+                "position": {
+                    "x": 0.8768693804740906,
+                    "y": 1.8214702606201172,
+                    "z": -0.012611687183380127
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandWrist": {
+                "position": {
+                    "x": 0.8768693804740906,
+                    "y": 1.8214702606201172,
+                    "z": -0.012611687183380127
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandThumbMetacarpal": {
+                "position": {
+                    "x": 0.9136863350868225,
+                    "y": 1.7972112894058228,
+                    "z": 0.029937922954559327
+                },
+                "rotation": {
+                    "x": -0.5597705841064453,
+                    "y": 0.4553295373916626,
+                    "z": -0.023152485489845277,
+                    "w": -0.6919510364532471
+                }
+            },
+            "RightHandThumbProximal": {
+                "position": {
+                    "x": 0.9374505877494812,
+                    "y": 1.7777810096740723,
+                    "z": 0.056621670722961429
+                },
+                "rotation": {
+                    "x": -0.45690810680389407,
+                    "y": 0.4465092718601227,
+                    "z": -0.08651229739189148,
+                    "w": -0.7644479274749756
+                }
+            },
+            "RightHandThumbDistal": {
+                "position": {
+                    "x": 0.9622359871864319,
+                    "y": 1.7661234140396119,
+                    "z": 0.08882337808609009
+                },
+                "rotation": {
+                    "x": -0.497001975774765,
+                    "y": 0.5123413801193237,
+                    "z": -0.1380060315132141,
+                    "w": -0.6866223812103272
+                }
+            },
+            "RightHandThumbTip": {
+                "position": {
+                    "x": 0.9746283888816834,
+                    "y": 1.7602944374084473,
+                    "z": 0.1049242615699768
+                },
+                "rotation": {
+                    "x": -0.4970019459724426,
+                    "y": 0.5123413801193237,
+                    "z": -0.13800594210624696,
+                    "w": -0.6866223812103272
+                }
+            },
+            "RightHandIndexMetacarpal": {
+                "position": {
+                    "x": 0.9178382754325867,
+                    "y": 1.8054912090301514,
+                    "z": 0.01769357919692993
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandIndexProximal": {
+                "position": {
+                    "x": 0.9903474450111389,
+                    "y": 1.8022396564483643,
+                    "z": 0.032604873180389407
+                },
+                "rotation": {
+                    "x": 0.02447599172592163,
+                    "y": 0.04647010564804077,
+                    "z": 0.10449612140655518,
+                    "w": -0.9931375980377197
+                }
+            },
+            "RightHandIndexIntermediate": {
+                "position": {
+                    "x": 1.0365527868270875,
+                    "y": 1.7924997806549073,
+                    "z": 0.03722691535949707
+                },
+                "rotation": {
+                    "x": 0.04924541711807251,
+                    "y": 0.03676491975784302,
+                    "z": 0.10910390317440033,
+                    "w": -0.9921289682388306
+                }
+            },
+            "RightHandIndexDistal": {
+                "position": {
+                    "x": 1.0661509037017823,
+                    "y": 1.7860279083251954,
+                    "z": 0.03977155685424805
+                },
+                "rotation": {
+                    "x": 0.06470885872840882,
+                    "y": 0.004416987299919128,
+                    "z": 0.03922627866268158,
+                    "w": -0.9971234798431397
+                }
+            },
+            "RightHandIndexTip": {
+                "position": {
+                    "x": 1.0809495449066163,
+                    "y": 1.782792091369629,
+                    "z": 0.04104411602020264
+                },
+                "rotation": {
+                    "x": 0.06470885872840882,
+                    "y": 0.004416987299919128,
+                    "z": 0.03922627866268158,
+                    "w": -0.9971234798431397
+                }
+            },
+            "RightHandMiddleMetacarpal": {
+                "position": {
+                    "x": 0.955462634563446,
+                    "y": 1.801640272140503,
+                    "z": 0.0049013495445251469
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandMiddleProximal": {
+                "position": {
+                    "x": 0.9941298365592957,
+                    "y": 1.8046034574508668,
+                    "z": 0.005250692367553711
+                },
+                "rotation": {
+                    "x": 0.06138619780540466,
+                    "y": 0.011999279260635376,
+                    "z": 0.11727242171764374,
+                    "w": -0.9911282062530518
+                }
+            },
+            "RightHandMiddleIntermediate": {
+                "position": {
+                    "x": 1.0463380813598633,
+                    "y": 1.7921985387802125,
+                    "z": 0.007301211357116699
+                },
+                "rotation": {
+                    "x": 0.07202041149139404,
+                    "y": 0.006220102310180664,
+                    "z": 0.1157064437866211,
+                    "w": -0.9906495809555054
+                }
+            },
+            "RightHandMiddleDistal": {
+                "position": {
+                    "x": 1.0798770189285279,
+                    "y": 1.7843289375305176,
+                    "z": 0.008300185203552246
+                },
+                "rotation": {
+                    "x": 0.10570833086967468,
+                    "y": -0.009048789739608765,
+                    "z": 0.023543447256088258,
+                    "w": -0.9940773248672485
+                }
+            },
+            "RightHandMiddleTip": {
+                "position": {
+                    "x": 1.0966463088989258,
+                    "y": 1.7803939580917359,
+                    "z": 0.00879979133605957
+                },
+                "rotation": {
+                    "x": 0.10570842027664185,
+                    "y": -0.009048700332641602,
+                    "z": 0.02354341745376587,
+                    "w": -0.9940773248672485
+                }
+            },
+            "RightHandRingMetacarpal": {
+                "position": {
+                    "x": 0.9204381108283997,
+                    "y": 1.8067786693572999,
+                    "z": -0.02457296848297119
+                },
+                "rotation": {
+                    "x": 0.05889132618904114,
+                    "y": 0.06085692346096039,
+                    "z": 0.06231014430522919,
+                    "w": -0.9944575428962708
+                }
+            },
+            "RightHandRingProximal": {
+                "position": {
+                    "x": 0.987149178981781,
+                    "y": 1.7978817224502564,
+                    "z": -0.018891215324401857
+                },
+                "rotation": {
+                    "x": 0.10044831037521362,
+                    "y": -0.06256884336471558,
+                    "z": 0.12169162929058075,
+                    "w": -0.9854881167411804
+                }
+            },
+            "RightHandRingIntermediate": {
+                "position": {
+                    "x": 1.0341060161590577,
+                    "y": 1.7855677604675294,
+                    "z": -0.023714542388916017
+                },
+                "rotation": {
+                    "x": 0.13354957103729249,
+                    "y": -0.06880420446395874,
+                    "z": 0.12538999319076539,
+                    "w": -0.980667233467102
+                }
+            },
+            "RightHandRingDistal": {
+                "position": {
+                    "x": 1.0659888982772828,
+                    "y": 1.7767813205718995,
+                    "z": -0.02708745002746582
+                },
+                "rotation": {
+                    "x": 0.13879723846912385,
+                    "y": -0.04391618072986603,
+                    "z": 0.09661565721035004,
+                    "w": -0.9846178889274597
+                }
+            },
+            "RightHandRingTip": {
+                "position": {
+                    "x": 1.0819306373596192,
+                    "y": 1.772388219833374,
+                    "z": -0.028773784637451173
+                },
+                "rotation": {
+                    "x": 0.13879723846912385,
+                    "y": -0.04391618072986603,
+                    "z": 0.09661565721035004,
+                    "w": -0.9846178889274597
+                }
+            },
+            "RightHandLittlePinkyMetacarpal": {
+                "position": {
+                    "x": 0.9201563000679016,
+                    "y": 1.8014869689941407,
+                    "z": -0.03400009870529175
+                },
+                "rotation": {
+                    "x": 0.253038614988327,
+                    "y": -0.092475026845932,
+                    "z": 0.0993937999010086,
+                    "w": -0.9578836560249329
+                }
+            },
+            "RightHandLittlePinkyProximal": {
+                "position": {
+                    "x": 0.9751600623130798,
+                    "y": 1.7879406213760377,
+                    "z": -0.04124194383621216
+                },
+                "rotation": {
+                    "x": 0.16761374473571778,
+                    "y": -0.07197922468185425,
+                    "z": 0.1332799643278122,
+                    "w": -0.9741466641426086
+                }
+            },
+            "RightHandLittlePinkyIntermediate": {
+                "position": {
+                    "x": 1.0118274688720704,
+                    "y": 1.7770342826843262,
+                    "z": -0.0449143648147583
+                },
+                "rotation": {
+                    "x": 0.19729089736938477,
+                    "y": -0.12092363834381104,
+                    "z": 0.1245976984500885,
+                    "w": -0.9648473262786865
+                }
+            },
+            "RightHandLittlePinkyDistal": {
+                "position": {
+                    "x": 1.0357052087783814,
+                    "y": 1.769712209701538,
+                    "z": -0.04959428310394287
+                },
+                "rotation": {
+                    "x": 0.19959503412246705,
+                    "y": -0.07795840501785279,
+                    "z": 0.0916135311126709,
+                    "w": -0.9724668264389038
+                }
+            },
+            "RightHandLittlePinkyTip": {
+                "position": {
+                    "x": 1.047644019126892,
+                    "y": 1.7660510540008546,
+                    "z": -0.05193436145782471
+                },
+                "rotation": {
+                    "x": 0.19959503412246705,
+                    "y": -0.07795840501785279,
+                    "z": 0.0916135311126709,
+                    "w": -0.9724668264389038
+                }
+            },
+            "LeftUpperLeg": {
+                "position": {
+                    "x": -0.09991558641195297,
+                    "y": 1.1970748901367188,
+                    "z": -0.006608910858631134
+                },
+                "rotation": {
+                    "x": -0.4807193875312805,
+                    "y": -0.533578097820282,
+                    "z": 0.4822108745574951,
+                    "w": 0.5016732215881348
+                }
+            },
+            "LeftLowerLeg": {
+                "position": {
+                    "x": -0.07931911200284958,
+                    "y": 0.591130793094635,
+                    "z": -0.03901536017656326
+                },
+                "rotation": {
+                    "x": -0.4727208912372589,
+                    "y": -0.5409671068191528,
+                    "z": 0.4764903783798218,
+                    "w": 0.5068004727363586
+                }
+            },
+            "LeftFootAnkleTwist": {
+                "position": {
+                    "x": -0.058601293712854388,
+                    "y": 0.06791901588439942,
+                    "z": -0.09048868715763092
+                },
+                "rotation": {
+                    "x": -0.4387589395046234,
+                    "y": -0.5572835803031921,
+                    "z": 0.5060506463050842,
+                    "w": 0.4907529950141907
+                }
+            },
+            "LeftFootAnkle": {
+                "position": {
+                    "x": -0.0586012527346611,
+                    "y": 0.06791830062866211,
+                    "z": -0.09048867970705033
+                },
+                "rotation": {
+                    "x": 0.11906759440898895,
+                    "y": -0.736628532409668,
+                    "z": 0.12348806113004685,
+                    "w": 0.6541807055473328
+                }
+            },
+            "LeftFootSubtalar": {
+                "position": {
+                    "x": -0.06308591365814209,
+                    "y": 0.024338841438293458,
+                    "z": -0.08364857733249664
+                },
+                "rotation": {
+                    "x": -0.15458747744560243,
+                    "y": -0.7640056610107422,
+                    "z": 0.3335089087486267,
+                    "w": 0.530254602432251
+                }
+            },
+            "LeftFootTransverse": {
+                "position": {
+                    "x": -0.06688137352466583,
+                    "y": 0.03749668598175049,
+                    "z": -0.008454777300357819
+                },
+                "rotation": {
+                    "x": -0.022499680519104005,
+                    "y": -0.7621172070503235,
+                    "z": 0.1550586223602295,
+                    "w": 0.6281944513320923
+                }
+            },
+            "LeftFootBall": {
+                "position": {
+                    "x": -0.06879547983407974,
+                    "y": 0.00018775463104248047,
+                    "z": 0.08140959590673447
+                },
+                "rotation": {
+                    "x": 0.06520262360572815,
+                    "y": -0.7850521802902222,
+                    "z": 0.05479457974433899,
+                    "w": 0.6135467886924744
+                }
+            },
+            "RightUpperLeg": {
+                "position": {
+                    "x": 0.09991566836833954,
+                    "y": 1.1970748901367188,
+                    "z": -0.006608918309211731
+                },
+                "rotation": {
+                    "x": 0.5016732215881348,
+                    "y": -0.4822108745574951,
+                    "z": -0.5335781574249268,
+                    "w": 0.48071932792663576
+                }
+            },
+            "RightLowerLeg": {
+                "position": {
+                    "x": 0.07931271195411682,
+                    "y": 0.5909422636032105,
+                    "z": -0.03902548551559448
+                },
+                "rotation": {
+                    "x": 0.5068003535270691,
+                    "y": -0.4764903783798218,
+                    "z": -0.5409671664237976,
+                    "w": 0.4727208912372589
+                }
+            },
+            "RightFootAnkleTwist": {
+                "position": {
+                    "x": 0.058594707399606708,
+                    "y": 0.06773126125335694,
+                    "z": -0.0904986709356308
+                },
+                "rotation": {
+                    "x": 0.4907529950141907,
+                    "y": -0.5060506463050842,
+                    "z": -0.5572836399078369,
+                    "w": 0.43875885009765627
+                }
+            },
+            "RightFootAnkle": {
+                "position": {
+                    "x": 0.058594703674316409,
+                    "y": 0.06773030757904053,
+                    "z": -0.09049880504608154
+                },
+                "rotation": {
+                    "x": 0.654180645942688,
+                    "y": -0.12348805367946625,
+                    "z": -0.736628532409668,
+                    "w": -0.11906777322292328
+                }
+            },
+            "RightFootSubtalar": {
+                "position": {
+                    "x": 0.06307923793792725,
+                    "y": 0.024150729179382325,
+                    "z": -0.08365869522094727
+                },
+                "rotation": {
+                    "x": 0.5302547216415405,
+                    "y": -0.33350884914398196,
+                    "z": -0.7640057802200317,
+                    "w": 0.15458714962005616
+                }
+            },
+            "RightFootTransverse": {
+                "position": {
+                    "x": 0.0668746829032898,
+                    "y": 0.037308692932128909,
+                    "z": -0.008465040475130082
+                },
+                "rotation": {
+                    "x": 0.6281945705413818,
+                    "y": -0.15505866706371308,
+                    "z": -0.762117326259613,
+                    "w": 0.022499576210975648
+                }
+            },
+            "RightFootBall": {
+                "position": {
+                    "x": 0.06878872960805893,
+                    "y": -1.1920928955078126e-7,
+                    "z": 0.08139938861131668
+                },
+                "rotation": {
+                    "x": 0.6135469675064087,
+                    "y": -0.054794490337371829,
+                    "z": -0.7850522398948669,
+                    "w": -0.06520295143127442
+                }
+            }
+        }
+    },
+    "target": {
+        "joints": [
+            "root",
+            "root.x",
+            "spine_01.x",
+            "spine_02.x",
+            "neck.x",
+            "head.x",
+            "shoulder.l",
+            "arm_stretch.l",
+            "arm_twist.l",
+            "forearm_stretch.l",
+            "forearm_twist.l",
+            "hand.l",
+            "shoulder.r",
+            "arm_stretch.r",
+            "arm_twist.r",
+            "forearm_stretch.r",
+            "forearm_twist.r",
+            "hand.r",
+            "thigh_stretch.l",
+            "leg_stretch.l",
+            "foot.l",
+            "toes_01.l",
+            "leg_twist.l",
+            "thigh_twist.l",
+            "thigh_stretch.r",
+            "leg_stretch.r",
+            "foot.r",
+            "toes_01.r",
+            "leg_twist.r",
+            "thigh_twist.r"
+        ],
+        "knownJoints": {
+            "root": "root",
+            "hips": "root.x",
+            "rightUpperArm": "arm_stretch.r",
+            "leftUpperArm": "arm_stretch.l",
+            "rightWrist": "hand.r",
+            "leftWrist": "hand.l",
+            "chest": "spine_02.x",
+            "neck": "neck.x",
+            "rightUpperLeg": "thigh_stretch.r",
+            "leftUpperLeg": "thigh_stretch.l",
+            "rightAnkle": "foot.r",
+            "leftAnkle": "foot.l"
+        },
+        "hierarchy": {
+            "root.x": "root",
+            "spine_01.x": "root.x",
+            "spine_02.x": "spine_01.x",
+            "neck.x": "spine_02.x",
+            "head.x": "neck.x",
+            "shoulder.l": "spine_02.x",
+            "arm_stretch.l": "shoulder.l",
+            "arm_twist.l": "arm_stretch.l",
+            "forearm_stretch.l": "arm_stretch.l",
+            "forearm_twist.l": "forearm_stretch.l",
+            "hand.l": "forearm_stretch.l",
+            "shoulder.r": "spine_02.x",
+            "arm_stretch.r": "shoulder.r",
+            "arm_twist.r": "arm_stretch.r",
+            "forearm_stretch.r": "arm_stretch.r",
+            "forearm_twist.r": "forearm_stretch.r",
+            "hand.r": "forearm_stretch.r",
+            "thigh_stretch.l": "root.x",
+            "leg_stretch.l": "thigh_stretch.l",
+            "foot.l": "leg_stretch.l",
+            "toes_01.l": "foot.l",
+            "leg_twist.l": "leg_stretch.l",
+            "thigh_twist.l": "thigh_stretch.l",
+            "thigh_stretch.r": "root.x",
+            "leg_stretch.r": "thigh_stretch.r",
+            "foot.r": "leg_stretch.r",
+            "toes_01.r": "foot.r",
+            "leg_twist.r": "leg_stretch.r",
+            "thigh_twist.r": "thigh_stretch.r"
+        },
+        "tposeMin": {
+            "root": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.02031012624502182,
+                    "z": 0.0048568369820714
+                },
+                "rotation": {
+                    "x": -0.7071068286895752,
+                    "y": -0.0,
+                    "z": -0.0,
+                    "w": 0.7071068286895752
+                }
+            },
+            "root.x": {
+                "position": {
+                    "x": -3.370369084596805e-15,
+                    "y": 0.5331456661224365,
+                    "z": -0.013885889202356339
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.000003532568598529906,
+                    "z": -0.0,
+                    "w": 1.0000001192092896
+                }
+            },
+            "spine_01.x": {
+                "position": {
+                    "x": -3.175396404153652e-11,
+                    "y": 0.6900907158851624,
+                    "z": -0.0093806441873312
+                },
+                "rotation": {
+                    "x": 0.014348149299621582,
+                    "y": 0.0033009541220963,
+                    "z": 0.000047367881052196029,
+                    "w": 0.9998917579650879
+                }
+            },
+            "spine_02.x": {
+                "position": {
+                    "x": -5.682230727610538e-11,
+                    "y": 0.8470358848571777,
+                    "z": -0.004875473212450743
+                },
+                "rotation": {
+                    "x": 0.014348119497299195,
+                    "y": -1.1741546757093602e-7,
+                    "z": -1.7293224630066107e-9,
+                    "w": 0.9998972415924072
+                }
+            },
+            "neck.x": {
+                "position": {
+                    "x": -6.744977493200466e-11,
+                    "y": 1.0039827823638917,
+                    "z": -0.0003704498813021928
+                },
+                "rotation": {
+                    "x": -0.262800008058548,
+                    "y": -0.006489678286015987,
+                    "z": 0.0017676614224910737,
+                    "w": 0.9648271799087524
+                }
+            },
+            "head.x": {
+                "position": {
+                    "x": -1.5433626598948536e-9,
+                    "y": 1.106923222541809,
+                    "z": -0.060942672193050387
+                },
+                "rotation": {
+                    "x": -1.7881393432617188e-7,
+                    "y": 0.00003402872971491888,
+                    "z": -4.420144250616431e-10,
+                    "w": 1.000000238418579
+                }
+            },
+            "shoulder.l": {
+                "position": {
+                    "x": -0.04953878000378609,
+                    "y": 0.8982823491096497,
+                    "z": 0.03190149739384651
+                },
+                "rotation": {
+                    "x": -0.5523439645767212,
+                    "y": 0.4387207627296448,
+                    "z": 0.3743402361869812,
+                    "w": 0.6019220352172852
+                }
+            },
+            "arm_stretch.l": {
+                "position": {
+                    "x": -0.15302157402038575,
+                    "y": 0.9155686497688294,
+                    "z": -0.014706109650433064
+                },
+                "rotation": {
+                    "x": -0.48613888025283816,
+                    "y": 0.46782293915748598,
+                    "z": 0.5277551412582398,
+                    "w": 0.5160288214683533
+                }
+            },
+            "arm_twist.l": {
+                "position": {
+                    "x": -0.15302157402038575,
+                    "y": 0.9155686497688294,
+                    "z": -0.014706109650433064
+                },
+                "rotation": {
+                    "x": -0.48613911867141726,
+                    "y": 0.4678226709365845,
+                    "z": 0.527755081653595,
+                    "w": 0.5160289406776428
+                }
+            },
+            "forearm_stretch.l": {
+                "position": {
+                    "x": -0.2977850139141083,
+                    "y": 0.9059830904006958,
+                    "z": -0.016331588849425317
+                },
+                "rotation": {
+                    "x": -0.4685274064540863,
+                    "y": 0.48852649331092837,
+                    "z": 0.5409961938858032,
+                    "w": 0.49914708733558657
+                }
+            },
+            "forearm_twist.l": {
+                "position": {
+                    "x": -0.3711029291152954,
+                    "y": 0.9032347202301025,
+                    "z": -0.011939559131860733
+                },
+                "rotation": {
+                    "x": -0.35892531275749209,
+                    "y": 0.37013670802116396,
+                    "z": 0.6309916973114014,
+                    "w": 0.5796736478805542
+                }
+            },
+            "hand.l": {
+                "position": {
+                    "x": -0.4444212019443512,
+                    "y": 0.9004872441291809,
+                    "z": -0.007547235116362572
+                },
+                "rotation": {
+                    "x": -0.3297184407711029,
+                    "y": 0.3962116837501526,
+                    "z": 0.6506157517433167,
+                    "w": 0.557675302028656
+                }
+            },
+            "shoulder.r": {
+                "position": {
+                    "x": 0.04953882470726967,
+                    "y": 0.8982820510864258,
+                    "z": 0.03190157189965248
+                },
+                "rotation": {
+                    "x": -0.5523660778999329,
+                    "y": -0.43868881464004519,
+                    "z": -0.37431925535202029,
+                    "w": 0.6019381880760193
+                }
+            },
+            "arm_stretch.r": {
+                "position": {
+                    "x": 0.15298034250736237,
+                    "y": 0.9155667424201965,
+                    "z": -0.014710016548633576
+                },
+                "rotation": {
+                    "x": 0.48613306879997256,
+                    "y": 0.46783068776130679,
+                    "z": 0.5277435183525086,
+                    "w": -0.5160391926765442
+                }
+            },
+            "arm_twist.r": {
+                "position": {
+                    "x": 0.15298029780387879,
+                    "y": 0.9155671000480652,
+                    "z": -0.014710163697600365
+                },
+                "rotation": {
+                    "x": 0.48613348603248598,
+                    "y": 0.4678303599357605,
+                    "z": 0.527743399143219,
+                    "w": -0.5160390734672546
+                }
+            },
+            "forearm_stretch.r": {
+                "position": {
+                    "x": 0.29769405722618105,
+                    "y": 0.9059857726097107,
+                    "z": -0.01633623242378235
+                },
+                "rotation": {
+                    "x": 0.46853476762771609,
+                    "y": 0.4885157346725464,
+                    "z": 0.5409878492355347,
+                    "w": -0.49915939569473269
+                }
+            },
+            "forearm_twist.r": {
+                "position": {
+                    "x": 0.3709879517555237,
+                    "y": 0.903237521648407,
+                    "z": -0.011948920786380768
+                },
+                "rotation": {
+                    "x": 0.35890525579452517,
+                    "y": 0.37007737159729006,
+                    "z": 0.631016731262207,
+                    "w": -0.5796967148780823
+                }
+            },
+            "hand.r": {
+                "position": {
+                    "x": 0.44428151845932009,
+                    "y": 0.9004877805709839,
+                    "z": -0.007561166305094957
+                },
+                "rotation": {
+                    "x": 0.3296947479248047,
+                    "y": 0.3962262272834778,
+                    "z": 0.6506403088569641,
+                    "w": -0.5576503276824951
+                }
+            },
+            "thigh_stretch.l": {
+                "position": {
+                    "x": -0.08469495177268982,
+                    "y": 0.5331457853317261,
+                    "z": -0.013885889202356339
+                },
+                "rotation": {
+                    "x": -0.6884750723838806,
+                    "y": -0.05265921354293823,
+                    "z": 0.7230241894721985,
+                    "w": -0.02157282829284668
+                }
+            },
+            "leg_stretch.l": {
+                "position": {
+                    "x": -0.055320896208286288,
+                    "y": 0.25172871351242068,
+                    "z": -0.02704073116183281
+                },
+                "rotation": {
+                    "x": -0.6878646612167358,
+                    "y": -0.06695523858070374,
+                    "z": 0.7226606607437134,
+                    "w": -0.011002510786056519
+                }
+            },
+            "foot.l": {
+                "position": {
+                    "x": -0.03339346870779991,
+                    "y": 0.050591737031936648,
+                    "z": -0.04361352697014809
+                },
+                "rotation": {
+                    "x": 0.028809621930122377,
+                    "y": 0.5031137466430664,
+                    "z": 0.863034725189209,
+                    "w": -0.03490371257066727
+                }
+            },
+            "toes_01.l": {
+                "position": {
+                    "x": -0.028943635523319246,
+                    "y": 0.026091989129781724,
+                    "z": -0.00041043752571567893
+                },
+                "rotation": {
+                    "x": -0.9316698908805847,
+                    "y": -0.005457551684230566,
+                    "z": 0.013898894190788269,
+                    "w": -0.3629992604255676
+                }
+            },
+            "leg_twist.l": {
+                "position": {
+                    "x": -0.04435720294713974,
+                    "y": 0.15116102993488313,
+                    "z": -0.03532707691192627
+                },
+                "rotation": {
+                    "x": -0.6878643035888672,
+                    "y": -0.06695517897605896,
+                    "z": 0.722661018371582,
+                    "w": -0.01100262999534607
+                }
+            },
+            "thigh_twist.l": {
+                "position": {
+                    "x": -0.0846949890255928,
+                    "y": 0.5331457853317261,
+                    "z": -0.013885815627872944
+                },
+                "rotation": {
+                    "x": -0.6884747743606567,
+                    "y": -0.05265909433364868,
+                    "z": 0.7230244278907776,
+                    "w": -0.021572798490524293
+                }
+            },
+            "thigh_stretch.r": {
+                "position": {
+                    "x": 0.0846949964761734,
+                    "y": 0.5331456661224365,
+                    "z": -0.013885851949453354
+                },
+                "rotation": {
+                    "x": 0.6884753704071045,
+                    "y": -0.05265909433364868,
+                    "z": 0.7230239510536194,
+                    "w": 0.021572530269622804
+                }
+            },
+            "leg_stretch.r": {
+                "position": {
+                    "x": 0.05532093346118927,
+                    "y": 0.25172916054725649,
+                    "z": -0.027040768414735795
+                },
+                "rotation": {
+                    "x": 0.6878650188446045,
+                    "y": -0.06695550680160523,
+                    "z": 0.7226603031158447,
+                    "w": 0.01100262999534607
+                }
+            },
+            "foot.r": {
+                "position": {
+                    "x": 0.03339347615838051,
+                    "y": 0.05059269815683365,
+                    "z": -0.04361352697014809
+                },
+                "rotation": {
+                    "x": -0.028807995840907098,
+                    "y": 0.5031141638755798,
+                    "z": 0.8630344271659851,
+                    "w": 0.03490452840924263
+                }
+            },
+            "toes_01.r": {
+                "position": {
+                    "x": 0.028943700715899469,
+                    "y": 0.026093317195773126,
+                    "z": -0.00041047437116503716
+                },
+                "rotation": {
+                    "x": -0.931670069694519,
+                    "y": 0.00545920804142952,
+                    "z": -0.013898421078920365,
+                    "w": -0.3629993200302124
+                }
+            },
+            "leg_twist.r": {
+                "position": {
+                    "x": 0.04435720294713974,
+                    "y": 0.15116165578365327,
+                    "z": -0.035327114164829257
+                },
+                "rotation": {
+                    "x": 0.6878654956817627,
+                    "y": -0.06695550680160523,
+                    "z": 0.7226599454879761,
+                    "w": 0.011002570390701294
+                }
+            },
+            "thigh_twist.r": {
+                "position": {
+                    "x": 0.0846949964761734,
+                    "y": 0.5331456661224365,
+                    "z": -0.013885889202356339
+                },
+                "rotation": {
+                    "x": 0.6884756088256836,
+                    "y": -0.052659034729003909,
+                    "z": 0.7230238318443298,
+                    "w": 0.021572411060333253
+                }
+            }
+        },
+        "tposeMax": {
+            "root": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0436493456363678,
+                    "z": 0.010109025985002518
+                },
+                "rotation": {
+                    "x": -0.7071068286895752,
+                    "y": -0.0,
+                    "z": -0.0,
+                    "w": 0.7071068286895752
+                }
+            },
+            "root.x": {
+                "position": {
+                    "x": -6.803244118503294e-15,
+                    "y": 1.078831434249878,
+                    "z": -0.027724023908376695
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.000003532568598529906,
+                    "z": -0.0,
+                    "w": 1.0000001192092896
+                }
+            },
+            "spine_01.x": {
+                "position": {
+                    "x": -6.411456782151603e-11,
+                    "y": 1.3956328630447388,
+                    "z": -0.018629981204867364
+                },
+                "rotation": {
+                    "x": 0.014348149299621582,
+                    "y": 0.0033009541220963,
+                    "z": 0.000047367881052196029,
+                    "w": 0.9998917579650879
+                }
+            },
+            "spine_02.x": {
+                "position": {
+                    "x": -3.33235479141325e-12,
+                    "y": 1.7124332189559937,
+                    "z": -0.009536384604871273
+                },
+                "rotation": {
+                    "x": 0.014348119497299195,
+                    "y": -1.1764827689830781e-7,
+                    "z": -1.7222490100721189e-9,
+                    "w": 0.9998972415924072
+                }
+            },
+            "neck.x": {
+                "position": {
+                    "x": -2.615007169137762e-11,
+                    "y": 2.02923846244812,
+                    "z": -0.00044249126221984625
+                },
+                "rotation": {
+                    "x": -0.262800008058548,
+                    "y": -0.006489680148661137,
+                    "z": 0.0017676607239991427,
+                    "w": 0.9648271799087524
+                }
+            },
+            "head.x": {
+                "position": {
+                    "x": -4.985379886690566e-10,
+                    "y": 2.2370285987854006,
+                    "z": -0.12270999699831009
+                },
+                "rotation": {
+                    "x": -1.7881393432617188e-7,
+                    "y": 0.000034025237255264076,
+                    "z": -7.239577826112509e-10,
+                    "w": 1.000000238418579
+                }
+            },
+            "shoulder.l": {
+                "position": {
+                    "x": -0.09999630600214005,
+                    "y": 1.8158771991729737,
+                    "z": 0.06469962000846863
+                },
+                "rotation": {
+                    "x": -0.5515968203544617,
+                    "y": 0.4399079382419586,
+                    "z": 0.3753322660923004,
+                    "w": 0.6011224389076233
+                }
+            },
+            "arm_stretch.l": {
+                "position": {
+                    "x": -0.3035445511341095,
+                    "y": 1.850815773010254,
+                    "z": -0.027963414788246156
+                },
+                "rotation": {
+                    "x": -0.4849524199962616,
+                    "y": 0.46889814734458926,
+                    "z": 0.5271835923194885,
+                    "w": 0.5167529582977295
+                }
+            },
+            "arm_twist.l": {
+                "position": {
+                    "x": -0.3035445511341095,
+                    "y": 1.850815773010254,
+                    "z": -0.027963414788246156
+                },
+                "rotation": {
+                    "x": -0.4849521219730377,
+                    "y": 0.46889856457710268,
+                    "z": 0.5271836519241333,
+                    "w": 0.5167527794837952
+                }
+            },
+            "forearm_stretch.l": {
+                "position": {
+                    "x": -0.5881842374801636,
+                    "y": 1.8319734334945679,
+                    "z": -0.030932076275348665
+                },
+                "rotation": {
+                    "x": -0.4671206474304199,
+                    "y": 0.48975417017936709,
+                    "z": 0.5414682030677795,
+                    "w": 0.49875032901763918
+                }
+            },
+            "forearm_twist.l": {
+                "position": {
+                    "x": -0.7324185967445374,
+                    "y": 1.8267292976379395,
+                    "z": -0.02178104966878891
+                },
+                "rotation": {
+                    "x": -0.35842210054397585,
+                    "y": 0.37057796120643618,
+                    "z": 0.6317561864852905,
+                    "w": 0.5788701772689819
+                }
+            },
+            "hand.l": {
+                "position": {
+                    "x": -0.8766542077064514,
+                    "y": 1.8214857578277588,
+                    "z": -0.01262972503900528
+                },
+                "rotation": {
+                    "x": -0.3304312527179718,
+                    "y": 0.39555224776268008,
+                    "z": 0.6512190103530884,
+                    "w": 0.5570170879364014
+                }
+            },
+            "shoulder.r": {
+                "position": {
+                    "x": 0.099996417760849,
+                    "y": 1.8158769607543946,
+                    "z": 0.06469976902008057
+                },
+                "rotation": {
+                    "x": -0.5515929460525513,
+                    "y": -0.4399201571941376,
+                    "z": -0.37535926699638369,
+                    "w": 0.6011003255844116
+                }
+            },
+            "arm_stretch.r": {
+                "position": {
+                    "x": 0.3036092519760132,
+                    "y": 1.85080885887146,
+                    "z": -0.027957463636994363
+                },
+                "rotation": {
+                    "x": 0.484956830739975,
+                    "y": 0.468890905380249,
+                    "z": 0.5271919369697571,
+                    "w": -0.5167468786239624
+                }
+            },
+            "arm_twist.r": {
+                "position": {
+                    "x": 0.30360886454582217,
+                    "y": 1.85080885887146,
+                    "z": -0.027958208695054055
+                },
+                "rotation": {
+                    "x": 0.48495686054229739,
+                    "y": 0.4688907861709595,
+                    "z": 0.5271922945976257,
+                    "w": -0.5167465209960938
+                }
+            },
+            "forearm_stretch.r": {
+                "position": {
+                    "x": 0.5883248448371887,
+                    "y": 1.8319638967514039,
+                    "z": -0.03092612512409687
+                },
+                "rotation": {
+                    "x": 0.4671156704425812,
+                    "y": 0.48975542187690737,
+                    "z": 0.5414770841598511,
+                    "w": -0.49874427914619448
+                }
+            },
+            "forearm_twist.r": {
+                "position": {
+                    "x": 0.7325969934463501,
+                    "y": 1.8267184495925904,
+                    "z": -0.021769147366285325
+                },
+                "rotation": {
+                    "x": 0.35837167501449587,
+                    "y": 0.370547354221344,
+                    "z": 0.6317829489707947,
+                    "w": -0.5788911581039429
+                }
+            },
+            "hand.r": {
+                "position": {
+                    "x": 0.8768697381019592,
+                    "y": 1.8214720487594605,
+                    "z": -0.012612168677151204
+                },
+                "rotation": {
+                    "x": 0.3304377794265747,
+                    "y": 0.39554229378700259,
+                    "z": 0.6511893272399902,
+                    "w": -0.5570548176765442
+                }
+            },
+            "thigh_stretch.l": {
+                "position": {
+                    "x": -0.17096064984798432,
+                    "y": 1.0788317918777466,
+                    "z": -0.027724023908376695
+                },
+                "rotation": {
+                    "x": -0.68839430809021,
+                    "y": -0.05489322543144226,
+                    "z": 0.7228965759277344,
+                    "w": -0.022822678089141847
+                }
+            },
+            "leg_stretch.l": {
+                "position": {
+                    "x": -0.10888379067182541,
+                    "y": 0.5111179947853088,
+                    "z": -0.055134810507297519
+                },
+                "rotation": {
+                    "x": -0.6877952814102173,
+                    "y": -0.06816595792770386,
+                    "z": 0.7225803136825562,
+                    "w": -0.013011246919631958
+                }
+            },
+            "foot.l": {
+                "position": {
+                    "x": -0.06275515258312226,
+                    "y": 0.10529015213251114,
+                    "z": -0.08816848695278168
+                },
+                "rotation": {
+                    "x": 0.02880905382335186,
+                    "y": 0.5031136274337769,
+                    "z": 0.863034725189209,
+                    "w": -0.034903161227703097
+                }
+            },
+            "toes_01.l": {
+                "position": {
+                    "x": -0.05377320200204849,
+                    "y": 0.05583665519952774,
+                    "z": -0.000961224315688014
+                },
+                "rotation": {
+                    "x": -0.9316699504852295,
+                    "y": -0.0054575069807469849,
+                    "z": 0.013898655772209168,
+                    "w": -0.36299920082092287
+                }
+            },
+            "leg_twist.l": {
+                "position": {
+                    "x": -0.08581967651844025,
+                    "y": 0.3082056939601898,
+                    "z": -0.07165161520242691
+                },
+                "rotation": {
+                    "x": -0.6877949237823486,
+                    "y": -0.06816580891609192,
+                    "z": 0.7225805521011353,
+                    "w": -0.013011246919631958
+                }
+            },
+            "thigh_twist.l": {
+                "position": {
+                    "x": -0.1709606945514679,
+                    "y": 1.0788317918777466,
+                    "z": -0.027723949402570726
+                },
+                "rotation": {
+                    "x": -0.6883942484855652,
+                    "y": -0.05489325523376465,
+                    "z": 0.7228966355323792,
+                    "w": -0.02282273769378662
+                }
+            },
+            "thigh_stretch.r": {
+                "position": {
+                    "x": 0.17096072435379029,
+                    "y": 1.078831434249878,
+                    "z": -0.027723949402570726
+                },
+                "rotation": {
+                    "x": 0.6883940696716309,
+                    "y": -0.05488860607147217,
+                    "z": 0.7228971719741821,
+                    "w": 0.022817671298980714
+                }
+            },
+            "leg_stretch.r": {
+                "position": {
+                    "x": 0.10889178514480591,
+                    "y": 0.5111191272735596,
+                    "z": -0.055135179311037067
+                },
+                "rotation": {
+                    "x": 0.6877949237823486,
+                    "y": -0.06815916299819946,
+                    "z": 0.7225812077522278,
+                    "w": 0.013007551431655884
+                }
+            },
+            "foot.r": {
+                "position": {
+                    "x": 0.06276895105838776,
+                    "y": 0.1052909716963768,
+                    "z": -0.08816707134246826
+                },
+                "rotation": {
+                    "x": -0.028807813301682473,
+                    "y": 0.5031142234802246,
+                    "z": 0.8630343675613403,
+                    "w": 0.03490452840924263
+                }
+            },
+            "toes_01.r": {
+                "position": {
+                    "x": 0.0537869818508625,
+                    "y": 0.05583665519952774,
+                    "z": -0.0009596621384844184
+                },
+                "rotation": {
+                    "x": -0.9316698312759399,
+                    "y": 0.005459129344671965,
+                    "z": -0.013898301869630814,
+                    "w": -0.3629993200302124
+                }
+            },
+            "leg_twist.r": {
+                "position": {
+                    "x": 0.08583024144172669,
+                    "y": 0.30820539593696597,
+                    "z": -0.07165110111236572
+                },
+                "rotation": {
+                    "x": 0.6877954006195068,
+                    "y": -0.06815910339355469,
+                    "z": 0.7225807905197144,
+                    "w": 0.01300761103630066
+                }
+            },
+            "thigh_twist.r": {
+                "position": {
+                    "x": 0.17096076905727387,
+                    "y": 1.0788311958312989,
+                    "z": -0.027723874896764756
+                },
+                "rotation": {
+                    "x": 0.6883940696716309,
+                    "y": -0.05488866567611694,
+                    "z": 0.7228972315788269,
+                    "w": 0.02281758189201355
+                }
+            }
+        },
+        "tpose": {
+            "root": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.017691761255264283,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.7071068286895752,
+                    "y": -0.0,
+                    "z": -0.0,
+                    "w": 0.7071068286895752
+                }
+            },
+            "root.x": {
+                "position": {
+                    "x": -5.450974652936643e-15,
+                    "y": 0.8471118807792664,
+                    "z": -0.030313031747937204
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.000003532568598529906,
+                    "z": -0.0,
+                    "w": 1.0000001192092896
+                }
+            },
+            "spine_01.x": {
+                "position": {
+                    "x": -5.07861114273922e-11,
+                    "y": 1.1009424924850464,
+                    "z": -0.02302665263414383
+                },
+                "rotation": {
+                    "x": 0.014348149299621582,
+                    "y": 0.0033009541220963,
+                    "z": 0.000047367881052196029,
+                    "w": 0.9998917579650879
+                }
+            },
+            "spine_02.x": {
+                "position": {
+                    "x": -4.396822489427521e-11,
+                    "y": 1.3547732830047608,
+                    "z": -0.015740571543574334
+                },
+                "rotation": {
+                    "x": 0.014348119497299195,
+                    "y": -1.1811388844762405e-7,
+                    "z": -1.72224545735844e-9,
+                    "w": 0.9998972415924072
+                }
+            },
+            "neck.x": {
+                "position": {
+                    "x": -5.234580824353685e-11,
+                    "y": 1.6086056232452393,
+                    "z": -0.008454252034425736
+                },
+                "rotation": {
+                    "x": -0.2628001272678375,
+                    "y": -0.006489680148661137,
+                    "z": 0.0017676623538136483,
+                    "w": 0.9648271799087524
+                }
+            },
+            "head.x": {
+                "position": {
+                    "x": -1.9533823447659417e-9,
+                    "y": 1.7750940322875977,
+                    "z": -0.10641924291849137
+                },
+                "rotation": {
+                    "x": -5.960464477539063e-8,
+                    "y": 0.00003402430593268946,
+                    "z": 1.3496901374310256e-9,
+                    "w": 1.0000004768371583
+                }
+            },
+            "shoulder.l": {
+                "position": {
+                    "x": -0.08012032508850098,
+                    "y": 1.4376555681228638,
+                    "z": 0.04373997077345848
+                },
+                "rotation": {
+                    "x": -0.5361295938491821,
+                    "y": 0.4630157947540283,
+                    "z": 0.39586883783340456,
+                    "w": 0.5843542814254761
+                }
+            },
+            "arm_stretch.l": {
+                "position": {
+                    "x": -0.3202413022518158,
+                    "y": 1.4656221866607667,
+                    "z": -0.021350154653191568
+                },
+                "rotation": {
+                    "x": -0.48789939284324648,
+                    "y": 0.46279025077819826,
+                    "z": 0.535125195980072,
+                    "w": 0.5112934112548828
+                }
+            },
+            "arm_twist.l": {
+                "position": {
+                    "x": -0.3202413022518158,
+                    "y": 1.4656221866607667,
+                    "z": -0.021350154653191568
+                },
+                "rotation": {
+                    "x": -0.4878993332386017,
+                    "y": 0.46279028058052065,
+                    "z": 0.5351254343986511,
+                    "w": 0.5112931728363037
+                }
+            },
+            "forearm_stretch.l": {
+                "position": {
+                    "x": -0.6437195539474487,
+                    "y": 1.4498134851455689,
+                    "z": -0.02252214215695858
+                },
+                "rotation": {
+                    "x": -0.4701560139656067,
+                    "y": 0.4837219715118408,
+                    "z": 0.5404187440872192,
+                    "w": 0.5029061436653137
+                }
+            },
+            "forearm_twist.l": {
+                "position": {
+                    "x": -0.8068448901176453,
+                    "y": 1.445533275604248,
+                    "z": -0.014363538473844529
+                },
+                "rotation": {
+                    "x": -0.3518243730068207,
+                    "y": 0.3726591467857361,
+                    "z": 0.6239538788795471,
+                    "w": 0.589938223361969
+                }
+            },
+            "hand.l": {
+                "position": {
+                    "x": -0.9699695706367493,
+                    "y": 1.441253423690796,
+                    "z": -0.006204816047102213
+                },
+                "rotation": {
+                    "x": -0.3517847955226898,
+                    "y": 0.3726222813129425,
+                    "z": 0.6239761114120483,
+                    "w": 0.5899615287780762
+                }
+            },
+            "shoulder.r": {
+                "position": {
+                    "x": 0.08012031763792038,
+                    "y": 1.4376555681228638,
+                    "z": 0.04374008998274803
+                },
+                "rotation": {
+                    "x": -0.5361292958259583,
+                    "y": -0.463016152381897,
+                    "z": -0.39586853981018069,
+                    "w": 0.5843543410301209
+                }
+            },
+            "arm_stretch.r": {
+                "position": {
+                    "x": 0.32024168968200686,
+                    "y": 1.4656224250793458,
+                    "z": -0.021350035443902017
+                },
+                "rotation": {
+                    "x": -0.48789623379707339,
+                    "y": -0.46279239654541018,
+                    "z": -0.5351231694221497,
+                    "w": 0.511296272277832
+                }
+            },
+            "arm_twist.r": {
+                "position": {
+                    "x": 0.3202416002750397,
+                    "y": 1.4656221866607667,
+                    "z": -0.021350273862481118
+                },
+                "rotation": {
+                    "x": -0.4878961443901062,
+                    "y": -0.46279239654541018,
+                    "z": -0.5351232290267944,
+                    "w": 0.511296272277832
+                }
+            },
+            "forearm_stretch.r": {
+                "position": {
+                    "x": 0.6437196135520935,
+                    "y": 1.4498177766799927,
+                    "z": -0.02252190373837948
+                },
+                "rotation": {
+                    "x": -0.47015586495399477,
+                    "y": -0.4837203919887543,
+                    "z": -0.540415346622467,
+                    "w": 0.5029115676879883
+                }
+            },
+            "forearm_twist.r": {
+                "position": {
+                    "x": 0.8068457841873169,
+                    "y": 1.4455392360687256,
+                    "z": -0.014364730566740036
+                },
+                "rotation": {
+                    "x": -0.3517855703830719,
+                    "y": -0.3726195991039276,
+                    "z": -0.6239736080169678,
+                    "w": 0.5899654626846314
+                }
+            },
+            "hand.r": {
+                "position": {
+                    "x": 0.9699709415435791,
+                    "y": 1.4412596225738526,
+                    "z": -0.0062077962793409828
+                },
+                "rotation": {
+                    "x": -0.3517855405807495,
+                    "y": -0.37261962890625,
+                    "z": -0.62397301197052,
+                    "w": 0.5899659395217896
+                }
+            },
+            "thigh_stretch.l": {
+                "position": {
+                    "x": -0.13697920739650727,
+                    "y": 0.8471118807792664,
+                    "z": -0.030313031747937204
+                },
+                "rotation": {
+                    "x": -0.6862227916717529,
+                    "y": -0.03609555959701538,
+                    "z": 0.7264952659606934,
+                    "w": 0.0006504356861114502
+                }
+            },
+            "leg_stretch.l": {
+                "position": {
+                    "x": -0.11471801996231079,
+                    "y": 0.3901991546154022,
+                    "z": -0.05474795028567314
+                },
+                "rotation": {
+                    "x": -0.6859731674194336,
+                    "y": -0.049668967723846439,
+                    "z": 0.7258498072624207,
+                    "w": 0.01079222559928894
+                }
+            },
+            "foot.l": {
+                "position": {
+                    "x": -0.09748905152082443,
+                    "y": 0.06356976181268692,
+                    "z": -0.08328334987163544
+                },
+                "rotation": {
+                    "x": 0.02880905754864216,
+                    "y": 0.5031137466430664,
+                    "z": 0.863034725189209,
+                    "w": -0.03490334004163742
+                }
+            },
+            "toes_01.l": {
+                "position": {
+                    "x": -0.09029244631528855,
+                    "y": 0.023946883156895639,
+                    "z": -0.013410133309662342
+                },
+                "rotation": {
+                    "x": -0.9316701889038086,
+                    "y": -0.0054575009271502499,
+                    "z": 0.013898775912821293,
+                    "w": -0.3629991114139557
+                }
+            },
+            "leg_twist.l": {
+                "position": {
+                    "x": -0.10610362142324448,
+                    "y": 0.22688575088977815,
+                    "z": -0.06901567429304123
+                },
+                "rotation": {
+                    "x": -0.6859728097915649,
+                    "y": -0.04966893792152405,
+                    "z": 0.7258501052856445,
+                    "w": 0.010792165994644165
+                }
+            },
+            "thigh_twist.l": {
+                "position": {
+                    "x": -0.13697920739650727,
+                    "y": 0.8471118807792664,
+                    "z": -0.030313031747937204
+                },
+                "rotation": {
+                    "x": -0.6862226724624634,
+                    "y": -0.03609555959701538,
+                    "z": 0.7264953851699829,
+                    "w": 0.0006504356861114502
+                }
+            },
+            "thigh_stretch.r": {
+                "position": {
+                    "x": 0.13697920739650727,
+                    "y": 0.8471118807792664,
+                    "z": -0.030313031747937204
+                },
+                "rotation": {
+                    "x": 0.6862225532531738,
+                    "y": -0.03609725832939148,
+                    "z": 0.7264953851699829,
+                    "w": -0.0006486475467681885
+                }
+            },
+            "leg_stretch.r": {
+                "position": {
+                    "x": 0.11471569538116455,
+                    "y": 0.3901977837085724,
+                    "z": -0.05474795028567314
+                },
+                "rotation": {
+                    "x": 0.6859728097915649,
+                    "y": -0.04966720938682556,
+                    "z": 0.7258501052856445,
+                    "w": -0.010790437459945679
+                }
+            },
+            "foot.r": {
+                "position": {
+                    "x": 0.09748643636703491,
+                    "y": 0.06356874853372574,
+                    "z": -0.08328203856945038
+                },
+                "rotation": {
+                    "x": -0.028808141127228738,
+                    "y": 0.5031144022941589,
+                    "z": 0.863034188747406,
+                    "w": 0.03490464761853218
+                }
+            },
+            "toes_01.r": {
+                "position": {
+                    "x": 0.09028968960046768,
+                    "y": 0.023945512250065805,
+                    "z": -0.013408822007477284
+                },
+                "rotation": {
+                    "x": -0.9316698312759399,
+                    "y": 0.00545915961265564,
+                    "z": -0.013898331671953202,
+                    "w": -0.36299964785575869
+                }
+            },
+            "leg_twist.r": {
+                "position": {
+                    "x": 0.10610108822584152,
+                    "y": 0.22688330709934236,
+                    "z": -0.0690150186419487
+                },
+                "rotation": {
+                    "x": 0.6859728097915649,
+                    "y": -0.04966732859611511,
+                    "z": 0.7258503437042236,
+                    "w": -0.010790437459945679
+                }
+            },
+            "thigh_twist.r": {
+                "position": {
+                    "x": 0.13697920739650727,
+                    "y": 0.8471118807792664,
+                    "z": -0.030313031747937204
+                },
+                "rotation": {
+                    "x": 0.6862226128578186,
+                    "y": -0.03609734773635864,
+                    "z": 0.7264953255653381,
+                    "w": -0.0006486773490905762
+                }
+            }
+        }
+    },
+    "mapping": {
+        "min": {
+            "root": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Root": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "root.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.24524368345737458,
+                        "weightRotation": 1.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.20596587657928468,
+                        "weightRotation": 0.0
+                    },
+                    "LeftUpperLeg": {
+                        "weightPosition": 0.2218504548072815,
+                        "weightRotation": 0.0
+                    },
+                    "RightUpperLeg": {
+                        "weightPosition": 0.2218502014875412,
+                        "weightRotation": 0.0
+                    },
+                    "SpineMiddle": {
+                        "weightPosition": 0.10508981347084046,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "spine_01.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.0879480242729187,
+                        "weightRotation": 0.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.10126779973506928,
+                        "weightRotation": 0.11103294044733048
+                    },
+                    "SpineMiddle": {
+                        "weightPosition": 0.6751829981803894,
+                        "weightRotation": 0.740290105342865
+                    },
+                    "SpineUpper": {
+                        "weightPosition": 0.13560114800930024,
+                        "weightRotation": 0.1486770212650299
+                    }
+                }
+            },
+            "spine_02.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "SpineUpper": {
+                        "weightPosition": 0.12223294377326966,
+                        "weightRotation": 0.22078117728233338
+                    },
+                    "Chest": {
+                        "weightPosition": 0.43140551447868349,
+                        "weightRotation": 0.779218852519989
+                    },
+                    "Neck": {
+                        "weightPosition": 0.12289402633905411,
+                        "weightRotation": 0.0
+                    },
+                    "LeftShoulder": {
+                        "weightPosition": 0.16173139214515687,
+                        "weightRotation": 0.0
+                    },
+                    "RightShoulder": {
+                        "weightPosition": 0.16173610091209413,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "neck.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.11796494573354721,
+                        "weightRotation": 0.0
+                    },
+                    "Neck": {
+                        "weightPosition": 0.2790954113006592,
+                        "weightRotation": 1.0
+                    },
+                    "Head": {
+                        "weightPosition": 0.6029396653175354,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "shoulder.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.18880000710487367,
+                        "weightRotation": 0.0
+                    },
+                    "LeftShoulder": {
+                        "weightPosition": 0.45509761571884158,
+                        "weightRotation": 0.5610178112983704
+                    },
+                    "LeftScapula": {
+                        "weightPosition": 0.1822051703929901,
+                        "weightRotation": 0.22461192309856416
+                    },
+                    "LeftArmUpper": {
+                        "weightPosition": 0.1738971769809723,
+                        "weightRotation": 0.21437031030654908
+                    }
+                }
+            },
+            "arm_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftScapula": {
+                        "weightPosition": 0.4150066077709198,
+                        "weightRotation": 0.4150066077709198
+                    },
+                    "LeftArmUpper": {
+                        "weightPosition": 0.5849934220314026,
+                        "weightRotation": 0.5849934220314026
+                    }
+                }
+            },
+            "forearm_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftArmLower": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "hand.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "shoulder.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.18879911303520204,
+                        "weightRotation": 0.0
+                    },
+                    "RightShoulder": {
+                        "weightPosition": 0.4551035463809967,
+                        "weightRotation": 0.5610244870185852
+                    },
+                    "RightScapula": {
+                        "weightPosition": 0.1822015941143036,
+                        "weightRotation": 0.22460724413394929
+                    },
+                    "RightArmUpper": {
+                        "weightPosition": 0.1738957166671753,
+                        "weightRotation": 0.21436825394630433
+                    }
+                }
+            },
+            "arm_stretch.r": {
+                "source": {
+                    "behavior": "normal",
+                    "mappings": {
+                        "RightScapula": {
+                            "weightPosition": 0.41490575671195986,
+                            "weightRotation": 0.41490575671195986
+                        },
+                        "RightArmUpper": {
+                            "weightPosition": 0.5850942134857178,
+                            "weightRotation": 0.5850942134857178
+                        }
+                    }
+                },
+                "target": {
+                    "behavior": "childAlignedTwist",
+                    "mappings": {
+                        "forearm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.5
+                        },
+                        "arm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.5
+                        }
+                    }
+                }
+            },
+            "forearm_stretch.r": {
+                "source": {
+                    "behavior": "normal",
+                    "mappings": {
+                        "RightArmLower": {
+                            "weightPosition": 1.0,
+                            "weightRotation": 1.0
+                        }
+                    }
+                },
+                "target": {
+                    "behavior": "childAlignedTwist",
+                    "mappings": {
+                        "hand.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.75
+                        },
+                        "forearm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.25
+                        }
+                    }
+                }
+            },
+            "forearm_twist.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "hand.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "thigh_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.2626645863056183,
+                        "weightRotation": 0.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.2453186810016632,
+                        "weightRotation": 0.0
+                    },
+                    "LeftUpperLeg": {
+                        "weightPosition": 0.4920167326927185,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftLowerLeg": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "foot.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftFootAnkle": {
+                        "weightPosition": 0.5359523296356201,
+                        "weightRotation": 1.0
+                    },
+                    "LeftFootSubtalar": {
+                        "weightPosition": 0.21990810334682465,
+                        "weightRotation": 0.0
+                    },
+                    "LeftFootTransverse": {
+                        "weightPosition": 0.16143138706684113,
+                        "weightRotation": 0.0
+                    },
+                    "LeftFootBall": {
+                        "weightPosition": 0.08270814269781113,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "toes_01.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftFootSubtalar": {
+                        "weightPosition": 0.18757003545761109,
+                        "weightRotation": 0.18757003545761109
+                    },
+                    "LeftFootTransverse": {
+                        "weightPosition": 0.8124299645423889,
+                        "weightRotation": 0.8124299645423889
+                    }
+                }
+            },
+            "thigh_stretch.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.2626645565032959,
+                        "weightRotation": 0.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.24531866610050202,
+                        "weightRotation": 0.0
+                    },
+                    "RightUpperLeg": {
+                        "weightPosition": 0.4920167326927185,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_stretch.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightLowerLeg": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "foot.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightFootAnkle": {
+                        "weightPosition": 0.5359445810317993,
+                        "weightRotation": 1.0
+                    },
+                    "RightFootSubtalar": {
+                        "weightPosition": 0.2199098914861679,
+                        "weightRotation": 0.0
+                    },
+                    "RightFootTransverse": {
+                        "weightPosition": 0.16143517196178437,
+                        "weightRotation": 0.0
+                    },
+                    "RightFootBall": {
+                        "weightPosition": 0.08271033316850662,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "toes_01.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightFootSubtalar": {
+                        "weightPosition": 0.1875792294740677,
+                        "weightRotation": 0.1875792294740677
+                    },
+                    "RightFootTransverse": {
+                        "weightPosition": 0.8124207854270935,
+                        "weightRotation": 0.8124207854270935
+                    }
+                }
+            },
+            "arm_twist.l": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "arm_stretch.l": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_twist.l": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "leg_stretch.l": {
+                        "weightPosition": 0.5000039339065552,
+                        "weightRotation": 0.5000039339065552
+                    },
+                    "foot.l": {
+                        "weightPosition": 0.49999603629112246,
+                        "weightRotation": 0.49999603629112246
+                    }
+                }
+            },
+            "leg_twist.r": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "leg_stretch.r": {
+                        "weightPosition": 0.5000035166740418,
+                        "weightRotation": 0.5000035166740418
+                    },
+                    "foot.r": {
+                        "weightPosition": 0.49999648332595827,
+                        "weightRotation": 0.49999648332595827
+                    }
+                }
+            }
+        },
+        "max": {
+            "root": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Root": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "root.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.23205678164958955,
+                        "weightRotation": 1.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.20140530169010163,
+                        "weightRotation": 0.0
+                    },
+                    "LeftUpperLeg": {
+                        "weightPosition": 0.22677220404148103,
+                        "weightRotation": 0.0
+                    },
+                    "RightUpperLeg": {
+                        "weightPosition": 0.22677211463451386,
+                        "weightRotation": 0.0
+                    },
+                    "SpineMiddle": {
+                        "weightPosition": 0.11299356818199158,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "spine_01.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "SpineMiddle": {
+                        "weightPosition": 1.000000238418579,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "spine_02.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "SpineUpper": {
+                        "weightPosition": 0.13167744874954225,
+                        "weightRotation": 0.24029375612735749
+                    },
+                    "Chest": {
+                        "weightPosition": 0.41630789637565615,
+                        "weightRotation": 0.7597061991691589
+                    },
+                    "Neck": {
+                        "weightPosition": 0.1245499774813652,
+                        "weightRotation": 0.0
+                    },
+                    "LeftShoulder": {
+                        "weightPosition": 0.16372999548912049,
+                        "weightRotation": 0.0
+                    },
+                    "RightShoulder": {
+                        "weightPosition": 0.16373471915721894,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "neck.x": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.12230224162340164,
+                        "weightRotation": 0.0
+                    },
+                    "Neck": {
+                        "weightPosition": 0.27939409017562868,
+                        "weightRotation": 1.0
+                    },
+                    "Head": {
+                        "weightPosition": 0.5983037352561951,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "shoulder.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.18921992182731629,
+                        "weightRotation": 0.0
+                    },
+                    "LeftShoulder": {
+                        "weightPosition": 0.443340003490448,
+                        "weightRotation": 0.5468067526817322
+                    },
+                    "LeftScapula": {
+                        "weightPosition": 0.1875099390745163,
+                        "weightRotation": 0.23127104341983796
+                    },
+                    "LeftArmUpper": {
+                        "weightPosition": 0.17993006110191346,
+                        "weightRotation": 0.22192217409610749
+                    }
+                }
+            },
+            "arm_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftScapula": {
+                        "weightPosition": 0.4226752519607544,
+                        "weightRotation": 0.4226752519607544
+                    },
+                    "LeftArmUpper": {
+                        "weightPosition": 0.5773247480392456,
+                        "weightRotation": 0.5773247480392456
+                    }
+                }
+            },
+            "forearm_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftArmLower": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "hand.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "shoulder.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Chest": {
+                        "weightPosition": 0.18921871483325959,
+                        "weightRotation": 0.0
+                    },
+                    "RightShoulder": {
+                        "weightPosition": 0.44334539771080019,
+                        "weightRotation": 0.5468125939369202
+                    },
+                    "RightScapula": {
+                        "weightPosition": 0.18750698864459992,
+                        "weightRotation": 0.2312670350074768
+                    },
+                    "RightArmUpper": {
+                        "weightPosition": 0.1799289584159851,
+                        "weightRotation": 0.22192047536373139
+                    }
+                }
+            },
+            "arm_stretch.r": {
+                "source": {
+                    "behavior": "normal",
+                    "mappings": {
+                        "RightScapula": {
+                            "weightPosition": 0.4227229356765747,
+                            "weightRotation": 0.4227229356765747
+                        },
+                        "RightArmUpper": {
+                            "weightPosition": 0.5772770047187805,
+                            "weightRotation": 0.5772770047187805
+                        }
+                    }
+                },
+                "target": {
+                    "behavior": "childAlignedTwist",
+                    "mappings": {
+                        "forearm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.5
+                        },
+                        "arm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.5
+                        }
+                    }
+                }
+            },
+            "forearm_stretch.r": {
+                "source": {
+                    "behavior": "normal",
+                    "mappings": {
+                        "RightArmLower": {
+                            "weightPosition": 1.0,
+                            "weightRotation": 1.0
+                        }
+                    }
+                },
+                "target": {
+                    "behavior": "childAlignedTwist",
+                    "mappings": {
+                        "hand.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.75
+                        },
+                        "forearm_stretch.r": {
+                            "weightPosition": 0.0,
+                            "weightRotation": 0.25
+                        }
+                    }
+                }
+            },
+            "forearm_twist.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "hand.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightHandWrist": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "thigh_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.2795715630054474,
+                        "weightRotation": 0.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.26123306155204775,
+                        "weightRotation": 0.0
+                    },
+                    "LeftUpperLeg": {
+                        "weightPosition": 0.4591953754425049,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_stretch.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftLowerLeg": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "foot.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftFootAnkle": {
+                        "weightPosition": 0.49673566222190859,
+                        "weightRotation": 1.0
+                    },
+                    "LeftFootSubtalar": {
+                        "weightPosition": 0.23081202805042268,
+                        "weightRotation": 0.0
+                    },
+                    "LeftFootTransverse": {
+                        "weightPosition": 0.17869529128074647,
+                        "weightRotation": 0.0
+                    },
+                    "LeftFootBall": {
+                        "weightPosition": 0.09375707060098648,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "toes_01.l": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "LeftFootAnkle": {
+                        "weightPosition": 0.14870035648345948,
+                        "weightRotation": 0.0
+                    },
+                    "LeftFootSubtalar": {
+                        "weightPosition": 0.1512002795934677,
+                        "weightRotation": 0.1776111125946045
+                    },
+                    "LeftFootTransverse": {
+                        "weightPosition": 0.5662900805473328,
+                        "weightRotation": 0.6652064919471741
+                    },
+                    "LeftFootBall": {
+                        "weightPosition": 0.13380931317806245,
+                        "weightRotation": 0.15718238055706025
+                    }
+                }
+            },
+            "thigh_stretch.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "Hips": {
+                        "weightPosition": 0.27957165241241457,
+                        "weightRotation": 0.0
+                    },
+                    "SpineLower": {
+                        "weightPosition": 0.2612331509590149,
+                        "weightRotation": 0.0
+                    },
+                    "RightUpperLeg": {
+                        "weightPosition": 0.45919516682624819,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_stretch.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightLowerLeg": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "foot.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightFootAnkle": {
+                        "weightPosition": 0.4958602488040924,
+                        "weightRotation": 1.0
+                    },
+                    "RightFootSubtalar": {
+                        "weightPosition": 0.23103167116641999,
+                        "weightRotation": 0.0
+                    },
+                    "RightFootTransverse": {
+                        "weightPosition": 0.17908670008182527,
+                        "weightRotation": 0.0
+                    },
+                    "RightFootBall": {
+                        "weightPosition": 0.09402143210172653,
+                        "weightRotation": 0.0
+                    }
+                }
+            },
+            "toes_01.r": {
+                "type": "source",
+                "behavior": "normal",
+                "mappings": {
+                    "RightFootAnkle": {
+                        "weightPosition": 0.14924509823322297,
+                        "weightRotation": 0.0
+                    },
+                    "RightFootSubtalar": {
+                        "weightPosition": 0.15160153806209565,
+                        "weightRotation": 0.1781964898109436
+                    },
+                    "RightFootTransverse": {
+                        "weightPosition": 0.5649970769882202,
+                        "weightRotation": 0.6641126275062561
+                    },
+                    "RightFootBall": {
+                        "weightPosition": 0.13415628671646119,
+                        "weightRotation": 0.1576908826828003
+                    }
+                }
+            },
+            "arm_twist.l": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "arm_stretch.l": {
+                        "weightPosition": 1.0,
+                        "weightRotation": 1.0
+                    }
+                }
+            },
+            "leg_twist.l": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "leg_stretch.l": {
+                        "weightPosition": 0.500003457069397,
+                        "weightRotation": 0.500003457069397
+                    },
+                    "foot.l": {
+                        "weightPosition": 0.49999651312828066,
+                        "weightRotation": 0.49999651312828066
+                    }
+                }
+            },
+            "leg_twist.r": {
+                "type": "target",
+                "behavior": "twist",
+                "mappings": {
+                    "leg_stretch.r": {
+                        "weightPosition": 0.5000007748603821,
+                        "weightRotation": 0.5000007748603821
+                    },
+                    "foot.r": {
+                        "weightPosition": 0.4999992251396179,
+                        "weightRotation": 0.4999992251396179
+                    }
+                }
+            }
+        }
+    }
+}
