@@ -17,8 +17,8 @@ public class CRAvatarAnimation : MonoBehaviour
     void Start()
     {
         _smr = _headObj.GetComponent<SkinnedMeshRenderer>();
-        _index = _smr.sharedMesh.GetBlendShapeIndex("キー 1"); //全角カタカナで「キー」，半角スペース，半角数字で1
-        if (_index < 0) Debug.LogError("ブレンドシェイプ 'キー 1' が見つかりません");
+        _index = _smr.sharedMesh.GetBlendShapeIndex("Cut off");
+        if (_index < 0) Debug.LogError("ブレンドシェイプが見つかりません");
     }
 
     void Update()
