@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CRCamraMove : MonoBehaviour
 {
-    [SerializeField] CRAnimationSyncronizer syncronizer;
+    [SerializeField] CRAnimationSyncronizer _syncronizer;
 
     [SerializeField] [Range(0f, 100f)] float _percent = 0f;
     [SerializeField] AnimationCurve _curve = AnimationCurve.Linear(0, 0, 1, 1);
@@ -23,7 +23,7 @@ public class CRCamraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _percent = syncronizer.percent;
+        _percent = _syncronizer.percent;
         // 0〜1に正規化
         float t = _percent / 100f;
         t = Mathf.Clamp01(_curve.Evaluate(t));
