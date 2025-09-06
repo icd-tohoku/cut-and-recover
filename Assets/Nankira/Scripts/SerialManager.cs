@@ -1,0 +1,277 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SerialManager : MonoBehaviour
+{
+    [Header("Port Settings")]
+    [Tooltip("List of port names to connect to")]
+    [SerializeField] private string[] portNames = { "COM3", "COM4", "COM5" };
+
+    [Header("Serial Settings")]
+    [Tooltip("Baud rate for all serial connections")]
+    [SerializeField] private int baudRate = 9600;
+
+    [Header("Transmission Settings")]
+    [SerializeField] private float _transmissionSpan = 0.1f;
+
+    // 動的に生成されたSerialHandlerを管理
+    private Dictionary<string, SerialHandler> serialHandlers = new Dictionary<string, SerialHandler>();
+
+    private string receivedData;
+    private Dictionary<string, string> sendData = new Dictionary<string, string>();
+    
+    // 圧力センサデータを管理
+    private Dictionary<string, float> pressureData = new Dictionary<string, float>();
+    
+    private bool isSendable = true;
+    private float time;
+
+    // 圧力データ更新イベント
+    public delegate void PressureDataUpdatedEventHandler(string portName, float pressure);
+    public event PressureDataUpdatedEventHandler OnPressureDataUpdated;
+
+    void Start()
+    {
+        // 設定されたポート名を使用してSerialHandlerを動的に生成
+        CreateSerialHandlers();
+    }
+
+    // 設定されたポート名を使用してSerialHandlerを動的に生成
+    private void CreateSerialHandlers()
+    {
+        foreach (string portName in portNames)
+        {
+            if (string.IsNullOrEmpty(portName))
+            {
+                Debug.LogWarning("Empty port name found in settings!");
+                continue;
+            }
+
+            CreateSingleSerialHandler(portName);
+        }
+    }
+
+    private void CreateSingleSerialHandler(string portName)
+    {
+        if (serialHandlers.ContainsKey(portName))
+        {
+            Debug.LogWarning($"Port '{portName}' is already registered!");
+            return;
+        }
+
+        // 新しいGameObjectを作成してSerialHandlerを追加
+        GameObject handlerObject = new GameObject($"SerialHandler_{portName}");
+        handlerObject.transform.SetParent(this.transform);
+
+        SerialHandler serialHandler = handlerObject.AddComponent<SerialHandler>();
+        
+        // SerialHandlerを初期化
+        serialHandler.SetPortName(portName);
+        serialHandler.SetBaudRate(baudRate);
+        serialHandler.OnDataReceived += OnDataReceived;
+        serialHandler.OnPressureDataReceived += (pressure) => OnPressureDataReceived(portName, pressure);
+        
+        // 辞書に追加
+        serialHandlers[portName] = serialHandler;
+        
+        // sendDataとpressureDataにも追加
+        if (!sendData.ContainsKey(portName))
+        {
+            sendData[portName] = "S;";
+        }
+        if (!pressureData.ContainsKey(portName))
+        {
+            pressureData[portName] = 0.0f;
+        }
+
+        // ポートを開く
+        serialHandler.OpenPort();
+        
+        Debug.Log($"Created SerialHandler for port: {portName}");
+    }
+
+    void OnDataReceived(string message)
+    {
+        receivedData = message;
+        Debug.Log($"受信データ: {message}");
+    }
+
+    void OnPressureDataReceived(string portName, float pressure)
+    {
+        pressureData[portName] = pressure;
+        OnPressureDataUpdated?.Invoke(portName, pressure);
+        // Debug.Log($"[{portName}] 圧力データ更新: {pressure:F3} units");
+    }
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+
+        // デフォルト値の設定（停止コマンド）
+        foreach (var portName in serialHandlers.Keys)
+        {
+            if (!sendData.ContainsKey(portName))
+            {
+                sendData[portName] = "S;";
+            }
+        }
+
+        // 定期的なコマンド送信
+        if (time > _transmissionSpan)
+        {
+            TransmitCommands();
+            time = 0;
+        }
+    }
+
+    private void TransmitCommands()
+    {
+        foreach (var kvp in sendData)
+        {
+            string portName = kvp.Key;
+            string command = kvp.Value;
+            
+            if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
+            {
+                serialHandler.Write(command);
+                // Debug.Log($"sendData[{portName}]: {command}");
+            }
+            else
+            {
+                Debug.LogWarning($"ポート '{portName}' に対応するSerialHandlerが見つかりませんでした。");
+            }
+        }
+
+        // 送信後、全てのコマンドを停止コマンドにリセット
+        var keys = sendData.Keys.ToList();
+        foreach (var key in keys)
+        {
+            sendData[key] = "S;";
+        }
+    }
+
+    // 外部から呼び出されるコマンド送信メソッド群
+    public void SendCommandToAllPorts(string command)
+    {
+        if (isSendable)
+        {
+            foreach (var key in sendData.Keys.ToList())
+            {
+                sendData[key] = command;
+            }
+            Debug.Log($"All ports Command: {command}");
+        }
+    }
+
+    public void SendCommandToSpecificPort(string portName, string command)
+    {
+        if (isSendable && serialHandlers.ContainsKey(portName))
+        {
+            sendData[portName] = command;
+            Debug.Log($"[{portName}] Command: {command}");
+        }
+        else
+        {
+            Debug.LogWarning($"Port '{portName}' not found or not sendable.");
+        }
+    }
+
+    // 圧力データ取得メソッド
+    public float GetPressureData(string portName)
+    {
+        if (pressureData.TryGetValue(portName, out float pressure))
+        {
+            return pressure;
+        }
+        return 0.0f;
+    }
+
+    public Dictionary<string, float> GetAllPressureData()
+    {
+        return new Dictionary<string, float>(pressureData);
+    }
+
+    // ランタイムで新しいSerialHandlerを追加する場合のメソッド
+    public void AddSerialHandler(string portName)
+    {
+        CreateSingleSerialHandler(portName);
+    }
+
+    // SerialHandlerを削除する場合のメソッド
+    public void RemoveSerialHandler(string portName)
+    {
+        if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
+        {
+            serialHandler.OnDataReceived -= OnDataReceived;
+            
+            // GameObjectを破棄
+            if (serialHandler != null && serialHandler.gameObject != null)
+            {
+                DestroyImmediate(serialHandler.gameObject);
+            }
+            
+            serialHandlers.Remove(portName);
+            sendData.Remove(portName);
+            pressureData.Remove(portName);
+            Debug.Log($"Removed SerialHandler for port: {portName}");
+        }
+    }
+
+    // 利用可能なポート一覧を取得
+    public List<string> GetAvailablePorts()
+    {
+        return new List<string>(serialHandlers.Keys);
+    }
+
+    // 特定のポートのSerialHandlerを取得
+    public SerialHandler GetSerialHandler(string portName)
+    {
+        serialHandlers.TryGetValue(portName, out SerialHandler handler);
+        return handler;
+    }
+
+    // 送信可能状態を設定/取得
+    public bool IsSendable
+    {
+        get => isSendable;
+        set => isSendable = value;
+    }
+
+    // Inspectorで設定されたポート名一覧を取得
+    public string[] GetConfiguredPortNames()
+    {
+        return (string[])portNames.Clone();
+    }
+
+    // ランタイムでポート名一覧を更新
+    public void UpdatePortNames(string[] newPortNames)
+    {
+        // 現在のハンドラーを全て削除
+        var currentPorts = new List<string>(serialHandlers.Keys);
+        foreach (string port in currentPorts)
+        {
+            RemoveSerialHandler(port);
+        }
+
+        // 新しいポート名を設定
+        portNames = (string[])newPortNames.Clone();
+        
+        // 新しいハンドラーを作成
+        CreateSerialHandlers();
+    }
+
+    void OnDestroy()
+    {
+        // 全てのSerialHandlerを適切に終了
+        foreach (var kvp in serialHandlers)
+        {
+            if (kvp.Value != null)
+            {
+                kvp.Value.OnDataReceived -= OnDataReceived;
+            }
+        }
+    }
+}
