@@ -2635,11 +2635,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09894204
+      value: 0.181
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.456
+      value: 2.558
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2669,13 +2669,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5482761652540059802, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -778611468251357502, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
       propertyPath: m_Name
       value: Nankira_@Sitting Idle_Ver001
       objectReference: {fileID: 0}
+    - target: {fileID: 1726344752564138694, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3537172756073253907, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[0]'
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052196607835650671, guid: 194a4c5f27a2f6a4c9ba4dec3311909b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4959,6 +4975,8 @@ PlayableDirector:
     value: {fileID: 1209636214}
   - key: {fileID: -6302672079406452762, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
     value: {fileID: 941435077}
+  - key: {fileID: 8036057274969367782, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 1890415675}
   m_ExposedReferences:
     m_References:
     - 4251fe8dfbc67c34592058118502b63f: {fileID: 2046990610}
@@ -5328,7 +5346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7993765477841990355, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.528
+      value: 1.743
       objectReference: {fileID: 0}
     - target: {fileID: 7993765477841990355, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11374,6 +11392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890415673}
   - component: {fileID: 1890415674}
+  - component: {fileID: 1890415675}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -11410,6 +11429,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _atomsource: {fileID: 1163865455}
   _syncronizer: {fileID: 2046990612}
+--- !u!114 &1890415675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890415672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
+    - {fileID: 0}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1890415674}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: CutSoundEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &1894302674
 PrefabInstance:
   m_ObjectHideFlags: 0

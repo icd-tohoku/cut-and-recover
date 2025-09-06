@@ -12,7 +12,7 @@ public class ProcessManager : MonoBehaviour
         Recover,
         End
     }
-    public GameState gameState;
+    public static GameState gameState;
 
     [SerializeField] PlayableDirector _cutTimeline;
 
