@@ -1,17 +1,20 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO.Ports;
 using System.Threading;
 using System.Text;
+using System.Globalization;
+using System.Linq;
 
 public class SerialHandler : MonoBehaviour
 {
     public delegate void SerialDataReceivedEventHandler(string message);
     public event SerialDataReceivedEventHandler OnDataReceived;
 
-    // 圧力データを受信するためのイベント
-    public delegate void PressureDataReceivedEventHandler(float pressure);
-    public event PressureDataReceivedEventHandler OnPressureDataReceived;
+    // 複数の圧力データを受信するためのイベント
+    public delegate void MultiplePressureDataReceivedEventHandler(Dictionary<int, float> sensorData);
+    public event MultiplePressureDataReceivedEventHandler OnMultiplePressureDataReceived;
 
     // portNameはprivateにして、外部から設定可能にする
     private string portName;
@@ -24,9 +27,9 @@ public class SerialHandler : MonoBehaviour
     private string message_;
     private bool isNewMessageReceived_ = false;
     
-    // 圧力データ用
-    private float pressureData_;
-    private bool isNewPressureDataReceived_ = false;
+    // 複数の圧力センサーデータ用
+    private Dictionary<int, float> currentSensorData_;
+    private bool isNewSensorDataReceived_ = false;
 
     private string readline;
     private StringBuilder dataBuffer = new StringBuilder();
@@ -48,6 +51,8 @@ public class SerialHandler : MonoBehaviour
 
     void Awake()
     {
+        currentSensorData_ = new Dictionary<int, float>();
+        
         // portNameが設定されていない場合は、Openを遅延させる
         if (!string.IsNullOrEmpty(portName))
         {
@@ -72,10 +77,10 @@ public class SerialHandler : MonoBehaviour
             isNewMessageReceived_ = false;
         }
 
-        if (isNewPressureDataReceived_)
+        if (isNewSensorDataReceived_)
         {
-            OnPressureDataReceived?.Invoke(pressureData_);
-            isNewPressureDataReceived_ = false;
+            OnMultiplePressureDataReceived?.Invoke(new Dictionary<int, float>(currentSensorData_));
+            isNewSensorDataReceived_ = false;
         }
     }
 
@@ -116,7 +121,7 @@ public class SerialHandler : MonoBehaviour
     {
         Write("S;");
         isNewMessageReceived_ = false;
-        isNewPressureDataReceived_ = false;
+        isNewSensorDataReceived_ = false;
         isRunning_ = false;
 
         if (thread_ != null && thread_.IsAlive)
@@ -175,20 +180,69 @@ public class SerialHandler : MonoBehaviour
 
     private void ProcessReceivedData(string data)
     {
-        // 受信したデータが数値（圧力値）かどうかを判定
-        if (float.TryParse(data, out float pressureValue))
+        // カンマ区切りのデータかどうかを判定
+        if (data.Contains(","))
         {
-            // 圧力データとして処理
-            pressureData_ = pressureValue;
-            isNewPressureDataReceived_ = true;
-            // Debug.Log($"[{portName}] Pressure: {pressureValue:F3} units");
+            // カンマ区切りの圧力センサーデータとして処理
+            ProcessMultiplePressureData(data);
         }
         else
         {
-            // 通常のメッセージとして処理
-            message_ = data;
-            isNewMessageReceived_ = true;
-            Debug.Log($"[{portName}] Message: {data}");
+            // 単一データとして処理（数値かメッセージか判定）
+            if (float.TryParse(data, NumberStyles.Float, CultureInfo.InvariantCulture, out float singleValue))
+            {
+                // 単一の圧力値として処理（センサーインデックス0として扱う）
+                var sensorData = new Dictionary<int, float> { { 0, singleValue } };
+                currentSensorData_ = sensorData;
+                isNewSensorDataReceived_ = true;
+                // Debug.Log($"[{portName}] Single Pressure: {singleValue:F3} units");
+            }
+            else
+            {
+                // 通常のメッセージとして処理
+                message_ = data;
+                isNewMessageReceived_ = true;
+                Debug.Log($"[{portName}] Message: {data}");
+            }
+        }
+    }
+
+    private void ProcessMultiplePressureData(string data)
+    {
+        try
+        {
+            string[] values = data.Split(',');
+            var sensorData = new Dictionary<int, float>();
+            bool hasValidData = false;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                string trimmedValue = values[i].Trim();
+                if (float.TryParse(trimmedValue, NumberStyles.Float, CultureInfo.InvariantCulture, out float pressure))
+                {
+                    sensorData[i] = pressure;
+                    hasValidData = true;
+                }
+                else
+                {
+                    Debug.LogWarning($"[{portName}] Invalid sensor data at index {i}: '{trimmedValue}'");
+                    sensorData[i] = 0.0f; // デフォルト値を設定
+                }
+            }
+
+            if (hasValidData)
+            {
+                currentSensorData_ = sensorData;
+                isNewSensorDataReceived_ = true;
+                
+                // Debug用ログ（コメントアウト可能）
+                var sensorInfo = string.Join(", ", sensorData.Select(kvp => $"S{kvp.Key}={kvp.Value:F3}"));
+                Debug.Log($"[{portName}] Multi Pressure: {sensorInfo}");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[{portName}] Error processing multiple pressure data '{data}': {e.Message}");
         }
     }
 
@@ -207,10 +261,32 @@ public class SerialHandler : MonoBehaviour
         }
     }
 
-    // 現在の圧力値を取得するメソッド
-    public float GetCurrentPressure()
+    // 現在の全センサーデータを取得するメソッド
+    public Dictionary<int, float> GetCurrentSensorData()
     {
-        return pressureData_;
+        return new Dictionary<int, float>(currentSensorData_);
+    }
+
+    // 特定のセンサーの現在値を取得するメソッド
+    public float GetCurrentPressure(int sensorIndex = 0)
+    {
+        if (currentSensorData_.TryGetValue(sensorIndex, out float pressure))
+        {
+            return pressure;
+        }
+        return 0.0f;
+    }
+
+    // 接続されているセンサー数を取得
+    public int GetSensorCount()
+    {
+        return currentSensorData_.Count;
+    }
+
+    // 利用可能なセンサーインデックスを取得
+    public List<int> GetAvailableSensorIndices()
+    {
+        return new List<int>(currentSensorData_.Keys);
     }
 
     // 接続状態を確認するプロパティ
@@ -219,6 +295,6 @@ public class SerialHandler : MonoBehaviour
         get { return serialPort_ != null && serialPort_.IsOpen && isRunning_; }
     }
 
-    // 最後に受信した圧力データの時刻を取得するプロパティ（デバッグ用）
-    public float LastPressureData => pressureData_;
+    // 最後に受信したセンサーデータを取得するプロパティ（デバッグ用）
+    public Dictionary<int, float> LastSensorData => new Dictionary<int, float>(currentSensorData_);
 }
