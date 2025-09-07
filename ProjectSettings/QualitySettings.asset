@@ -267,7 +267,7 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms: []
   - serializedVersion: 4
-    name: Ultra
+    name: High
     pixelLightCount: 1
     shadows: 2
     shadowResolution: 2
@@ -278,7 +278,7 @@ QualitySettings:
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
     shadowmaskMode: 1
-    skinWeights: 4
+    skinWeights: 2
     globalTextureMipmapLimit: 0
     textureMipmapLimitSettings: []
     anisotropicTextures: 1
@@ -328,8 +328,10 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     PS5: 5
+    Server: 0
     Stadia: 5
     Standalone: 5
+    VisionOS: 0
     WebGL: 3
     Windows Store Apps: 5
     XboxOne: 5
