@@ -301,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: -203655887218126122, guid: 6d429dd06ab671e41a217a26336d5c37, type: 3}
-  m_Position: {x: 0, y: 0, z: 1.111}
+  m_Clip: {fileID: -203655887218126122, guid: 906501798540fcb44a7beb49b5f367d0, type: 3}
+  m_Position: {x: 0, y: 0, z: 2.5}
   m_EulerAngles: {x: 0, y: 180, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
@@ -323,9 +323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: -203655887218126122, guid: c7c089cf1c0d53441b5d96e61ae4efb3, type: 3}
-  m_Position: {x: 0, y: 0, z: 1.111}
-  m_EulerAngles: {x: 0, y: 180, z: 0}
+  m_Clip: {fileID: -203655887218126122, guid: 726fcb1aee87366478b6c7e211d9479a, type: 3}
+  m_Position: {x: -0.000000042922867, y: -3.9652254e-11, z: 2.4999995}
+  m_EulerAngles: {x: 0.013, y: 188.688, z: 0.015}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
   m_RemoveStartOffset: 1
@@ -371,6 +371,22 @@ MonoBehaviour:
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
   m_Time: 2.8333333333333317
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
+--- !u!114 &-2537961496959965700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 2.8333333333333335
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
@@ -463,8 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: -203655887218126122, guid: 6d429dd06ab671e41a217a26336d5c37, type: 3}
-  m_Position: {x: 0, y: 0, z: 1.111}
+  m_Clip: {fileID: -203655887218126122, guid: 906501798540fcb44a7beb49b5f367d0, type: 3}
+  m_Position: {x: 0, y: 0, z: 2.5}
   m_EulerAngles: {x: 0, y: 180, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
@@ -497,6 +513,31 @@ MonoBehaviour:
   - {fileID: -6302672079406452762}
   - {fileID: -2960764811794854109}
   - {fileID: 2952272788828814289}
+  - {fileID: 8036057274969367782}
   m_Clips: []
   m_Markers:
     m_Objects: []
+--- !u!114 &8036057274969367782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46e36075dd1c124a8422c228e75e1fb, type: 3}
+  m_Name: Signal Track (2)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7106766826883833514}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects:
+    - {fileID: -2537961496959965700}
