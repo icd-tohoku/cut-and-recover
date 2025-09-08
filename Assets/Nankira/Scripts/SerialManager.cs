@@ -23,15 +23,19 @@ public class SerialManager : MonoBehaviour
     private string receivedData;
     private Dictionary<string, string> sendData = new Dictionary<string, string>();
     
-    // 圧力センサデータを管理
-    private Dictionary<string, float> pressureData = new Dictionary<string, float>();
+    // 複数の圧力センサデータを管理（ポート名 -> センサーインデックス -> 圧力値）
+    private Dictionary<string, Dictionary<int, float>> pressureData = new Dictionary<string, Dictionary<int, float>>();
     
     private bool isSendable = true;
     private float time;
 
-    // 圧力データ更新イベント
-    public delegate void PressureDataUpdatedEventHandler(string portName, float pressure);
+    // 圧力データ更新イベント（複数センサー対応）
+    public delegate void PressureDataUpdatedEventHandler(string portName, Dictionary<int, float> sensorData);
     public event PressureDataUpdatedEventHandler OnPressureDataUpdated;
+
+    // 単一センサーデータ更新イベント（個別通知用）
+    public delegate void SinglePressureDataUpdatedEventHandler(string portName, int sensorIndex, float pressure);
+    public event SinglePressureDataUpdatedEventHandler OnSinglePressureDataUpdated;
 
     void Start()
     {
@@ -72,7 +76,7 @@ public class SerialManager : MonoBehaviour
         serialHandler.SetPortName(portName);
         serialHandler.SetBaudRate(baudRate);
         serialHandler.OnDataReceived += OnDataReceived;
-        serialHandler.OnPressureDataReceived += (pressure) => OnPressureDataReceived(portName, pressure);
+        serialHandler.OnMultiplePressureDataReceived += (sensorData) => OnMultiplePressureDataReceived(portName, sensorData);
         
         // 辞書に追加
         serialHandlers[portName] = serialHandler;
@@ -84,7 +88,7 @@ public class SerialManager : MonoBehaviour
         }
         if (!pressureData.ContainsKey(portName))
         {
-            pressureData[portName] = 0.0f;
+            pressureData[portName] = new Dictionary<int, float>();
         }
 
         // ポートを開く
@@ -99,11 +103,29 @@ public class SerialManager : MonoBehaviour
         Debug.Log($"受信データ: {message}");
     }
 
-    void OnPressureDataReceived(string portName, float pressure)
+    void OnMultiplePressureDataReceived(string portName, Dictionary<int, float> sensorData)
     {
-        pressureData[portName] = pressure;
-        OnPressureDataUpdated?.Invoke(portName, pressure);
-        // Debug.Log($"[{portName}] 圧力データ更新: {pressure:F3} units");
+        if (!pressureData.ContainsKey(portName))
+        {
+            pressureData[portName] = new Dictionary<int, float>();
+        }
+
+        // 受信したセンサーデータを更新
+        foreach (var kvp in sensorData)
+        {
+            int sensorIndex = kvp.Key;
+            float pressure = kvp.Value;
+            
+            pressureData[portName][sensorIndex] = pressure;
+            
+            // 個別センサーの更新イベントを発火
+            OnSinglePressureDataUpdated?.Invoke(portName, sensorIndex, pressure);
+        }
+        
+        // 全体の更新イベントを発火
+        OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(pressureData[portName]));
+        
+        // Debug.Log($"[{portName}] 圧力データ更新: {string.Join(", ", sensorData.Select(kvp => $"Sensor{kvp.Key}={kvp.Value:F3}"))}");
     }
 
     private void Update()
@@ -179,19 +201,48 @@ public class SerialManager : MonoBehaviour
         }
     }
 
-    // 圧力データ取得メソッド
-    public float GetPressureData(string portName)
+    // 圧力データ取得メソッド（複数センサー対応）
+    public Dictionary<int, float> GetPressureData(string portName)
     {
-        if (pressureData.TryGetValue(portName, out float pressure))
+        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
         {
-            return pressure;
+            return new Dictionary<int, float>(sensorData);
+        }
+        return new Dictionary<int, float>();
+    }
+
+    // 特定のセンサーの圧力データを取得
+    public float GetPressureData(string portName, int sensorIndex)
+    {
+        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
+        {
+            if (sensorData.TryGetValue(sensorIndex, out float pressure))
+            {
+                return pressure;
+            }
         }
         return 0.0f;
     }
 
-    public Dictionary<string, float> GetAllPressureData()
+    // 全ポートの全センサーデータを取得
+    public Dictionary<string, Dictionary<int, float>> GetAllPressureData()
     {
-        return new Dictionary<string, float>(pressureData);
+        var result = new Dictionary<string, Dictionary<int, float>>();
+        foreach (var kvp in pressureData)
+        {
+            result[kvp.Key] = new Dictionary<int, float>(kvp.Value);
+        }
+        return result;
+    }
+
+    // 特定ポートのセンサー数を取得
+    public int GetSensorCount(string portName)
+    {
+        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
+        {
+            return sensorData.Count;
+        }
+        return 0;
     }
 
     // ランタイムで新しいSerialHandlerを追加する場合のメソッド
