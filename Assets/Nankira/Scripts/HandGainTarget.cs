@@ -2,40 +2,64 @@ using UnityEngine;
 
 public class HandGainTarget : MonoBehaviour
 {
-    [Header("ゲイン前の手とゲインをかける基準点")]
+    [Header("ゲイン前の手")]
     [SerializeField] Transform _handPoint;
-    [SerializeField] Transform _referencePoint;
 
-    [Header("ゲイン値")]
-    [SerializeField] Vector3 _positionGain;
-    [SerializeField] float _rorationGain = 1.0f;
-
-    Vector3 _refPos;
-    Vector3 _delta;
-    float _geinedPos_x;
-    float _geinedPos_y;
-    float _geinedPos_z;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [System.Serializable]
+    public class GainInfo
     {
-        
+        [Header("基準点とゲイン値")]
+        public Transform referencePoint;
+        public Vector3 positionGain = Vector3.one;
+
+        [Header("距離でゲインを有効化する場合")]
+        public bool useDistanceGate = false;
+        public float enableDistance = 1.0f;
+        public float distance = 1.0f;
     }
 
-    // Update is called once per frame
+    [SerializeField] public GainInfo[] _gainInfos;
+
     void Update()
     {
-        Debug.Assert( _handPoint != null && _referencePoint != null );
+        Debug.Assert(_handPoint != null, "Hand point is not assigned.");
 
-        _refPos = _referencePoint.position;
-        _delta = _handPoint.position - _refPos;
+        if (_gainInfos == null || _gainInfos.Length == 0)
+            return;
 
-        _geinedPos_x = _refPos.x + _delta.x * _positionGain.x;
-        _geinedPos_y = _refPos.y + _delta.y * _positionGain.y;
-        _geinedPos_z = _refPos.z + _delta.z * _positionGain.z;
+        // 1) ベース位置（基準点の平均）を作る
+        Vector3 basePos = Vector3.zero;
+        int baseCount = 0;
 
-        transform.position = new Vector3(_geinedPos_x, _geinedPos_y, _geinedPos_z);
+        // 2) 合成する差分（= offset * gain）の合計
+        Vector3 totalOffset = Vector3.zero;
 
-        transform.rotation = Quaternion.Slerp(_referencePoint.rotation, _handPoint.rotation, _rorationGain);
+        foreach (var info in _gainInfos)
+        {
+            if (info == null) continue;
+
+            // 距離ゲート
+            if (info.useDistanceGate)
+            {
+                float dis = Vector3.Distance(_handPoint.position, info.referencePoint.position);
+                info.distance = dis;
+                if (dis > info.enableDistance) continue;
+            }
+
+            // ベース位置用（平均）
+            basePos += info.referencePoint.position;
+            baseCount++;
+
+            // 差分 × ゲイン を合成
+            Vector3 offset = _handPoint.position - info.referencePoint.position;
+            totalOffset += Vector3.Scale(offset, info.positionGain); // 各軸ごとに乗算
+        }
+
+        if (baseCount == 0) return;
+
+        basePos /= baseCount; // 平均
+
+        // 3) 最終位置 = ベース位置 + 合成オフセット
+        transform.position = basePos + totalOffset;
     }
 }
