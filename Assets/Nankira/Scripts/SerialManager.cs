@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -36,6 +34,10 @@ public class SerialManager : MonoBehaviour
     // 単一センサーデータ更新イベント（個別通知用）
     public delegate void SinglePressureDataUpdatedEventHandler(string portName, int sensorIndex, float pressure);
     public event SinglePressureDataUpdatedEventHandler OnSinglePressureDataUpdated;
+
+
+    private readonly Dictionary<string, float> _avgPressure = new Dictionary<string, float>();
+
 
     void Start()
     {
@@ -103,29 +105,38 @@ public class SerialManager : MonoBehaviour
         Debug.Log($"受信データ: {message}");
     }
 
+
+    
+
+    // 受信ハンドラの末尾を少しだけ修正（差分受信でも正しい平均にする）
     void OnMultiplePressureDataReceived(string portName, Dictionary<int, float> sensorData)
     {
-        if (!pressureData.ContainsKey(portName))
+        if (!pressureData.TryGetValue(portName, out var portDict))
         {
-            pressureData[portName] = new Dictionary<int, float>();
+            portDict = new Dictionary<int, float>();
+            pressureData[portName] = portDict;
         }
 
-        // 受信したセンサーデータを更新
+        // 既存の上書き更新
         foreach (var kvp in sensorData)
         {
-            int sensorIndex = kvp.Key;
-            float pressure = kvp.Value;
-            
-            pressureData[portName][sensorIndex] = pressure;
-            
-            // 個別センサーの更新イベントを発火
-            OnSinglePressureDataUpdated?.Invoke(portName, sensorIndex, pressure);
+            portDict[kvp.Key] = kvp.Value;
+            OnSinglePressureDataUpdated?.Invoke(portName, kvp.Key, kvp.Value);
         }
-        
-        // 全体の更新イベントを発火
-        OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(pressureData[portName]));
-        
-        // Debug.Log($"[{portName}] 圧力データ更新: {string.Join(", ", sensorData.Select(kvp => $"Sensor{kvp.Key}={kvp.Value:F3}"))}");
+
+        OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(portDict));
+
+        // ★ここで「ポート内の全センサー現在値」から平均を更新（LINQなし＝小GCも出ない）
+        if (portDict.Count > 0)
+        {
+            float sum = 0f;
+            foreach (var v in portDict.Values) sum += v;
+            _avgPressure[portName] = sum / portDict.Count;
+        }
+        else
+        {
+            _avgPressure[portName] = 0f;
+        }
     }
 
     private void Update()
@@ -201,7 +212,14 @@ public class SerialManager : MonoBehaviour
         }
     }
 
+    // 圧力センサ取得API（見つからなければ0f）基本はこれを使う
+    public float GetAveragePressure(string portName)
+    {
+        return _avgPressure.TryGetValue(portName, out var v) ? v : 0f;
+    }
+
     // 圧力データ取得メソッド（複数センサー対応）
+    /*
     public Dictionary<int, float> GetPressureData(string portName)
     {
         if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
@@ -223,6 +241,7 @@ public class SerialManager : MonoBehaviour
         }
         return 0.0f;
     }
+    */
 
     // 全ポートの全センサーデータを取得
     public Dictionary<string, Dictionary<int, float>> GetAllPressureData()

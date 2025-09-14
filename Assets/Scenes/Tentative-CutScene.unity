@@ -1512,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4c41e7864b6592244886800333fe433c, type: 3}
       propertyPath: m_Name
-      value: Nankira_Ver002@Sitting Idle
+      value: NankiraKun
       objectReference: {fileID: 0}
     - target: {fileID: 1052520655926217830, guid: 4c41e7864b6592244886800333fe433c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1555,12 +1555,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -320645280802139608, guid: 4c41e7864b6592244886800333fe433c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 360426831}
-    - targetCorrespondingSourceObject: {fileID: -320645280802139608, guid: 4c41e7864b6592244886800333fe433c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1708974554}
-    - targetCorrespondingSourceObject: {fileID: -320645280802139608, guid: 4c41e7864b6592244886800333fe433c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 503431664}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c41e7864b6592244886800333fe433c, type: 3}
       insertIndex: -1
@@ -2935,17 +2929,17 @@ MonoBehaviour:
       target: {fileID: 841109675}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 1, z: 0}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: -30
+      wristToPalmAxis: {x: 0, y: 0, z: 2}
+      palmToThumbAxis: {x: 0, y: 0, z: -3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -2957,17 +2951,17 @@ MonoBehaviour:
       target: {fileID: 1304370985}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 0, z: 1}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: 50
+      wristToPalmAxis: {x: 3, y: 7, z: 3}
+      palmToThumbAxis: {x: 3, y: 0, z: 3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -3009,7 +3003,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       useAnimatedBendNormal: 0
     locomotion:
-      mode: 0
+      mode: 1
       weight: 1
       moveThreshold: 0.3
       animationHeader: 0
@@ -3344,12 +3338,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503431663}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.005808997, y: -0.9884562, z: 0.15053657, w: -0.0161052}
-  m_LocalPosition: {x: -0.007845955, y: -1.5192053, z: 0.22422974}
-  m_LocalScale: {x: 1.1111547, y: 1.1265658, z: 1.5813291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 774592384}
+  m_Father: {fileID: 1931851594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &523531912
 PrefabInstance:
@@ -5593,6 +5587,8 @@ PlayableDirector:
     value: {fileID: 941435077}
   - key: {fileID: 8036057274969367782, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
     value: {fileID: 1890415675}
+  - key: {fileID: 3444186297523920105, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 1074823109}
   m_ExposedReferences:
     m_References:
     - 4251fe8dfbc67c34592058118502b63f: {fileID: 2046990610}
@@ -6027,7 +6023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7993765477841990357, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192623165065142701, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_LocalScale.y
@@ -6047,6 +6043,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7993765477841990357, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1229822987}
+    - targetCorrespondingSourceObject: {fileID: 7993765477841990357, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708974554}
+    - targetCorrespondingSourceObject: {fileID: 7993765477841990357, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 503431664}
     - targetCorrespondingSourceObject: {fileID: 7993765477841908485, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       insertIndex: 0
       addedObject: {fileID: 50568096}
@@ -6297,7 +6299,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831842289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f7b4f30efc160479cffd37f81d4e84, type: 3}
   m_Name: 
@@ -7669,6 +7671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RHandMove
       objectReference: {fileID: 0}
+    - target: {fileID: 8836543252120568866, guid: 6826d3fd55331954189c12a1b444a414, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8949831034554039288, guid: 6826d3fd55331954189c12a1b444a414, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000002
@@ -8253,6 +8259,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerialManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3491615545984536987, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      propertyPath: 'portNames.Array.data[0]'
+      value: COM3
+      objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8296,8 +8310,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3491615545984536987, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1074823109}
   m_SourcePrefab: {fileID: 100100000, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+--- !u!1 &1074823107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3491615545984536987, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+  m_PrefabInstance: {fileID: 1074823106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1074823108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+  m_PrefabInstance: {fileID: 1074823106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074823107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2463cbdfb154591449765e4e91b5b4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1074823109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074823107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendCommandToAllPorts
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P1;
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1089991800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6958657332088104706, guid: 4c41e7864b6592244886800333fe433c, type: 3}
@@ -11314,7 +11377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_Name
-      value: Stickman_Ver001
+      value: CutMan
       objectReference: {fileID: 0}
     - target: {fileID: 1017604278939857351, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12606,12 +12669,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708974553}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.005808997, y: -0.9884562, z: 0.15053657, w: -0.0161052}
-  m_LocalPosition: {x: -0.007845955, y: -1.5192053, z: 0.22422974}
-  m_LocalScale: {x: 1.1111547, y: 1.1265658, z: 1.5813291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3, y: 0, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 774592384}
+  m_Father: {fileID: 1931851594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1738239559
 PrefabInstance:
@@ -13272,6 +13335,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1890415674}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: PlaySE
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Cue_1
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1891795297
@@ -14667,6 +14742,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _switcher
+      value: 
+      objectReference: {fileID: 1192976189}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: gameState
       value: 0
       objectReference: {fileID: 0}
@@ -14687,9 +14766,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 749311505}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _syncronizer
+      value: 
+      objectReference: {fileID: 2046990612}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: _rHandMoveObj
       value: 
       objectReference: {fileID: 831842289}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _soundManager
+      value: 
+      objectReference: {fileID: 1890415674}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _serialManager
+      value: 
+      objectReference: {fileID: 1074823108}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: startCut.m_Name
       value: Start Cut
@@ -15190,6 +15281,10 @@ PrefabInstance:
       propertyPath: _rightMaskObj
       value: 
       objectReference: {fileID: 1848884003}
+    - target: {fileID: 9018535701609088812, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
+      propertyPath: _speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9018535701609088812, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
       propertyPath: percent
       value: 0
