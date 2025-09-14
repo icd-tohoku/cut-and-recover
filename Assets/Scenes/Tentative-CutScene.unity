@@ -14518,6 +14518,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _switcher
+      value: 
+      objectReference: {fileID: 1192976189}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: gameState
       value: 0
       objectReference: {fileID: 0}
@@ -14538,9 +14542,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 749311505}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _syncronizer
+      value: 
+      objectReference: {fileID: 2046990612}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: _rHandMoveObj
       value: 
       objectReference: {fileID: 831842289}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _serialManager
+      value: 
+      objectReference: {fileID: 1074823108}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: startCut.m_Name
       value: Start Cut
