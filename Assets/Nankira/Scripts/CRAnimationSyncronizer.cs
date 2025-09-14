@@ -11,27 +11,24 @@ public class CRAnimationSyncronizer : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
-        {
-            _speed += 3f;
-        }
-        // ←を押すたびに速度が減速（逆方向）
-        if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
-        {
-            _speed -= 3f;
-        }
+        
         // speed に応じて 0..100 の進行度を前進/後退させる
-        float step = _speed * Time.deltaTime;           // 進む量
+        float step = Mathf.Abs(_speed) * Time.deltaTime;
 
         if(0<=percent && percent <= 100)
         {
+            if(ProcessManager.gameState == ProcessManager.GameState.Cut)
+            {
+                _target = 100f;
+            }
+            else if(ProcessManager.gameState == ProcessManager.GameState.Recover)
+            {
+                _target = 0f;
+            }
             percent = Mathf.MoveTowards(percent, _target, step);
+
         }
         
     }
-
-    // 任意イベント用のヘルパ
-    public void GoTo100() => _target = 100f;
-    public void GoTo0() => _target = 0f;
-    public void SetSpeed(float s) => _speed = s;   // 外部から毎フレーム呼んでもOK
+    public void SetSpeed(float s) => _speed = s;
 }
