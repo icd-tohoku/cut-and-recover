@@ -57,14 +57,14 @@ public class ProcessManager : MonoBehaviour
     {
         float _pressure = _serialManager.GetAveragePressure("COM3");
 
-        //if (_pressure > 0)
-        //{
-        //    _switcher.ChangeTrack(false);
-        //}
-        //else
-        //{
-        //    _switcher.ChangeTrack(true);
-        //}
+        if (_pressure > 0)
+        {
+            _switcher.ChangeTrack(false);
+        }
+        else
+        {
+            _switcher.ChangeTrack(true);
+        }
 
         switch (gameState)
         {
@@ -97,28 +97,27 @@ public class ProcessManager : MonoBehaviour
                 break;
 
             case GameState.Cut:
-                // 毎フレームの処理があればここに
                 break;
 
             case GameState.Recover:
-                //_syncronizer.SetSpeed(_pressure);
+                _syncronizer.SetSpeed(_pressure);
 
-                ////P4,3,2で送る
-                //if (!_sentP4 && _syncronizer.percent <= 50)
-                //{
-                //    _serialManager.SendCommandToAllPorts("P4;");
-                //    _sentP4 = true;
-                //}
-                //if (!_sentP3 && _syncronizer.percent <= 25)
-                //{
-                //    _serialManager.SendCommandToAllPorts("P3;");
-                //    _sentP3 = true;
-                //}
+                //P4,3,2で送る
+                if (!_sentP4 && _syncronizer.percent <= 50)
+                {
+                    _serialManager.SendCommandToAllPorts("P4;");
+                    _sentP4 = true;
+                }
+                if (!_sentP3 && _syncronizer.percent <= 25)
+                {
+                    _serialManager.SendCommandToAllPorts("P3;");
+                    _sentP3 = true;
+                }
 
                 if (_syncronizer.percent <= 0)
                 {
-                    //_serialManager.SendCommandToAllPorts("P2;");
-                    //_sentP2 = true;
+                    _serialManager.SendCommandToAllPorts("P2;");
+                    _sentP2 = true;
                     ChangeState(GameState.End);
                     _soundManager.PlaySE("Cue_2");
                 }
