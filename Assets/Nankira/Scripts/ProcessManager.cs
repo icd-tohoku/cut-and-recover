@@ -34,7 +34,8 @@ public class ProcessManager : MonoBehaviour
 
     [SerializeField] HandTargetSwitcher _switcher;
 
-    Dictionary<int, float> _pressureDataDict = new Dictionary<int, float>();
+    [SerializeField] SoundManager _soundManager;
+
 
     readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
@@ -86,17 +87,23 @@ public class ProcessManager : MonoBehaviour
                 break;
 
             case GameState.Recover:
-                float _pressure = _serialManager.GetAveragePressure("COM16");
-                _syncronizer.SetSpeed(_pressure);
+                //float _pressure = _serialManager.GetAveragePressure("COM16");
+                //_syncronizer.SetSpeed(_pressure);
 
-                if (_pressure > 0)
+                //if (_pressure > 0)
+                //{
+                //    _switcher.ChangeTrack(false);
+                //}
+                //else
+                //{
+                //    _switcher.ChangeTrack(true);
+                //}
+
+                if (_syncronizer.percent <= 0)
                 {
-                    _switcher.ChangeTrack(false);
+                    ChangeState(GameState.End);
+                    _soundManager.PlaySE("Cue_2");
                 }
-                else
-                {
-                    _switcher.ChangeTrack(true);
-                }                   
                 break;
 
             case GameState.End:

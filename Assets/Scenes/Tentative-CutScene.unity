@@ -7627,6 +7627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RHandMove
       objectReference: {fileID: 0}
+    - target: {fileID: 8836543252120568866, guid: 6826d3fd55331954189c12a1b444a414, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8949831034554039288, guid: 6826d3fd55331954189c12a1b444a414, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000002
@@ -8210,6 +8214,10 @@ PrefabInstance:
     - target: {fileID: 3491615545984536987, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_Name
       value: SerialManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491615545984536987, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14562,6 +14570,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 831842289}
     - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
+      propertyPath: _soundManager
+      value: 
+      objectReference: {fileID: 1890415674}
+    - target: {fileID: 8410187882851530877, guid: fe0af96b1236ece49967c674b9b344ea, type: 3}
       propertyPath: _serialManager
       value: 
       objectReference: {fileID: 1074823108}
@@ -15065,6 +15077,10 @@ PrefabInstance:
       propertyPath: _rightMaskObj
       value: 
       objectReference: {fileID: 1848884003}
+    - target: {fileID: 9018535701609088812, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
+      propertyPath: _speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9018535701609088812, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
       propertyPath: percent
       value: 0
