@@ -39,4 +39,9 @@ public class SoundManager : MonoBehaviour
             0.5f
             );
     }
+
+    public void PlaySE(string cueName)
+    {
+        _atomsource.Play(cueName);
+    }
 }
