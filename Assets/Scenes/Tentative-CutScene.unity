@@ -2920,8 +2920,8 @@ MonoBehaviour:
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
       bendGoalWeight: 0.3
-      swivelOffset: -15
-      wristToPalmAxis: {x: 0, y: -7, z: 2}
+      swivelOffset: -30
+      wristToPalmAxis: {x: 0, y: 0, z: 2}
       palmToThumbAxis: {x: 0, y: 0, z: -3}
       armLengthMlp: 1.2
       stretchCurve:
@@ -2942,7 +2942,7 @@ MonoBehaviour:
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
       bendGoalWeight: 0.3
-      swivelOffset: 15
+      swivelOffset: 50
       wristToPalmAxis: {x: 3, y: 7, z: 3}
       palmToThumbAxis: {x: 3, y: 0, z: 3}
       armLengthMlp: 1.2
@@ -2987,7 +2987,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       useAnimatedBendNormal: 0
     locomotion:
-      mode: 0
+      mode: 1
       weight: 1
       moveThreshold: 0.3
       animationHeader: 0
