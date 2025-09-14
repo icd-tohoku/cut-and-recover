@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
@@ -26,7 +28,15 @@ public class ProcessManager : MonoBehaviour
     [SerializeField] float _time = 0;
     float _threshTime = 8f;
 
-    String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
+    [SerializeField] SerialManager _serialManager;
+
+    [SerializeField] CRAnimationSyncronizer _syncronizer;
+
+    [SerializeField] HandTargetSwitcher _switcher;
+
+    Dictionary<int, float> _pressureDataDict = new Dictionary<int, float>();
+
+    readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,7 +86,17 @@ public class ProcessManager : MonoBehaviour
                 break;
 
             case GameState.Recover:
-                // 復元フェーズの処理
+                float _pressure = _serialManager.GetAveragePressure("COM16");
+                _syncronizer.SetSpeed(_pressure);
+
+                if (_pressure > 0)
+                {
+                    _switcher.ChangeTrack(false);
+                }
+                else
+                {
+                    _switcher.ChangeTrack(true);
+                }                   
                 break;
 
             case GameState.End:
