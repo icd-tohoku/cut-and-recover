@@ -2913,17 +2913,17 @@ MonoBehaviour:
       target: {fileID: 841109675}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 1, z: 0}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: -30
+      wristToPalmAxis: {x: 0, y: 0, z: 2}
+      palmToThumbAxis: {x: 0, y: 0, z: -3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -2935,17 +2935,17 @@ MonoBehaviour:
       target: {fileID: 1304370985}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 0, z: 1}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: 50
+      wristToPalmAxis: {x: 3, y: 7, z: 3}
+      palmToThumbAxis: {x: 3, y: 0, z: 3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -2987,7 +2987,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       useAnimatedBendNormal: 0
     locomotion:
-      mode: 0
+      mode: 1
       weight: 1
       moveThreshold: 0.3
       animationHeader: 0
