@@ -2919,17 +2919,17 @@ MonoBehaviour:
       target: {fileID: 841109675}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 1, z: 0}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: -15
+      wristToPalmAxis: {x: 0, y: -7, z: 2}
+      palmToThumbAxis: {x: 0, y: 0, z: -3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -2941,17 +2941,17 @@ MonoBehaviour:
       target: {fileID: 1304370985}
       positionWeight: 1
       rotationWeight: 0
-      shoulderRotationWeight: 1
+      shoulderRotationWeight: 0
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 1, z: 0}
-      palmToThumbAxis: {x: 0, y: 0, z: 1}
-      armLengthMlp: 1
+      bendGoalWeight: 0.3
+      swivelOffset: 15
+      wristToPalmAxis: {x: 3, y: 7, z: 3}
+      palmToThumbAxis: {x: 3, y: 0, z: 3}
+      armLengthMlp: 1.2
       stretchCurve:
         serializedVersion: 2
         m_Curve: []
@@ -6277,7 +6277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831842289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f7b4f30efc160479cffd37f81d4e84, type: 3}
   m_Name: 
