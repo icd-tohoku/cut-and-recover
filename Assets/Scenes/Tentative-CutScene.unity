@@ -6448,10 +6448,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handPoint: {fileID: 807609298}
   handtracked: {fileID: 50568102}
-  useHeadDefence: 0
-  Headposition: {fileID: 1229822987}
-  headsize: 1.2
-  maxsframes: 10
   _gainInfos:
   - referencePoint: {fileID: 836056019}
     positionGain: {x: 2, y: 1.6, z: 3}
@@ -8265,7 +8261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: 'portNames.Array.data[0]'
-      value: COM3
+      value: COM15
       objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9350,10 +9346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handPoint: {fileID: 807609297}
   handtracked: {fileID: 842869947}
-  useHeadDefence: 0
-  Headposition: {fileID: 1229822987}
-  headsize: 1.2
-  maxsframes: 10
   _gainInfos:
   - referencePoint: {fileID: 1103721642}
     positionGain: {x: 2, y: 1.6, z: 3}
