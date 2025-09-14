@@ -55,16 +55,16 @@ public class ProcessManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float _pressure = _serialManager.GetAveragePressure("COM16");
+        float _pressure = _serialManager.GetAveragePressure("COM3");
 
-        if (_pressure > 0)
-        {
-            _switcher.ChangeTrack(false);
-        }
-        else
-        {
-            _switcher.ChangeTrack(true);
-        }
+        //if (_pressure > 0)
+        //{
+        //    _switcher.ChangeTrack(false);
+        //}
+        //else
+        //{
+        //    _switcher.ChangeTrack(true);
+        //}
 
         switch (gameState)
         {
