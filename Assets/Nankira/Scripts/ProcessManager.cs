@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class ProcessManager : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class ProcessManager : MonoBehaviour
 
     readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
+    bool _sentP2 = false, _sentP3 = false, _sentP4 = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,6 +55,17 @@ public class ProcessManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float _pressure = _serialManager.GetAveragePressure("COM16");
+
+        if (_pressure > 0)
+        {
+            _switcher.ChangeTrack(false);
+        }
+        else
+        {
+            _switcher.ChangeTrack(true);
+        }
+
         switch (gameState)
         {
             case GameState.Ready:
@@ -87,26 +101,38 @@ public class ProcessManager : MonoBehaviour
                 break;
 
             case GameState.Recover:
-                //float _pressure = _serialManager.GetAveragePressure("COM16");
                 //_syncronizer.SetSpeed(_pressure);
 
-                //if (_pressure > 0)
+                ////P4,3,2で送る
+                //if (!_sentP4 && _syncronizer.percent <= 50)
                 //{
-                //    _switcher.ChangeTrack(false);
+                //    _serialManager.SendCommandToAllPorts("P4;");
+                //    _sentP4 = true;
                 //}
-                //else
+                //if (!_sentP3 && _syncronizer.percent <= 25)
                 //{
-                //    _switcher.ChangeTrack(true);
+                //    _serialManager.SendCommandToAllPorts("P3;");
+                //    _sentP3 = true;
                 //}
 
                 if (_syncronizer.percent <= 0)
                 {
+                    //_serialManager.SendCommandToAllPorts("P2;");
+                    //_sentP2 = true;
                     ChangeState(GameState.End);
                     _soundManager.PlaySE("Cue_2");
                 }
                 break;
 
             case GameState.End:
+                if (Keyboard.current.rKey.wasPressedThisFrame)
+                {
+                    gameState = GameState.Ready;
+                    _syncronizer.SetSpeed(0);
+                    _sentP2 = false;
+                    _sentP3 = false;
+                    _sentP4 = false;
+                }
                 break;
         }
     }
@@ -129,7 +155,7 @@ public class ProcessManager : MonoBehaviour
         }
         else if( nextState == GameState.End)
         {
-
+            
         }
     }
 
