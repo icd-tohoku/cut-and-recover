@@ -11,6 +11,8 @@ public class HandGainTarget : MonoBehaviour
     [SerializeField] Transform _handPoint;
     public OVRHand handtracked;
 
+    public CRAnimationSyncronizer _syncronizer;
+
     [System.Serializable]
     public class GainInfo
     {
@@ -19,7 +21,10 @@ public class HandGainTarget : MonoBehaviour
         public Vector3 positionGain = Vector3.one;
 
         [Header("ある点からの距離でゲインを有効化する場合")]
-        public Transform headpoint;
+        
+        public Transform beforehead;
+        public Transform cuthead;
+        public Transform Headpos;
         public bool useDistanceGate = false;
         public float enableDistance = 1.0f;
         public float distance = 1.0f;
@@ -29,8 +34,10 @@ public class HandGainTarget : MonoBehaviour
 
     void Update()
     {
-        // ハンドトラッキングができていない、または信頼性が低い場合は処理を行わない
+        if(_syncronizer.percent > 0){ _gainInfos[0].Headpos = _gainInfos[0].cuthead; }
+        else{ _gainInfos[0].Headpos = _gainInfos[0].beforehead; }
 
+        float a = _syncronizer.percent;
         Debug.Assert(_handPoint != null, "Hand point is not assigned.");
 
         if (_gainInfos == null || _gainInfos.Length == 0)
@@ -83,12 +90,12 @@ public class HandGainTarget : MonoBehaviour
         {
             if (info != null && info.useDistanceGate)
             {
-                float dis = Vector3.Distance(calculatedPosition, info.headpoint.position);
+                float dis = Vector3.Distance(calculatedPosition, info.Headpos.position);
                 if (dis < info.enableDistance)
                 {
-                    Vector3 direction = (calculatedPosition - info.headpoint.position).normalized; 
+                    Vector3 direction = (calculatedPosition - info.Headpos.position).normalized; 
                     if (direction == Vector3.zero) direction = Vector3.up; // 念のため                                                                                                                                                                   
-                    calculatedPosition = info.headpoint.position + direction * info.enableDistance;
+                    calculatedPosition = info.Headpos.position + direction * info.enableDistance;
                 }
             }
         }
