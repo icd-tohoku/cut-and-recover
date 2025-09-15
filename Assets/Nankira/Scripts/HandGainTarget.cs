@@ -12,6 +12,7 @@ public class HandGainTarget : MonoBehaviour
     public OVRHand handtracked;
 
     public CRAnimationSyncronizer _syncronizer;
+    public float rotation_cut;
 
     [System.Serializable]
     public class GainInfo
@@ -34,10 +35,11 @@ public class HandGainTarget : MonoBehaviour
 
     void Update()
     {
-        if(_syncronizer.percent > 0){ _gainInfos[0].Headpos = _gainInfos[0].cuthead; }
-        else{ _gainInfos[0].Headpos = _gainInfos[0].beforehead; }
+        //頭が割れているとき、めり込み補正の基準が割れた頭の中心になるように変更
+        if (_syncronizer.percent > 0) { _gainInfos[0].Headpos = _gainInfos[0].cuthead; }
+        else { _gainInfos[0].Headpos = _gainInfos[0].beforehead; }
 
-        float a = _syncronizer.percent;
+        
         Debug.Assert(_handPoint != null, "Hand point is not assigned.");
 
         if (_gainInfos == null || _gainInfos.Length == 0)
@@ -53,16 +55,6 @@ public class HandGainTarget : MonoBehaviour
         foreach (var info in _gainInfos)
         {
             if (info == null) continue;
-            /*
-
-            // 距離ゲート
-            if (info.useDistanceGate)
-            {
-                float dis = Vector3.Distance(_handPoint.position, info.referencePoint.position);
-                info.distance = dis;
-                if (dis > info.enableDistance) continue;
-            }*/
-
             // ベース位置用（平均）
             basePos += info.referencePoint.position;
             baseCount++;
@@ -75,6 +67,11 @@ public class HandGainTarget : MonoBehaviour
         if (baseCount == 0) return;
 
         basePos /= baseCount; // 平均
+
+        //頭が割れているとき、合成オフセットを回転
+        if (_syncronizer.percent == 100) { totalOffset = Quaternion.Euler(0, 0, rotation_cut) * totalOffset; }
+        
+
 
         // 3) 最終位置 = ベース位置 + 合成オフセット
         Vector3 calculatedPosition = basePos + totalOffset;

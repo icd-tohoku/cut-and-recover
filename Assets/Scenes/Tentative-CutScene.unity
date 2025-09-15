@@ -5962,6 +5962,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936899313154521204, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936899313154521204, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
@@ -6032,6 +6036,10 @@ PrefabInstance:
     - target: {fileID: 9192623165065142701, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192623165065142701, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 9192623165065142701, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -6370,7 +6378,7 @@ Transform:
   m_GameObject: {fileID: 836056018}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0017450601, y: -0.99899536, z: 0.044778552, w: 0.00038552785}
-  m_LocalPosition: {x: -0.139, y: 0.41, z: -0.042}
+  m_LocalPosition: {x: -0.139, y: 0.41, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6455,9 +6463,10 @@ MonoBehaviour:
   _handPoint: {fileID: 807609298}
   handtracked: {fileID: 50568102}
   _syncronizer: {fileID: 2046990612}
+  rotation_cut: -20
   _gainInfos:
   - referencePoint: {fileID: 836056019}
-    positionGain: {x: 2, y: 1.6, z: 3}
+    positionGain: {x: 2, y: 1.6, z: 2.2}
     beforehead: {fileID: 1229822987}
     cuthead: {fileID: 1469784024}
     Headpos: {fileID: 0}
@@ -8396,7 +8405,7 @@ Transform:
   m_GameObject: {fileID: 1103721641}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0017450601, y: -0.99899536, z: 0.044778552, w: 0.00038552785}
-  m_LocalPosition: {x: 0.139, y: 0.41, z: -0.038}
+  m_LocalPosition: {x: 0.139, y: 0.41, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9356,9 +9365,10 @@ MonoBehaviour:
   _handPoint: {fileID: 807609297}
   handtracked: {fileID: 842869947}
   _syncronizer: {fileID: 2046990612}
+  rotation_cut: 20
   _gainInfos:
   - referencePoint: {fileID: 1103721642}
-    positionGain: {x: 2, y: 1.6, z: 3}
+    positionGain: {x: 2, y: 1.6, z: 2.2}
     beforehead: {fileID: 1229822987}
     cuthead: {fileID: 2141017066}
     Headpos: {fileID: 0}
@@ -13762,7 +13772,7 @@ Transform:
   m_GameObject: {fileID: 1921870105}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0017450601, y: -0.99899536, z: 0.044778552, w: 0.00038552785}
-  m_LocalPosition: {x: 0.157, y: 0.608, z: -0.06}
+  m_LocalPosition: {x: 0.157, y: 0.608, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
