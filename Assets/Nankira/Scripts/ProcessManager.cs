@@ -37,6 +37,8 @@ public class ProcessManager : MonoBehaviour
 
     [SerializeField] SoundManager _soundManager;
 
+    [SerializeField] ParticleSystem _recoverEffect;
+
 
     readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
@@ -118,6 +120,8 @@ public class ProcessManager : MonoBehaviour
                 {
                     _serialManager.SendCommandToAllPorts("P2;");
                     _sentP2 = true;
+
+                    _recoverEffect.Play();
                     ChangeState(GameState.End);
                     _soundManager.PlaySE("Cue_2");
                 }
