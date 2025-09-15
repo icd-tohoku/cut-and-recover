@@ -113,14 +113,15 @@ public class SerialManager : MonoBehaviour
 
         OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(portDict));
 
+
         // ポート内の全センサー現在値から平均を計算
         if (portDict.Count > 0)
         {
             float sum = 0f;
             foreach (var v in portDict.Values) sum += v;
-            _avgPressure[portName] = sum / portDict.Count;
-            
+            _avgPressure[portName] = sum / (30*portDict.Count); //値を30で割って小さくする（生データのmaxが4096らしいので）
             Debug.Log($"[{portName}] Average pressure: {_avgPressure[portName]:F3} (from {portDict.Count} sensors)");
+
         }
         else
         {
