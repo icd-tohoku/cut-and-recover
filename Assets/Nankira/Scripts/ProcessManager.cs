@@ -1,10 +1,7 @@
 using System;
-using System.Linq;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
-using UnityEngine.SceneManagement;
 
 public class ProcessManager : MonoBehaviour
 {
@@ -42,7 +39,12 @@ public class ProcessManager : MonoBehaviour
 
     readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
-    bool _sentP2 = false, _sentP3 = false, _sentP4 = false;
+    bool _sentC5 = false, _sentC6 = false, _sentC7 = false;
+
+    bool _isStop = false;
+
+    bool _isFinish = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -104,27 +106,55 @@ public class ProcessManager : MonoBehaviour
             case GameState.Recover:
                 _syncronizer.SetSpeed(_pressure);
 
-                //P4,3,2で送る
-                if (!_sentP4 && _syncronizer.percent <= 50)
+                if (!_isStop && _pressure <= 0)
                 {
-                    _serialManager.SendCommandToAllPorts("P4;");
-                    _sentP4 = true;
-                }
-                if (!_sentP3 && _syncronizer.percent <= 25)
-                {
-                    _serialManager.SendCommandToAllPorts("P3;");
-                    _sentP3 = true;
+                    _serialManager.SendCommandToAllPorts("STOP;");
+                    _isStop = true;
+                    _sentC5 = false;
+                    _sentC6 = false;
+                    _sentC7 = false;
+                    Debug.Log("STOP sent");
                 }
 
-                if (_syncronizer.percent <= 0)
+                // pressure > 0 のとき、現在の区間に応じて一度だけ送る
+                if (_pressure > 0)
                 {
-                    _serialManager.SendCommandToAllPorts("P2;");
-                    _sentP2 = true;
+                    // 100~50
+                    if (!_sentC5 && _syncronizer.percent >= 50f)
+                    {
+                        _serialManager.SendCommandToAllPorts("C5;");
+                        _isStop = false;
+                        _sentC5 = true;
+                         Debug.Log("C5 sent");
+                    }
+                    // 50~25
+                    else if (!_sentC6 && _syncronizer.percent >= 25f && _syncronizer.percent < 50f)
+                    {
+                        _serialManager.SendCommandToAllPorts("C6;");
+                        _isStop = false;
+                        _sentC6 = true;
+                         Debug.Log("C6 sent");
+                    }
+                    // 25~0
+                    else if (!_sentC7 && _syncronizer.percent > 0f && _syncronizer.percent < 25f)
+                    {
+                        _serialManager.SendCommandToAllPorts("C7;");
+                        _isStop = false;
+                        _sentC7 = true;
+                         Debug.Log("C7 sent");
+                    }
+                }
 
+                // percent が 0 になったら STOP（多重送信防止に _isStop を立てる）
+                if (_syncronizer.percent <= 0f && !_isFinish)
+                {
+                    _serialManager.SendCommandToAllPorts("STOP;");
+                    _isFinish = true;                // ★ 追加：連打防止
                     _recoverEffect.Play();
                     ChangeState(GameState.End);
                     _soundManager.PlaySE("Cue_2");
                 }
+
                 break;
 
             case GameState.End:
@@ -132,9 +162,11 @@ public class ProcessManager : MonoBehaviour
                 {
                     gameState = GameState.Ready;
                     _syncronizer.SetSpeed(0);
-                    _sentP2 = false;
-                    _sentP3 = false;
-                    _sentP4 = false;
+                    _sentC5 = false;
+                    _sentC6 = false;
+                    _sentC7 = false;
+                    _isStop = false;
+                    _isFinish=false;
                 }
                 break;
         }
