@@ -8279,7 +8279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: 'portNames.Array.data[0]'
-      value: COM3
+      value: COM15
       objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
