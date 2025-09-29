@@ -1,0 +1,28 @@
+using UnityEngine;
+
+public class CREffectController : MonoBehaviour
+{
+    [SerializeField] CRAnimationSyncronizer _syncronizer;
+
+    [SerializeField] AnimationCurve _curve = AnimationCurve.Linear(0, 0, 1, 1);
+
+    [SerializeField] GameObject _leftMaskObj;
+    [SerializeField] GameObject _rightMaskObj;
+    [SerializeField, Range(0f, 100f)] float _percent = 0;
+    [SerializeField] float _beforePosY;
+    [SerializeField] float _afterPosY;
+
+    void Update()
+    {
+        _percent = _syncronizer.percent;
+        // 0〜1に正規化
+        float t = _percent / 100f;
+        t = Mathf.Clamp01(_curve.Evaluate(t));
+
+        // Y座標を補間（左目と右目のマスクオブジェクトの座標が同一である前提）
+        Vector3 targetPos = _leftMaskObj.transform.localPosition;
+        targetPos.y = Mathf.Lerp(_beforePosY, _afterPosY, t);
+        _leftMaskObj.transform.localPosition = targetPos;
+        _rightMaskObj.transform.localPosition = targetPos;
+    }
+}

@@ -1,0 +1,17 @@
+Library: C:\Users\satoi\Documents\GitHub\cut-and-recover\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--platform=Android
+--backend=burst-llvm-18
+--target=ARMV8A_AARCH64
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=C:\Users\satoi\Documents\GitHub\cut-and-recover\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\satoi\Documents\GitHub\cut-and-recover\Library\Burst
+--output=C:\Users\satoi\Documents\GitHub\cut-and-recover\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9b1d3a449de8902439ae9dab16bc5a44
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 236499
+  packageName: Hyper Casual Weapons
+  packageVersion: 1.0
+  assetPath: Assets/Hyper Casual Weapons/Light/OcclusionCullingData.asset
+  uploadId: 549212
