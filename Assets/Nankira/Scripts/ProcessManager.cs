@@ -37,7 +37,7 @@ public class ProcessManager : MonoBehaviour
     [SerializeField] ParticleSystem _recoverEffect;
 
 
-    readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
+    readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4", "MoveHand" };
 
     bool _sentC5 = false, _sentC6 = false, _sentC7 = false;
 
@@ -54,6 +54,7 @@ public class ProcessManager : MonoBehaviour
         _cutTimeline.Stop();
         _rHandMoveObj.SetActive(false);
         _animator = _cutManObj.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -80,22 +81,25 @@ public class ProcessManager : MonoBehaviour
 
                 //待機中切る人がランダムにモーションをとる
                 _time += Time.deltaTime;
-
-                if(_time > _threshTime)
+                
+                if (_time > _threshTime)
                 {
-                    int _randomIndex = UnityEngine.Random.Range(0, SwordIdleMotions.Length);
-                    _animator.CrossFade(SwordIdleMotions[_randomIndex], 0.6f);
                     _time = 0;
 
-                    if(_randomIndex == 0 || _randomIndex == 3)
+                    if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Great Sword Idle"))
                     {
-                        _threshTime = UnityEngine.Random.Range(16, 20);
+                        int _randomIndex = UnityEngine.Random.Range(0, SwordIdleMotions.Length);
+                        _animator.CrossFade(SwordIdleMotions[_randomIndex], 0.6f);
+
+                        if (_randomIndex == 0 || _randomIndex == 3)
+                        {
+                            _threshTime = UnityEngine.Random.Range(16, 20);
+                        }
+                        else
+                        {
+                            _threshTime = UnityEngine.Random.Range(9, 12);
+                        }
                     }
-                    else
-                    {
-                        _threshTime = UnityEngine.Random.Range(9, 12);
-                    }
-                    
                 }
 
                 break;

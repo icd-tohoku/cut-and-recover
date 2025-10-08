@@ -18,6 +18,8 @@ public class MoveHandChecker : MonoBehaviour
     bool _isWaveCheck = false;
     bool _isSpeed = false;
 
+    [SerializeField] Animator _animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,14 +52,14 @@ public class MoveHandChecker : MonoBehaviour
             _time += Time.deltaTime;
         }
 
-        if(_time <= _threshTime)
+        if(_isWaveCheck && _time <= _threshTime)
         {
             if( _isSpeed)
             {
                 //アニメーション再生
                 Debug.Log("Shake!!");
-
-                _isWaveCheck= false;
+                
+                _isWaveCheck = false;
             }
         }
         else

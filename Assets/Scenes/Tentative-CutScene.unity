@@ -2000,6 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handPos: {fileID: 1028093030}
   _headPos: {fileID: 1089991800}
+  _animator: {fileID: 941435077}
 --- !u!4 &1159647857
 Transform:
   m_ObjectHideFlags: 0
