@@ -1407,6 +1407,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -2525213446790289079, guid: 4c41e7864b6592244886800333fe433c, type: 3}
   m_PrefabInstance: {fileID: 216495536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &864306865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 20931419862231904, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
+  m_PrefabInstance: {fileID: 5914159559310796635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &864306867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7063239874792394613, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
+  m_PrefabInstance: {fileID: 5914159559310796635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864306865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75474f2f9fee2d048b3aa6cdda0d33e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &864306868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864306865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a389ba0a14747e0a4f53736213f7a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _crCameraMove: {fileID: 864306867}
+  _endPointActual:
+    PositionX: 0.1
+    PositionY: -0.06
+    RollInDeg: 40
 --- !u!1 &931672792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,6 +4332,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3004074734143231436, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2046990613}
+    - targetCorrespondingSourceObject: {fileID: 20931419862231904, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 864306868}
   m_SourcePrefab: {fileID: 100100000, guid: 7344a9313f6d2284ca93f0665842d3d5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
