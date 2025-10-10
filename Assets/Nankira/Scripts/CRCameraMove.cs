@@ -13,8 +13,6 @@ public class CRCamraMove : MonoBehaviour
     [SerializeField] Transform _startPoint;
     [SerializeField] Transform _leftEndPoint;
     [SerializeField] Transform _rightEndPoint;
-    public Transform LeftEndPoint => _leftEndPoint;
-    public Transform RightEndPoint => _rightEndPoint;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

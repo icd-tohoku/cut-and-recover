@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class adjustchair : MonoBehaviour
 {
@@ -27,11 +26,6 @@ public class adjustchair : MonoBehaviour
             //十分な時間が経過したら調整を終了
             checktime++;
             if (checktime > 100) ischeckd = true;
-        }
-        if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            checktime = 0;
-            ischeckd = false;
-        }
+        }  
     }
 }
