@@ -37,7 +37,7 @@ public class ProcessManager : MonoBehaviour
     [SerializeField] ParticleSystem _recoverEffect;
 
 
-    readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4", "MoveHand" };
+    readonly String[] SwordIdleMotions = { "SwordIdle_sub1", "SwordIdle_sub2", "SwordIdle_sub3", "SwordIdle_sub4" };
 
     bool _sentC5 = false, _sentC6 = false, _sentC7 = false;
 
