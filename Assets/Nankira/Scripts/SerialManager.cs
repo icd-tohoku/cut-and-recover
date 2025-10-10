@@ -179,19 +179,12 @@ public class SerialManager : MonoBehaviour
             pressureData[sensorPort] = portDict;
         }
 
+
         foreach (var kvp in sensorData)
         {
-            float value = kvp.Value;
-
-            // ★ 2つ目のセンサ（例: ID=1）の値を1/2にする
-            if (kvp.Key == 1)
-            {
-                value *= 0.5f;
-            }
-
-            portDict[kvp.Key] = value;
-            OnSinglePressureDataUpdated?.Invoke(sensorPort, kvp.Key, value);
-            Debug.Log($"[Sensor:{sensorPort}] Sensor {kvp.Key}: {value:F3}");
+            portDict[kvp.Key] = kvp.Value;
+            OnSinglePressureDataUpdated?.Invoke(sensorPort, kvp.Key, kvp.Value);
+            Debug.Log($"[Sensor:{sensorPort}] Sensor {kvp.Key}: {kvp.Value:F3}");
         }
 
         OnPressureDataUpdated?.Invoke(sensorPort, new Dictionary<int, float>(portDict));
@@ -201,8 +194,7 @@ public class SerialManager : MonoBehaviour
             float sum = 0f;
             foreach (var v in portDict.Values) sum += v;
 
-            // 元のスケーリング（30倍）はそのまま維持
-            _avgPressure[sensorPort] = sum / (30 * portDict.Count);
+            _avgPressure[sensorPort] = sum / (15 * portDict.Count);
             Debug.Log($"[Sensor:{sensorPort}] Average pressure: {_avgPressure[sensorPort]:F3} (from {portDict.Count} sensors)");
         }
         else
