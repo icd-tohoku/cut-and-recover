@@ -1831,8 +1831,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      propertyPath: portNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: 'portNames.Array.data[0]'
       value: COM3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
+      propertyPath: 'portNames.Array.data[1]'
+      value: COM7
       objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1918,7 +1926,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1074823108}
           m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
-          m_MethodName: SendCommandToAllPorts
+          m_MethodName: SendCommandToAllPairs
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

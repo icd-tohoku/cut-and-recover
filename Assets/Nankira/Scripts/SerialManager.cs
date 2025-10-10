@@ -2,268 +2,379 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[System.Serializable]
+public class ESP32Pair
+{
+    [Tooltip("振動子用ESP32のポート名")]
+    public string vibratorPort;
+    
+    [Tooltip("圧力センサ用ESP32のポート名")]
+    public string sensorPort;
+    
+    [Tooltip("このペアの識別名（任意）")]
+    public string pairName;
+}
+
 public class SerialManager : MonoBehaviour
 {
-    [Header("Port Settings")]
-    [Tooltip("List of port names to connect to")]
-    [SerializeField] private string[] portNames = { "COM3", "COM4", "COM5" };
+    [Header("ESP32 Pair Settings")]
+    [Tooltip("振動子と圧力センサのペアリスト")]
+    [SerializeField] private ESP32Pair[] esp32Pairs = new ESP32Pair[]
+    {
+        new ESP32Pair { vibratorPort = "COM3", sensorPort = "COM7", pairName = "Pair1" }
+    };
 
     [Header("Serial Settings")]
     [Tooltip("Baud rate for all serial connections")]
     [SerializeField] private int baudRate = 9600;
 
-    // 動的に生成されたSerialHandlerを管理
-    private Dictionary<string, SerialHandler> serialHandlers = new Dictionary<string, SerialHandler>();
+    // 振動子用SerialHandlerを管理
+    private Dictionary<string, SerialHandler> vibratorHandlers = new Dictionary<string, SerialHandler>();
+    
+    // 圧力センサ用SerialHandlerを管理
+    private Dictionary<string, SerialHandler> sensorHandlers = new Dictionary<string, SerialHandler>();
+    
+    // ペア名から対応するポート名を取得するための辞書
+    private Dictionary<string, (string vibratorPort, string sensorPort)> pairMapping = new Dictionary<string, (string, string)>();
 
     private string receivedData;
     
-    // 複数の圧力センサデータを管理（ポート名 -> センサーインデックス -> 圧力値）
+    // 圧力センサデータを管理（センサーポート名 -> センサーインデックス -> 圧力値）
     private Dictionary<string, Dictionary<int, float>> pressureData = new Dictionary<string, Dictionary<int, float>>();
 
-    // 圧力データ更新イベント（複数センサー対応）
-    public delegate void PressureDataUpdatedEventHandler(string portName, Dictionary<int, float> sensorData);
+    // 圧力データ更新イベント
+    public delegate void PressureDataUpdatedEventHandler(string sensorPort, Dictionary<int, float> sensorData);
     public event PressureDataUpdatedEventHandler OnPressureDataUpdated;
 
-    // 単一センサーデータ更新イベント（個別通知用）
-    public delegate void SinglePressureDataUpdatedEventHandler(string portName, int sensorIndex, float pressure);
+    public delegate void SinglePressureDataUpdatedEventHandler(string sensorPort, int sensorIndex, float pressure);
     public event SinglePressureDataUpdatedEventHandler OnSinglePressureDataUpdated;
 
     private readonly Dictionary<string, float> _avgPressure = new Dictionary<string, float>();
 
     void Start()
     {
-        // 設定されたポート名を使用してSerialHandlerを動的に生成
         CreateSerialHandlers();
     }
 
-    // 設定されたポート名を使用してSerialHandlerを動的に生成
     private void CreateSerialHandlers()
     {
-        foreach (string portName in portNames)
+        foreach (ESP32Pair pair in esp32Pairs)
         {
-            if (string.IsNullOrEmpty(portName))
+            if (string.IsNullOrEmpty(pair.vibratorPort) || string.IsNullOrEmpty(pair.sensorPort))
             {
-                Debug.LogWarning("Empty port name found in settings!");
+                Debug.LogWarning($"Invalid pair configuration: {pair.pairName}");
                 continue;
             }
 
-            CreateSingleSerialHandler(portName);
+            string pairName = string.IsNullOrEmpty(pair.pairName) 
+                ? $"{pair.vibratorPort}_{pair.sensorPort}" 
+                : pair.pairName;
+
+            // ペアマッピングを保存
+            pairMapping[pairName] = (pair.vibratorPort, pair.sensorPort);
+
+            // 振動子用SerialHandlerを作成
+            CreateVibratorHandler(pair.vibratorPort, pairName);
+            
+            // 圧力センサ用SerialHandlerを作成
+            CreateSensorHandler(pair.sensorPort, pairName);
+
+            Debug.Log($"Created ESP32 Pair '{pairName}': Vibrator={pair.vibratorPort}, Sensor={pair.sensorPort}");
         }
     }
 
-    private void CreateSingleSerialHandler(string portName)
+    private void CreateVibratorHandler(string portName, string pairName)
     {
-        if (serialHandlers.ContainsKey(portName))
+        if (vibratorHandlers.ContainsKey(portName))
         {
-            Debug.LogWarning($"Port '{portName}' is already registered!");
+            Debug.LogWarning($"Vibrator port '{portName}' is already registered!");
             return;
         }
 
-        // 新しいGameObjectを作成してSerialHandlerを追加
-        GameObject handlerObject = new GameObject($"SerialHandler_{portName}");
+        GameObject handlerObject = new GameObject($"Vibrator_{pairName}_{portName}");
         handlerObject.transform.SetParent(this.transform);
 
         SerialHandler serialHandler = handlerObject.AddComponent<SerialHandler>();
-        
-        // SerialHandlerを初期化
         serialHandler.SetPortName(portName);
         serialHandler.SetBaudRate(baudRate);
-        serialHandler.OnDataReceived += OnDataReceived;
+        
+        // ラムダ式でportNameをキャプチャ
+        serialHandler.OnDataReceived += (message) => 
+        {
+            Debug.Log($"[Vibrator:{portName}] {message}");
+        };
+        
+        vibratorHandlers[portName] = serialHandler;
+        serialHandler.OpenPort();
+    }
+
+    private void CreateSensorHandler(string portName, string pairName)
+    {
+        if (sensorHandlers.ContainsKey(portName))
+        {
+            Debug.LogWarning($"Sensor port '{portName}' is already registered!");
+            return;
+        }
+
+        GameObject handlerObject = new GameObject($"Sensor_{pairName}_{portName}");
+        handlerObject.transform.SetParent(this.transform);
+
+        SerialHandler serialHandler = handlerObject.AddComponent<SerialHandler>();
+        serialHandler.SetPortName(portName);
+        serialHandler.SetBaudRate(baudRate);
+        
+        // ラムダ式でportNameをキャプチャ
+        serialHandler.OnDataReceived += (message) => 
+        {
+            receivedData = message;
+            Debug.Log($"[Sensor:{portName}] {message}");
+        };
+        
         serialHandler.OnMultiplePressureDataReceived += (sensorData) => OnMultiplePressureDataReceived(portName, sensorData);
         
-        // 辞書に追加
-        serialHandlers[portName] = serialHandler;
+        sensorHandlers[portName] = serialHandler;
         
-        // pressureDataにも追加
         if (!pressureData.ContainsKey(portName))
         {
             pressureData[portName] = new Dictionary<int, float>();
         }
 
-        // ポートを開く
         serialHandler.OpenPort();
-        
-        Debug.Log($"Created SerialHandler for port: {portName}");
     }
 
-    void OnDataReceived(string message)
-    {
-        receivedData = message;
-        Debug.Log($"受信データ: {message}");
-    }
+    // void OnMultiplePressureDataReceived(string sensorPort, Dictionary<int, float> sensorData)
+    // {
+    //     if (!pressureData.TryGetValue(sensorPort, out var portDict))
+    //     {
+    //         portDict = new Dictionary<int, float>();
+    //         pressureData[sensorPort] = portDict;
+    //     }
 
-    // 受信ハンドラ（圧力センサーデータの処理を改善）
-    void OnMultiplePressureDataReceived(string portName, Dictionary<int, float> sensorData)
+    //     foreach (var kvp in sensorData)
+    //     {
+    //         portDict[kvp.Key] = kvp.Value;
+    //         OnSinglePressureDataUpdated?.Invoke(sensorPort, kvp.Key, kvp.Value);
+    //         Debug.Log($"[Sensor:{sensorPort}] Sensor {kvp.Key}: {kvp.Value:F3}");
+    //     }
+
+    //     OnPressureDataUpdated?.Invoke(sensorPort, new Dictionary<int, float>(portDict));
+
+    //     if (portDict.Count > 0)
+    //     {
+    //         float sum = 0f;
+    //         foreach (var v in portDict.Values) sum += v;
+    //         _avgPressure[sensorPort] = sum / (30 * portDict.Count);
+    //         Debug.Log($"[Sensor:{sensorPort}] Average pressure: {_avgPressure[sensorPort]:F3} (from {portDict.Count} sensors)");
+    //     }
+    //     else
+    //     {
+    //         _avgPressure[sensorPort] = 0f;
+    //     }
+    // }
+    void OnMultiplePressureDataReceived(string sensorPort, Dictionary<int, float> sensorData)
     {
-        if (!pressureData.TryGetValue(portName, out var portDict))
+        if (!pressureData.TryGetValue(sensorPort, out var portDict))
         {
             portDict = new Dictionary<int, float>();
-            pressureData[portName] = portDict;
+            pressureData[sensorPort] = portDict;
         }
 
-        // 受信したセンサーデータを更新（既存データは保持、新しいデータのみ更新）
         foreach (var kvp in sensorData)
         {
-            portDict[kvp.Key] = kvp.Value;
-            OnSinglePressureDataUpdated?.Invoke(portName, kvp.Key, kvp.Value);
-            
-            // デバッグログを追加
-            Debug.Log($"[{portName}] Sensor {kvp.Key}: {kvp.Value:F3}");
+            float value = kvp.Value;
+
+            // ★ 2つ目のセンサ（例: ID=1）の値を1/2にする
+            if (kvp.Key == 1)
+            {
+                value *= 0.5f;
+            }
+
+            portDict[kvp.Key] = value;
+            OnSinglePressureDataUpdated?.Invoke(sensorPort, kvp.Key, value);
+            Debug.Log($"[Sensor:{sensorPort}] Sensor {kvp.Key}: {value:F3}");
         }
 
-        OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(portDict));
+        OnPressureDataUpdated?.Invoke(sensorPort, new Dictionary<int, float>(portDict));
 
-
-        // ポート内の全センサー現在値から平均を計算
         if (portDict.Count > 0)
         {
             float sum = 0f;
             foreach (var v in portDict.Values) sum += v;
-            _avgPressure[portName] = sum / (30*portDict.Count); //値を30で割って小さくする（生データのmaxが4096らしいので）
-            Debug.Log($"[{portName}] Average pressure: {_avgPressure[portName]:F3} (from {portDict.Count} sensors)");
 
+            // 元のスケーリング（30倍）はそのまま維持
+            _avgPressure[sensorPort] = sum / (30 * portDict.Count);
+            Debug.Log($"[Sensor:{sensorPort}] Average pressure: {_avgPressure[sensorPort]:F3} (from {portDict.Count} sensors)");
         }
         else
         {
-            _avgPressure[portName] = 0f;
+            _avgPressure[sensorPort] = 0f;
         }
     }
 
-    private void Update()
-    {
-        // Update()での定期送信は削除
-        // 必要に応じてここでデバッグ情報の表示などのみ行う
-    }
 
-    // === 新しいコマンド送信メソッド（即座に送信） ===
-    
-    /// <summary>
-    /// 全ポートに即座にコマンドを送信
-    /// </summary>
-    /// <param name="command">送信するコマンド</param>
-    public void SendImmediateCommandToAllPorts(string command)
-    {
-        foreach (var kvp in serialHandlers)
-        {
-            string portName = kvp.Key;
-            SerialHandler serialHandler = kvp.Value;
-            
-            serialHandler.Write(command);
-            Debug.Log($"[{portName}] Immediate Command: {command}");
-        }
-    }
+    // === ペア単位での振動コマンド送信 ===
 
     /// <summary>
-    /// 特定ポートに即座にコマンドを送信
+    /// 特定ペアの振動子にコマンドを送信
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <param name="command">送信するコマンド</param>
-    public void SendImmediateCommandToSpecificPort(string portName, string command)
+    public void SendCommandToPair(string pairName, string command)
     {
-        if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
+        if (pairMapping.TryGetValue(pairName, out var ports))
         {
-            serialHandler.Write(command);
-            Debug.Log($"[{portName}] Immediate Command: {command}");
+            SendCommandToVibrator(ports.vibratorPort, command);
         }
         else
         {
-            Debug.LogWarning($"Port '{portName}' not found.");
+            Debug.LogWarning($"Pair '{pairName}' not found.");
         }
     }
 
     /// <summary>
-    /// 全ポートに停止コマンドを即座に送信
+    /// 全ペアの振動子にコマンドを送信
     /// </summary>
-    public void StopAllPorts()
+    public void SendCommandToAllPairs(string command)
     {
-        SendImmediateCommandToAllPorts("S;");
+        foreach (var kvp in vibratorHandlers)
+        {
+            kvp.Value.Write(command);
+            Debug.Log($"[Vibrator:{kvp.Key}] Command: {command}");
+        }
     }
 
     /// <summary>
-    /// 特定ポートに停止コマンドを即座に送信
+    /// 特定の振動子ポートにコマンドを送信
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    public void StopSpecificPort(string portName)
+    public void SendCommandToVibrator(string vibratorPort, string command)
     {
-        SendImmediateCommandToSpecificPort(portName, "S;");
+        if (vibratorHandlers.TryGetValue(vibratorPort, out SerialHandler handler))
+        {
+            handler.Write(command);
+            Debug.Log($"[Vibrator:{vibratorPort}] Command: {command}");
+        }
+        else
+        {
+            Debug.LogWarning($"Vibrator port '{vibratorPort}' not found.");
+        }
     }
 
-    // === 振動コマンド用の便利メソッド ===
+    // === 振動制御メソッド ===
     
     /// <summary>
-    /// 全ポートの特定チャンネルに振動コマンドを送信
+    /// 特定ペアの振動子を制御
     /// </summary>
-    /// <param name="channel">振動チャンネル (1-5)</param>
-    /// <param name="intensity">強度 (0-255)</param>
-    public void SetVibratorAllPorts(int channel, int intensity)
+    public void SetVibratorForPair(string pairName, int channel, int intensity)
     {
         string command = $"V{channel}{intensity:000};";
-        SendImmediateCommandToAllPorts(command);
+        SendCommandToPair(pairName, command);
     }
 
     /// <summary>
-    /// 特定ポートの特定チャンネルに振動コマンドを送信
+    /// 全ペアの振動子を制御
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <param name="channel">振動チャンネル (1-5)</param>
-    /// <param name="intensity">強度 (0-255)</param>
-    public void SetVibratorSpecificPort(string portName, int channel, int intensity)
+    public void SetVibratorForAllPairs(int channel, int intensity)
     {
         string command = $"V{channel}{intensity:000};";
-        SendImmediateCommandToSpecificPort(portName, command);
+        SendCommandToAllPairs(command);
     }
 
     /// <summary>
-    /// 全ポートにプリセットパターンを送信
+    /// 特定ペアの振動子を停止
     /// </summary>
-    /// <param name="presetNumber">プリセット番号 (1-4)</param>
-    public void ExecutePresetAllPorts(int presetNumber)
+    public void StopPair(string pairName)
+    {
+        SendCommandToPair(pairName, "S;");
+    }
+
+    /// <summary>
+    /// 全ペアの振動子を停止
+    /// </summary>
+    public void StopAllPairs()
+    {
+        SendCommandToAllPairs("S;");
+    }
+
+    /// <summary>
+    /// 特定ペアにプリセットパターンを送信
+    /// </summary>
+    public void ExecutePresetForPair(string pairName, int presetNumber)
     {
         string command = $"P{presetNumber};";
-        SendImmediateCommandToAllPorts(command);
+        SendCommandToPair(pairName, command);
     }
 
     /// <summary>
-    /// 特定ポートにプリセットパターンを送信
+    /// 全ペアにプリセットパターンを送信
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <param name="presetNumber">プリセット番号 (1-4)</param>
-    public void ExecutePresetSpecificPort(string portName, int presetNumber)
+    public void ExecutePresetForAllPairs(int presetNumber)
     {
         string command = $"P{presetNumber};";
-        SendImmediateCommandToSpecificPort(portName, command);
+        SendCommandToAllPairs(command);
     }
 
-    // === 旧メソッド（互換性のため残すが非推奨） ===
-    
-    [System.Obsolete("Use SendImmediateCommandToAllPorts instead")]
-    public void SendCommandToAllPorts(string command)
-    {
-        SendImmediateCommandToAllPorts(command);
-    }
-
-    [System.Obsolete("Use SendImmediateCommandToSpecificPort instead")]
-    public void SendCommandToSpecificPort(string portName, string command)
-    {
-        SendImmediateCommandToSpecificPort(portName, command);
-    }
-
-    // === データ取得メソッド（変更なし） ===
+    // === 圧力データ取得メソッド ===
 
     /// <summary>
-    /// 指定ポートの平均圧力を取得
+    /// 特定ペアの圧力センサの平均値を取得
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <returns>平均圧力値</returns>
-    public float GetAveragePressure(string portName)
+    public float GetAveragePressureForPair(string pairName)
     {
-        return _avgPressure.TryGetValue(portName, out var v) ? v : 0f;
+        if (pairMapping.TryGetValue(pairName, out var ports))
+        {
+            return GetAveragePressure(ports.sensorPort);
+        }
+        return 0f;
     }
 
     /// <summary>
-    /// 全ポートの全センサーデータを取得
+    /// 特定センサポートの平均圧力を取得
     /// </summary>
-    /// <returns>ポート名 -> センサーインデックス -> 圧力値の辞書</returns>
+    public float GetAveragePressure(string sensorPort)
+    {
+        return _avgPressure.TryGetValue(sensorPort, out var v) ? v : 0f;
+    }
+
+    /// <summary>
+    /// 特定ペアの全センサーデータを取得
+    /// </summary>
+    public Dictionary<int, float> GetPressureDataForPair(string pairName)
+    {
+        if (pairMapping.TryGetValue(pairName, out var ports))
+        {
+            return GetPressureData(ports.sensorPort);
+        }
+        return new Dictionary<int, float>();
+    }
+
+    /// <summary>
+    /// 特定センサポートの全センサーデータを取得
+    /// </summary>
+    public Dictionary<int, float> GetPressureData(string sensorPort)
+    {
+        if (pressureData.TryGetValue(sensorPort, out Dictionary<int, float> sensorData))
+        {
+            return new Dictionary<int, float>(sensorData);
+        }
+        return new Dictionary<int, float>();
+    }
+
+    /// <summary>
+    /// 特定センサポート・特定センサーの圧力値を取得
+    /// </summary>
+    public float GetPressureData(string sensorPort, int sensorIndex)
+    {
+        if (pressureData.TryGetValue(sensorPort, out Dictionary<int, float> sensorData))
+        {
+            if (sensorData.TryGetValue(sensorIndex, out float pressure))
+            {
+                return pressure;
+            }
+        }
+        return 0.0f;
+    }
+
+    /// <summary>
+    /// 全センサポートの全データを取得
+    /// </summary>
     public Dictionary<string, Dictionary<int, float>> GetAllPressureData()
     {
         var result = new Dictionary<string, Dictionary<int, float>>();
@@ -275,463 +386,121 @@ public class SerialManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 特定ポートのセンサー数を取得
+    /// 特定センサポートのセンサー数を取得
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <returns>センサー数</returns>
-    public int GetSensorCount(string portName)
+    public int GetSensorCount(string sensorPort)
     {
-        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
+        if (pressureData.TryGetValue(sensorPort, out Dictionary<int, float> sensorData))
         {
             return sensorData.Count;
         }
         return 0;
     }
 
+    // === ペア情報取得メソッド ===
+
     /// <summary>
-    /// 特定ポート・特定センサーの圧力値を取得
+    /// 登録されている全ペア名を取得
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <param name="sensorIndex">センサーインデックス</param>
-    /// <returns>圧力値</returns>
-    public float GetPressureData(string portName, int sensorIndex)
+    public List<string> GetAllPairNames()
     {
-        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
-        {
-            if (sensorData.TryGetValue(sensorIndex, out float pressure))
-            {
-                return pressure;
-            }
-        }
-        return 0.0f;
+        return new List<string>(pairMapping.Keys);
     }
 
     /// <summary>
-    /// 特定ポートの全センサーデータを取得
+    /// 登録されている全センサポート名を取得
     /// </summary>
-    /// <param name="portName">ポート名</param>
-    /// <returns>センサーインデックス -> 圧力値の辞書</returns>
-    public Dictionary<int, float> GetPressureData(string portName)
+    public List<string> GetAllSensorPorts()
     {
-        if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
+        return new List<string>(sensorHandlers.Keys);
+    }
+
+    /// <summary>
+    /// 登録されている全振動子ポート名を取得
+    /// </summary>
+    public List<string> GetAllVibratorPorts()
+    {
+        return new List<string>(vibratorHandlers.Keys);
+    }
+
+    /// <summary>
+    /// 最初に登録されているセンサポート名を取得
+    /// </summary>
+    public string GetFirstSensorPort()
+    {
+        if (sensorHandlers.Count > 0)
         {
-            return new Dictionary<int, float>(sensorData);
+            return sensorHandlers.Keys.First();
         }
-        return new Dictionary<int, float>();
+        return null;
     }
 
-    // === SerialHandler管理メソッド（変更なし） ===
-
-    public void AddSerialHandler(string portName)
+    /// <summary>
+    /// 最初に登録されている振動子ポート名を取得
+    /// </summary>
+    public string GetFirstVibratorPort()
     {
-        CreateSingleSerialHandler(portName);
-    }
-
-    public void RemoveSerialHandler(string portName)
-    {
-        if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
+        if (vibratorHandlers.Count > 0)
         {
-            serialHandler.OnDataReceived -= OnDataReceived;
-            
-            if (serialHandler != null && serialHandler.gameObject != null)
-            {
-                DestroyImmediate(serialHandler.gameObject);
-            }
-            
-            serialHandlers.Remove(portName);
-            pressureData.Remove(portName);
-            _avgPressure.Remove(portName);
-            Debug.Log($"Removed SerialHandler for port: {portName}");
+            return vibratorHandlers.Keys.First();
         }
+        return null;
     }
 
-    public List<string> GetAvailablePorts()
+    /// <summary>
+    /// 最初のペアのセンサポート名を取得
+    /// </summary>
+    public string GetFirstPairSensorPort()
     {
-        return new List<string>(serialHandlers.Keys);
-    }
-
-    public SerialHandler GetSerialHandler(string portName)
-    {
-        serialHandlers.TryGetValue(portName, out SerialHandler handler);
-        return handler;
-    }
-
-    public string[] GetConfiguredPortNames()
-    {
-        return (string[])portNames.Clone();
-    }
-
-    public void UpdatePortNames(string[] newPortNames)
-    {
-        var currentPorts = new List<string>(serialHandlers.Keys);
-        foreach (string port in currentPorts)
+        if (pairMapping.Count > 0)
         {
-            RemoveSerialHandler(port);
+            var firstPair = pairMapping.Values.First();
+            return firstPair.sensorPort;
         }
+        return null;
+    }
 
-        portNames = (string[])newPortNames.Clone();
-        CreateSerialHandlers();
+    /// <summary>
+    /// 最初のペアの振動子ポート名を取得
+    /// </summary>
+    public string GetFirstPairVibratorPort()
+    {
+        if (pairMapping.Count > 0)
+        {
+            var firstPair = pairMapping.Values.First();
+            return firstPair.vibratorPort;
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// 特定ペアの振動子ポート名を取得
+    /// </summary>
+    public string GetVibratorPortForPair(string pairName)
+    {
+        if (pairMapping.TryGetValue(pairName, out var ports))
+        {
+            return ports.vibratorPort;
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// 特定ペアのセンサポート名を取得
+    /// </summary>
+    public string GetSensorPortForPair(string pairName)
+    {
+        if (pairMapping.TryGetValue(pairName, out var ports))
+        {
+            return ports.sensorPort;
+        }
+        return null;
     }
 
     void OnDestroy()
     {
-        // 全てのポートに停止コマンドを送信してからクリーンアップ
-        StopAllPorts();
+        StopAllPairs();
         
-        foreach (var kvp in serialHandlers)
-        {
-            if (kvp.Value != null)
-            {
-                kvp.Value.OnDataReceived -= OnDataReceived;
-            }
-        }
+        // SerialHandlerのクリーンアップは各HandlerのOnDestroyで行われる
     }
 }
-
-// using System.Collections.Generic;
-// using System.Linq;
-// using UnityEngine;
-
-// public class SerialManager : MonoBehaviour
-// {
-//     [Header("Port Settings")]
-//     [Tooltip("List of port names to connect to")]
-//     [SerializeField] private string[] portNames = { "COM3", "COM4", "COM5" };
-
-//     [Header("Serial Settings")]
-//     [Tooltip("Baud rate for all serial connections")]
-//     [SerializeField] private int baudRate = 9600;
-
-//     [Header("Transmission Settings")]
-//     [SerializeField] private float _transmissionSpan = 0.1f;
-
-//     // 動的に生成されたSerialHandlerを管理
-//     private Dictionary<string, SerialHandler> serialHandlers = new Dictionary<string, SerialHandler>();
-
-//     private string receivedData;
-//     private Dictionary<string, string> sendData = new Dictionary<string, string>();
-    
-//     // 複数の圧力センサデータを管理（ポート名 -> センサーインデックス -> 圧力値）
-//     private Dictionary<string, Dictionary<int, float>> pressureData = new Dictionary<string, Dictionary<int, float>>();
-    
-//     private bool isSendable = true;
-//     private float time;
-
-//     // 圧力データ更新イベント（複数センサー対応）
-//     public delegate void PressureDataUpdatedEventHandler(string portName, Dictionary<int, float> sensorData);
-//     public event PressureDataUpdatedEventHandler OnPressureDataUpdated;
-
-//     // 単一センサーデータ更新イベント（個別通知用）
-//     public delegate void SinglePressureDataUpdatedEventHandler(string portName, int sensorIndex, float pressure);
-//     public event SinglePressureDataUpdatedEventHandler OnSinglePressureDataUpdated;
-
-
-//     private readonly Dictionary<string, float> _avgPressure = new Dictionary<string, float>();
-
-
-//     void Start()
-//     {
-//         // 設定されたポート名を使用してSerialHandlerを動的に生成
-//         CreateSerialHandlers();
-//     }
-
-//     // 設定されたポート名を使用してSerialHandlerを動的に生成
-//     private void CreateSerialHandlers()
-//     {
-//         foreach (string portName in portNames)
-//         {
-//             if (string.IsNullOrEmpty(portName))
-//             {
-//                 Debug.LogWarning("Empty port name found in settings!");
-//                 continue;
-//             }
-
-//             CreateSingleSerialHandler(portName);
-//         }
-//     }
-
-//     private void CreateSingleSerialHandler(string portName)
-//     {
-//         if (serialHandlers.ContainsKey(portName))
-//         {
-//             Debug.LogWarning($"Port '{portName}' is already registered!");
-//             return;
-//         }
-
-//         // 新しいGameObjectを作成してSerialHandlerを追加
-//         GameObject handlerObject = new GameObject($"SerialHandler_{portName}");
-//         handlerObject.transform.SetParent(this.transform);
-
-//         SerialHandler serialHandler = handlerObject.AddComponent<SerialHandler>();
-        
-//         // SerialHandlerを初期化
-//         serialHandler.SetPortName(portName);
-//         serialHandler.SetBaudRate(baudRate);
-//         serialHandler.OnDataReceived += OnDataReceived;
-//         serialHandler.OnMultiplePressureDataReceived += (sensorData) => OnMultiplePressureDataReceived(portName, sensorData);
-        
-//         // 辞書に追加
-//         serialHandlers[portName] = serialHandler;
-        
-//         // sendDataとpressureDataにも追加
-//         if (!sendData.ContainsKey(portName))
-//         {
-//             sendData[portName] = "S;";
-//         }
-//         if (!pressureData.ContainsKey(portName))
-//         {
-//             pressureData[portName] = new Dictionary<int, float>();
-//         }
-
-//         // ポートを開く
-//         serialHandler.OpenPort();
-        
-//         Debug.Log($"Created SerialHandler for port: {portName}");
-//     }
-
-//     void OnDataReceived(string message)
-//     {
-//         receivedData = message;
-//         Debug.Log($"受信データ: {message}");
-//     }
-
-
-    
-
-//     // 受信ハンドラの末尾を少しだけ修正（差分受信でも正しい平均にする）
-//     void OnMultiplePressureDataReceived(string portName, Dictionary<int, float> sensorData)
-//     {
-//         if (!pressureData.TryGetValue(portName, out var portDict))
-//         {
-//             portDict = new Dictionary<int, float>();
-//             pressureData[portName] = portDict;
-//         }
-
-//         // 既存の上書き更新
-//         foreach (var kvp in sensorData)
-//         {
-//             portDict[kvp.Key] = kvp.Value;
-//             OnSinglePressureDataUpdated?.Invoke(portName, kvp.Key, kvp.Value);
-//         }
-
-//         OnPressureDataUpdated?.Invoke(portName, new Dictionary<int, float>(portDict));
-
-//         // ★ここで「ポート内の全センサー現在値」から平均を更新（LINQなし＝小GCも出ない）
-//         if (portDict.Count > 0)
-//         {
-//             float sum = 0f;
-//             foreach (var v in portDict.Values) sum += v;
-//             _avgPressure[portName] = sum / portDict.Count;
-//         }
-//         else
-//         {
-//             _avgPressure[portName] = 0f;
-//         }
-//     }
-
-//     private void Update()
-//     {
-//         time += Time.deltaTime;
-
-//         // デフォルト値の設定（停止コマンド）
-//         foreach (var portName in serialHandlers.Keys)
-//         {
-//             if (!sendData.ContainsKey(portName))
-//             {
-//                 sendData[portName] = "S;";
-//             }
-//         }
-
-//         // 定期的なコマンド送信
-//         if (time > _transmissionSpan)
-//         {
-//             TransmitCommands();
-//             time = 0;
-//         }
-//     }
-
-//     private void TransmitCommands()
-//     {
-//         foreach (var kvp in sendData)
-//         {
-//             string portName = kvp.Key;
-//             string command = kvp.Value;
-            
-//             if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
-//             {
-//                 serialHandler.Write(command);
-//                 // Debug.Log($"sendData[{portName}]: {command}");
-//             }
-//             else
-//             {
-//                 Debug.LogWarning($"ポート '{portName}' に対応するSerialHandlerが見つかりませんでした。");
-//             }
-//         }
-
-//         // 送信後、全てのコマンドを停止コマンドにリセット
-//         var keys = sendData.Keys.ToList();
-//         foreach (var key in keys)
-//         {
-//             sendData[key] = "S;";
-//         }
-//     }
-
-//     // 外部から呼び出されるコマンド送信メソッド群
-//     public void SendCommandToAllPorts(string command)
-//     {
-//         if (isSendable)
-//         {
-//             foreach (var key in sendData.Keys.ToList())
-//             {
-//                 sendData[key] = command;
-//             }
-//             Debug.Log($"All ports Command: {command}");
-//         }
-//     }
-
-//     public void SendCommandToSpecificPort(string portName, string command)
-//     {
-//         if (isSendable && serialHandlers.ContainsKey(portName))
-//         {
-//             sendData[portName] = command;
-//             Debug.Log($"[{portName}] Command: {command}");
-//         }
-//         else
-//         {
-//             Debug.LogWarning($"Port '{portName}' not found or not sendable.");
-//         }
-//     }
-
-//     // 圧力センサ取得API（見つからなければ0f）基本はこれを使う
-//     public float GetAveragePressure(string portName)
-//     {
-//         return _avgPressure.TryGetValue(portName, out var v) ? v : 0f;
-//     }
-
-//     // 圧力データ取得メソッド（複数センサー対応）
-//     /*
-//     public Dictionary<int, float> GetPressureData(string portName)
-//     {
-//         if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
-//         {
-//             return new Dictionary<int, float>(sensorData);
-//         }
-//         return new Dictionary<int, float>();
-//     }
-
-//     // 特定のセンサーの圧力データを取得
-//     public float GetPressureData(string portName, int sensorIndex)
-//     {
-//         if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
-//         {
-//             if (sensorData.TryGetValue(sensorIndex, out float pressure))
-//             {
-//                 return pressure;
-//             }
-//         }
-//         return 0.0f;
-//     }
-//     */
-
-//     // 全ポートの全センサーデータを取得
-//     public Dictionary<string, Dictionary<int, float>> GetAllPressureData()
-//     {
-//         var result = new Dictionary<string, Dictionary<int, float>>();
-//         foreach (var kvp in pressureData)
-//         {
-//             result[kvp.Key] = new Dictionary<int, float>(kvp.Value);
-//         }
-//         return result;
-//     }
-
-//     // 特定ポートのセンサー数を取得
-//     public int GetSensorCount(string portName)
-//     {
-//         if (pressureData.TryGetValue(portName, out Dictionary<int, float> sensorData))
-//         {
-//             return sensorData.Count;
-//         }
-//         return 0;
-//     }
-
-//     // ランタイムで新しいSerialHandlerを追加する場合のメソッド
-//     public void AddSerialHandler(string portName)
-//     {
-//         CreateSingleSerialHandler(portName);
-//     }
-
-//     // SerialHandlerを削除する場合のメソッド
-//     public void RemoveSerialHandler(string portName)
-//     {
-//         if (serialHandlers.TryGetValue(portName, out SerialHandler serialHandler))
-//         {
-//             serialHandler.OnDataReceived -= OnDataReceived;
-            
-//             // GameObjectを破棄
-//             if (serialHandler != null && serialHandler.gameObject != null)
-//             {
-//                 DestroyImmediate(serialHandler.gameObject);
-//             }
-            
-//             serialHandlers.Remove(portName);
-//             sendData.Remove(portName);
-//             pressureData.Remove(portName);
-//             Debug.Log($"Removed SerialHandler for port: {portName}");
-//         }
-//     }
-
-//     // 利用可能なポート一覧を取得
-//     public List<string> GetAvailablePorts()
-//     {
-//         return new List<string>(serialHandlers.Keys);
-//     }
-
-//     // 特定のポートのSerialHandlerを取得
-//     public SerialHandler GetSerialHandler(string portName)
-//     {
-//         serialHandlers.TryGetValue(portName, out SerialHandler handler);
-//         return handler;
-//     }
-
-//     // 送信可能状態を設定/取得
-//     public bool IsSendable
-//     {
-//         get => isSendable;
-//         set => isSendable = value;
-//     }
-
-//     // Inspectorで設定されたポート名一覧を取得
-//     public string[] GetConfiguredPortNames()
-//     {
-//         return (string[])portNames.Clone();
-//     }
-
-//     // ランタイムでポート名一覧を更新
-//     public void UpdatePortNames(string[] newPortNames)
-//     {
-//         // 現在のハンドラーを全て削除
-//         var currentPorts = new List<string>(serialHandlers.Keys);
-//         foreach (string port in currentPorts)
-//         {
-//             RemoveSerialHandler(port);
-//         }
-
-//         // 新しいポート名を設定
-//         portNames = (string[])newPortNames.Clone();
-        
-//         // 新しいハンドラーを作成
-//         CreateSerialHandlers();
-//     }
-
-//     void OnDestroy()
-//     {
-//         // 全てのSerialHandlerを適切に終了
-//         foreach (var kvp in serialHandlers)
-//         {
-//             if (kvp.Value != null)
-//             {
-//                 kvp.Value.OnDataReceived -= OnDataReceived;
-//             }
-//         }
-//     }
-// }
