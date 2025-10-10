@@ -13,8 +13,8 @@ namespace Nankira
             // Actual（実際）の動きモードに設定
             if (Keyboard.current.aKey.wasPressedThisFrame)
             {
-                Debug.Log("【モード設定】実際の目の動きモード");
                 SetEndPoints(true);
+                Debug.Log("【モード設定】実際の目の動きモード");
             }
             // Intuitive（直感的）の動きモードに設定
             else if (Keyboard.current.iKey.wasPressedThisFrame)
