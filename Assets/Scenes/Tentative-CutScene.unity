@@ -1436,6 +1436,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _crCameraMove: {fileID: 864306867}
+  _endPointActual:
+    PositionX: 0.1
+    PositionY: -0.06
+    RollInDeg: 40
 --- !u!1 &931672792
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ namespace Nankira
     public class CRCameraMoveSetter : MonoBehaviour
     {
         [SerializeField] private CRCamraMove _crCameraMove;
+        [SerializeField] private CRCameraMoveDto _endPointActual;
 
         void Update()
         {
@@ -27,11 +28,11 @@ namespace Nankira
         {
             int sign = isActual ? 1 : -1;
 
-            _crCameraMove.LeftEndPoint.position = new(-0.1f, -0.06f, 0.0f);
-            _crCameraMove.LeftEndPoint.rotation = Quaternion.Euler(0.0f, 0.0f, sign * 40.0f);
+            _crCameraMove.LeftEndPoint.position = new(-1.0f * _endPointActual.PositionX, _endPointActual.PositionY, 0.0f);
+            _crCameraMove.LeftEndPoint.rotation = Quaternion.Euler(0.0f, 0.0f, sign * _endPointActual.RollInDeg);
 
-            _crCameraMove.RightEndPoint.position = new(0.1f, -0.06f, 0.0f);
-            _crCameraMove.RightEndPoint.rotation = Quaternion.Euler(0.0f, 0.0f, sign * -40.0f);
+            _crCameraMove.RightEndPoint.position = new(_endPointActual.PositionX, _endPointActual.PositionY, 0.0f);
+            _crCameraMove.RightEndPoint.rotation = Quaternion.Euler(0.0f, 0.0f, -sign * _endPointActual.RollInDeg);
         }
     }
 }
