@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a7ac59187cef19d4393e928eb3afa234
+timeCreated: 1502001810
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/RootMotion/RootMotion_Humanoid.anim
+  uploadId: 801660

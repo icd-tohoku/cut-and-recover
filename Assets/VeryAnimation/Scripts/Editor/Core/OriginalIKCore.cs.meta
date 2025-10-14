@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 265bf1b0b9253134f962fbb6c3adb9f4
+timeCreated: 1509680395
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Core/OriginalIKCore.cs
+  uploadId: 801660

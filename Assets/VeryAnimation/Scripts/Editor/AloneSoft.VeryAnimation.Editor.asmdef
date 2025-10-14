@@ -1,0 +1,33 @@
+{
+    "name": "AloneSoft.VeryAnimation.Editor",
+    "rootNamespace": "",
+    "references": [
+        "AloneSoft.VeryAnimation",
+        "Unity.Timeline",
+        "Unity.Timeline.Editor",
+        "Unity.Animation.Rigging",
+        "Unity.Animation.Rigging.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.6",
+            "define": "VERYANIMATION_TIMELINE"
+        },
+        {
+            "name": "com.unity.animation.rigging",
+            "expression": "1.1",
+            "define": "VERYANIMATION_ANIMATIONRIGGING"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 622971feef0f5034f8660ad5a052f292
+timeCreated: 1513658800
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/OriginalIK.unity
+  uploadId: 801660

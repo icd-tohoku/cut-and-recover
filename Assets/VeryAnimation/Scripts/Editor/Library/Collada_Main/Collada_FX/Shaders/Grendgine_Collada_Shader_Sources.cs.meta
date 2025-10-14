@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8eb352b1625b12742843e8214157506c
+timeCreated: 1496726844
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_FX/Shaders/Grendgine_Collada_Shader_Sources.cs
+  uploadId: 801660

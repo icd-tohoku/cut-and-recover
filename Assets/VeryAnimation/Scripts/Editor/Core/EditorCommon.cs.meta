@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e72f006c521164a4bbe5a1e0cea12ee0
+timeCreated: 1497682195
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Core/EditorCommon.cs
+  uploadId: 801660

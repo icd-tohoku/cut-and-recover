@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 85623c02dff3b0e46a14b395443a31c1
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Shader/Editor/OnionSkin-2pass.shader
+  uploadId: 801660
