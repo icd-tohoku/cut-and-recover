@@ -1481,6 +1481,156 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
   m_PrefabInstance: {fileID: 1516119068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &941435079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941435076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246455474a0d74a4291b3cedc896ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonePaths:
+  - 
+  - Cylinder.008
+  - root
+  - root/root.x
+  - root/root.x/spine_01.x
+  - root/root.x/spine_01.x/spine_02.x
+  - root/root.x/spine_01.x/spine_02.x/neck.x
+  - root/root.x/spine_01.x/spine_02.x/neck.x/head.x
+  - root/root.x/spine_01.x/spine_02.x/neck.x/head.x/head.x_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/arm_twist.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/arm_twist.l/arm_twist.l_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/forearm_stretch.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/forearm_stretch.l/forearm_twist.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/forearm_stretch.l/forearm_twist.l/forearm_twist.l_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l
+  - root/root.x/spine_01.x/spine_02.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/hand.l_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/arm_twist.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/arm_twist.r/arm_twist.r_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r/forearm_twist.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r/forearm_twist.r/forearm_twist.r_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/hand.r_end
+  - root/root.x/spine_01.x/spine_02.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/Knife2
+  - root/root.x/thigh_stretch.l
+  - root/root.x/thigh_stretch.l/leg_stretch.l
+  - root/root.x/thigh_stretch.l/leg_stretch.l/foot.l
+  - root/root.x/thigh_stretch.l/leg_stretch.l/foot.l/toes_01.l
+  - root/root.x/thigh_stretch.l/leg_stretch.l/foot.l/toes_01.l/toes_01.l_end
+  - root/root.x/thigh_stretch.l/leg_stretch.l/leg_twist.l
+  - root/root.x/thigh_stretch.l/leg_stretch.l/leg_twist.l/leg_twist.l_end
+  - root/root.x/thigh_stretch.l/thigh_twist.l
+  - root/root.x/thigh_stretch.l/thigh_twist.l/thigh_twist.l_end
+  - root/root.x/thigh_stretch.r
+  - root/root.x/thigh_stretch.r/leg_stretch.r
+  - root/root.x/thigh_stretch.r/leg_stretch.r/foot.r
+  - root/root.x/thigh_stretch.r/leg_stretch.r/foot.r/toes_01.r
+  - root/root.x/thigh_stretch.r/leg_stretch.r/foot.r/toes_01.r/toes_01.r_end
+  - root/root.x/thigh_stretch.r/leg_stretch.r/leg_twist.r
+  - root/root.x/thigh_stretch.r/leg_stretch.r/leg_twist.r/leg_twist.r_end
+  - root/root.x/thigh_stretch.r/thigh_twist.r
+  - root/root.x/thigh_stretch.r/thigh_twist.r/thigh_twist.r_end
+  writeLockBones: 
+  showBones: 01000000020000000300000005000000080000000b0000000c0000000e0000000f00000011000000140000001500000017000000180000001a0000001b0000002000000021000000220000002300000024000000290000002a0000002b0000002c0000002d000000
+  foldoutBones: 0b0000002a000000140000002600000025000000120000001c0000000a000000160000000d000000130000000200000000000000230000001f0000000600000010000000170000001e00000021000000040000001d00000003000000280000002c0000000e0000001900000027000000050000000900000007000000
+  mirrorBones: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff12000000130000001400000015000000160000001700000018000000190000001a000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000ffffffff25000000260000002700000028000000290000002a0000002b0000002c0000002d0000001c0000001d0000001e0000001f0000002000000021000000220000002300000024000000
+  mirrorBlendShape: []
+  animatorIkData:
+  - enable: 0
+    autoRotation: 0
+    linkType: 0
+    spaceType: 0
+    parent: {fileID: 0}
+    position: {x: -0.1709254, y: 1.1116326, z: 0.91938186}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    headWeight: 1
+    eyesWeight: 0
+    enableShoulder: 0
+    shoulderSensitivityY: 0.8
+    shoulderSensitivityZ: 0.8
+    swivelRotation: 4.8399353
+    defaultSyncType: 0
+    writeFlags: 4294967295
+    parentPath: 
+  - enable: 1
+    autoRotation: 0
+    linkType: 0
+    spaceType: 0
+    parent: {fileID: 0}
+    position: {x: -0.12294864, y: 0.8938986, z: 0.7522447}
+    rotation: {x: -0.52510643, y: -0.816086, z: 0.19261111, w: 0.1454921}
+    headWeight: 1
+    eyesWeight: 0
+    enableShoulder: 0
+    shoulderSensitivityY: 0.8
+    shoulderSensitivityZ: 0.8
+    swivelRotation: 149.72855
+    defaultSyncType: 0
+    writeFlags: 4294967295
+    parentPath: 
+  - enable: 1
+    autoRotation: 0
+    linkType: 0
+    spaceType: 0
+    parent: {fileID: 0}
+    position: {x: -0.064678155, y: 1.1472142, z: 0.8588848}
+    rotation: {x: -0.6222985, y: 0.71544087, z: -0.0697265, w: 0.3098828}
+    headWeight: 1
+    eyesWeight: 0
+    enableShoulder: 0
+    shoulderSensitivityY: 0.8
+    shoulderSensitivityZ: 0.8
+    swivelRotation: -168.781
+    defaultSyncType: 0
+    writeFlags: 4294967295
+    parentPath: 
+  - enable: 0
+    autoRotation: 0
+    linkType: 0
+    spaceType: 0
+    parent: {fileID: 0}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    headWeight: 1
+    eyesWeight: 0
+    enableShoulder: 0
+    shoulderSensitivityY: 0.8
+    shoulderSensitivityZ: 0.8
+    swivelRotation: 0
+    defaultSyncType: 0
+    writeFlags: 4294967295
+    parentPath: 
+  - enable: 0
+    autoRotation: 0
+    linkType: 0
+    spaceType: 0
+    parent: {fileID: 0}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    headWeight: 1
+    eyesWeight: 0
+    enableShoulder: 0
+    shoulderSensitivityY: 0.8
+    shoulderSensitivityZ: 0.8
+    swivelRotation: 0
+    defaultSyncType: 0
+    writeFlags: 4294967295
+    parentPath: 
+  originalIkData: []
+  selectionData: []
+  lastSelectAnimationClip: {fileID: 7400000, guid: 18cfff187b1fe6d4da75ebd76e8cfd1c, type: 2}
+  handPoseList: []
+  blendShapeList: []
 --- !u!4 &942527927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1052520655926217830, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
@@ -3023,19 +3173,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2698785023205546893, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.005155593
+      value: 0.005155772
       objectReference: {fileID: 0}
     - target: {fileID: -2698785023205546893, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.031307757
+      value: -0.031307667
       objectReference: {fileID: 0}
     - target: {fileID: -2698785023205546893, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.98728335
+      value: -0.9872828
       objectReference: {fileID: 0}
     - target: {fileID: -2698785023205546893, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15577187
+      value: 0.15577555
       objectReference: {fileID: 0}
     - target: {fileID: -2525213446790289079, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3203,19 +3353,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186721377250667627, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.005121529
+      value: -0.0051216776
       objectReference: {fileID: 0}
     - target: {fileID: 186721377250667627, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.031304643
+      value: 0.03130455
       objectReference: {fileID: 0}
     - target: {fileID: 186721377250667627, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9872836
+      value: -0.9872831
       objectReference: {fileID: 0}
     - target: {fileID: 186721377250667627, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15577233
+      value: 0.15577509
       objectReference: {fileID: 0}
     - target: {fileID: 658787665688052172, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3439,7 +3589,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1052520655926217830, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1562614168}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941435079}
   m_SourcePrefab: {fileID: 100100000, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
 --- !u!4 &1562614168 stripped
 Transform:
