@@ -430,7 +430,7 @@ MonoBehaviour:
       bodyRotStiffness: 0
       neckStiffness: 0.2
       moveBodyBackWhenCrouching: 0.5
-      maxRootAngle: 25
+      maxRootAngle: 0
       rootHeadingOffset: 0
     leftArm:
       bones: []
