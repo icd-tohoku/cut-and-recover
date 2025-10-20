@@ -1551,14 +1551,14 @@ MonoBehaviour:
     linkType: 0
     spaceType: 0
     parent: {fileID: 0}
-    position: {x: -0.1709254, y: 1.1116326, z: 0.91938186}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
     headWeight: 1
     eyesWeight: 0
     enableShoulder: 0
     shoulderSensitivityY: 0.8
     shoulderSensitivityZ: 0.8
-    swivelRotation: 4.8399353
+    swivelRotation: 0
     defaultSyncType: 0
     writeFlags: 4294967295
     parentPath: 
@@ -1567,14 +1567,14 @@ MonoBehaviour:
     linkType: 0
     spaceType: 0
     parent: {fileID: 0}
-    position: {x: 0.029289998, y: 1.1080029, z: 2.0489545}
-    rotation: {x: -0.5319259, y: -0.5850186, z: 0.61082584, w: -0.041229405}
+    position: {x: 0.015287571, y: 1.6758095, z: 1.5403857}
+    rotation: {x: -0.5140333, y: -0.8070204, z: 0.10975905, w: 0.2691483}
     headWeight: 1
     eyesWeight: 0
     enableShoulder: 0
     shoulderSensitivityY: 0.8
     shoulderSensitivityZ: 0.8
-    swivelRotation: 158.0393
+    swivelRotation: 119.99255
     defaultSyncType: 0
     writeFlags: 4294967295
     parentPath: 
@@ -1583,14 +1583,14 @@ MonoBehaviour:
     linkType: 0
     spaceType: 0
     parent: {fileID: 0}
-    position: {x: -0.20922747, y: 1.2397437, z: 1.9031746}
-    rotation: {x: -0.67737806, y: 0.62822807, z: -0.38242167, w: -0.015559805}
+    position: {x: -0.13314271, y: 1.3949883, z: 1.5559822}
+    rotation: {x: -0.55594265, y: 0.75519973, z: 0.053860128, w: 0.34307495}
     headWeight: 1
     eyesWeight: 0
     enableShoulder: 0
     shoulderSensitivityY: 0.8
     shoulderSensitivityZ: 0.8
-    swivelRotation: -168.58643
+    swivelRotation: -69.847046
     defaultSyncType: 0
     writeFlags: 4294967295
     parentPath: 
@@ -1628,7 +1628,7 @@ MonoBehaviour:
     parentPath: 
   originalIkData: []
   selectionData: []
-  lastSelectAnimationClip: {fileID: 7400000, guid: 18cfff187b1fe6d4da75ebd76e8cfd1c, type: 2}
+  lastSelectAnimationClip: {fileID: 0}
   handPoseList: []
   blendShapeList: []
 --- !u!4 &942527927 stripped
