@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5647e87a239c0fe44b94507414376cb1
+timeCreated: 1496726842
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_FX/Rendering/Grendgine_Collada_Color_Clear.cs
+  uploadId: 801660

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 575c8abb133f9b745bb172febf7481da
+timeCreated: 1503638234
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/Edit while paused/OpenDoor.anim
+  uploadId: 801660

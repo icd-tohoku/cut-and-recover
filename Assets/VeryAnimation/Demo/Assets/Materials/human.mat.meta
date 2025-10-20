@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1eaff981ca72d8549ba1c37d626368ac
+timeCreated: 1484203201
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/Assets/Materials/human.mat
+  uploadId: 801660

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ac5b89c139ddefa42b5c2cb9af9ffe0e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Reflection/UEditorGUI.cs
+  uploadId: 801660

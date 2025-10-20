@@ -1,0 +1,459 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78c6efa51b78674bac5fa1e7f03afe6, type: 3}
+  m_Name: Very
+  m_EditorClassIdentifier: 
+  isHuman: 1
+  haveRootT: 1
+  rootT: {x: -0.00014069387, y: 1.0978526, z: -0.00007981674}
+  haveRootQ: 1
+  rootQ: {x: -0.10031436, y: 0, z: 0, w: 0.9949558}
+  musclePropertyNames:
+  - Spine Front-Back
+  - Spine Left-Right
+  - Spine Twist Left-Right
+  - Chest Front-Back
+  - Chest Left-Right
+  - Chest Twist Left-Right
+  - UpperChest Front-Back
+  - UpperChest Left-Right
+  - UpperChest Twist Left-Right
+  - Neck Nod Down-Up
+  - Neck Tilt Left-Right
+  - Neck Turn Left-Right
+  - Head Nod Down-Up
+  - Head Tilt Left-Right
+  - Head Turn Left-Right
+  - Left Eye Down-Up
+  - Left Eye In-Out
+  - Right Eye Down-Up
+  - Right Eye In-Out
+  - Jaw Close
+  - Jaw Left-Right
+  - Left Upper Leg Front-Back
+  - Left Upper Leg In-Out
+  - Left Upper Leg Twist In-Out
+  - Left Lower Leg Stretch
+  - Left Lower Leg Twist In-Out
+  - Left Foot Up-Down
+  - Left Foot Twist In-Out
+  - Left Toes Up-Down
+  - Right Upper Leg Front-Back
+  - Right Upper Leg In-Out
+  - Right Upper Leg Twist In-Out
+  - Right Lower Leg Stretch
+  - Right Lower Leg Twist In-Out
+  - Right Foot Up-Down
+  - Right Foot Twist In-Out
+  - Right Toes Up-Down
+  - Left Shoulder Down-Up
+  - Left Shoulder Front-Back
+  - Left Arm Down-Up
+  - Left Arm Front-Back
+  - Left Arm Twist In-Out
+  - Left Forearm Stretch
+  - Left Forearm Twist In-Out
+  - Left Hand Down-Up
+  - Left Hand In-Out
+  - Right Shoulder Down-Up
+  - Right Shoulder Front-Back
+  - Right Arm Down-Up
+  - Right Arm Front-Back
+  - Right Arm Twist In-Out
+  - Right Forearm Stretch
+  - Right Forearm Twist In-Out
+  - Right Hand Down-Up
+  - Right Hand In-Out
+  - LeftHand.Thumb.1 Stretched
+  - LeftHand.Thumb.Spread
+  - LeftHand.Thumb.2 Stretched
+  - LeftHand.Thumb.3 Stretched
+  - LeftHand.Index.1 Stretched
+  - LeftHand.Index.Spread
+  - LeftHand.Index.2 Stretched
+  - LeftHand.Index.3 Stretched
+  - LeftHand.Middle.1 Stretched
+  - LeftHand.Middle.Spread
+  - LeftHand.Middle.2 Stretched
+  - LeftHand.Middle.3 Stretched
+  - LeftHand.Ring.1 Stretched
+  - LeftHand.Ring.Spread
+  - LeftHand.Ring.2 Stretched
+  - LeftHand.Ring.3 Stretched
+  - LeftHand.Little.1 Stretched
+  - LeftHand.Little.Spread
+  - LeftHand.Little.2 Stretched
+  - LeftHand.Little.3 Stretched
+  - RightHand.Thumb.1 Stretched
+  - RightHand.Thumb.Spread
+  - RightHand.Thumb.2 Stretched
+  - RightHand.Thumb.3 Stretched
+  - RightHand.Index.1 Stretched
+  - RightHand.Index.Spread
+  - RightHand.Index.2 Stretched
+  - RightHand.Index.3 Stretched
+  - RightHand.Middle.1 Stretched
+  - RightHand.Middle.Spread
+  - RightHand.Middle.2 Stretched
+  - RightHand.Middle.3 Stretched
+  - RightHand.Ring.1 Stretched
+  - RightHand.Ring.Spread
+  - RightHand.Ring.2 Stretched
+  - RightHand.Ring.3 Stretched
+  - RightHand.Little.1 Stretched
+  - RightHand.Little.Spread
+  - RightHand.Little.2 Stretched
+  - RightHand.Little.3 Stretched
+  muscleValues:
+  - 0.26086956
+  - -0.00000025613204
+  - 0.00000034150946
+  - 0.26086956
+  - 0.00000008537736
+  - 0.0000003841981
+  - 0
+  - 0
+  - 0
+  - 0.0000004268868
+  - 0.000000085377344
+  - 0.00000008537736
+  - 0.00000017075472
+  - 0.00000021344344
+  - -0.0000002561321
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0.5873516
+  - -0.09823706
+  - -0.1481156
+  - 0.97621447
+  - 0.3105708
+  - 0.99946475
+  - 0.011434293
+  - -1
+  - 0.5873516
+  - -0.09823706
+  - -0.1481156
+  - 0.9750077
+  - 0.3410877
+  - 0.99946475
+  - 0.011664994
+  - -1
+  - 0.00000010583234
+  - 0.0000007528326
+  - 1
+  - -0.23902911
+  - -0.090367936
+  - 0.9909167
+  - -0.14595094
+  - 0.0031638304
+  - 0.0015225275
+  - -0.0000028125612
+  - -0.000000042688654
+  - 1
+  - -0.23902911
+  - -0.090367936
+  - 0.9906487
+  - -0.14791387
+  - 0.0032883852
+  - 0.0016052906
+  - -0.6886542
+  - -1.5586371
+  - -0.7813319
+  - 0.6457092
+  - 0.58834654
+  - -0.55409503
+  - 0.81106526
+  - 0.81106526
+  - 0.51647735
+  - -1.0124934
+  - 0.79941463
+  - 0.7994134
+  - 0.4940854
+  - -0.095706746
+  - 0.84105515
+  - 0.80111766
+  - 0.61717427
+  - -0.34918272
+  - 0.80638576
+  - 0.80638576
+  - -0.68519586
+  - -1.5740012
+  - -0.7826602
+  - 0.6457959
+  - 0.58147556
+  - -0.5583288
+  - 0.81094384
+  - 0.8109435
+  - 0.5077105
+  - -1.0293018
+  - 0.798989
+  - 0.79898906
+  - 0.48441952
+  - -0.07225497
+  - 0.8447254
+  - 0.8010595
+  - 0.6105178
+  - -0.3378897
+  - 0.8059407
+  - 0.805941
+  tdofIndices: 0000000001000000020000000300000004000000050000000600000007000000
+  tdofValues:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  ikIndices: 00000000010000000200000003000000
+  ikValues:
+  - position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - position: {x: -0.0318186, y: -0.95551413, z: -0.27114618}
+    rotation: {x: -0.1468146, y: 0.6033909, z: -0.14012359, w: 0.77118766}
+  - position: {x: 0.034121532, y: -0.95717216, z: -0.27086732}
+    rotation: {x: -0.14250147, y: 0.78082484, z: -0.14310831, w: 0.59120727}
+  transformPaths:
+  - 
+  - Game_engine
+  - Game_engine/Root
+  - Game_engine/Root/pelvis
+  - Game_engine/Root/pelvis/spine_01
+  - Game_engine/Root/pelvis/spine_01/spine_02
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/index_01_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/index_01_l/index_02_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/index_01_l/index_02_l/index_03_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/middle_01_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/middle_01_l/middle_02_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/middle_01_l/middle_02_l/middle_03_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/pinky_01_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/pinky_01_l/pinky_02_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/ring_01_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/ring_01_l/ring_02_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/ring_01_l/ring_02_l/ring_03_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/thumb_01_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/thumb_01_l/thumb_02_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/neck_01
+  - Game_engine/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head
+  - Game_engine/Root/pelvis/thigh_l
+  - Game_engine/Root/pelvis/thigh_l/calf_l
+  - Game_engine/Root/pelvis/thigh_l/calf_l/foot_l
+  - Game_engine/Root/pelvis/thigh_l/calf_l/foot_l/ball_l
+  - Game_engine/Root/pelvis/thigh_r
+  - Game_engine/Root/pelvis/thigh_r/calf_r
+  - Game_engine/Root/pelvis/thigh_r/calf_r/foot_r
+  - Game_engine/Root/pelvis/thigh_r/calf_r/foot_r/ball_r
+  - humanMesh
+  transformValues:
+  - position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0, y: 0, z: 0}
+  - position: {x: 0, y: 0, z: 0}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0, y: 0.0030344962, z: -0.09648955}
+    rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.9581375, y: 0.13483047, z: 0.00029408932}
+    rotation: {x: 0.5590536, y: -0.42989075, z: -0.56096405, w: -0.43355775}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -2.2146196e-10, y: 0.09263387, z: 0.0000000018626451}
+    rotation: {x: 0.13717847, y: 0.008064268, z: -0.024351353, w: 0.9902141}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 9.313226e-10, y: 0.082346246, z: 0.0000000027939677}
+    rotation: {x: -0.20572834, y: -0.005278498, z: 0.025144279, w: 0.9782719}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 5.8619776e-14, y: 0.06400829, z: 0.000000007450581}
+    rotation: {x: 0.03632024, y: -0.0012868047, z: 0.035157904, w: 0.99872077}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.013118714, y: 0.30972344, z: 0.075407624}
+    rotation: {x: -0.028905049, y: 0.011978962, z: 0.66847414, w: 0.743077}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000009313226, y: 0.15018535, z: -4.0745363e-10}
+    rotation: {x: 0.2983357, y: 0.1726857, z: -0.44151562, w: 0.82839566}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000011175871, y: 0.24206588, z: 0.0000000028230716}
+    rotation: {x: 0.06614485, y: -0.00587438, z: -0.013550014, w: 0.99770075}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.0000000721775, y: 0.25340772, z: -0.000000027590431}
+    rotation: {x: 0.09138244, y: -0.36921924, z: -0.0037432513, w: 0.92483103}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.00923452, y: 0.100439124, z: 0.0104024885}
+    rotation: {x: -0.04531008, y: -0.17203924, z: 0.119254485, w: 0.9767947}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000027939677, y: 0.023732863, z: -0.000000019266736}
+    rotation: {x: -0.023406832, y: 0.04406387, z: 0.013628108, w: 0.9986615}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 5.2386895e-10, y: 0.021557502, z: 0.000000008541974}
+    rotation: {x: 0.05411147, y: -0.03283055, z: 0.05369894, w: 0.9965493}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0024949834, y: 0.0967706, z: -0.011681894}
+    rotation: {x: -0.0051714242, y: -0.30353707, z: 0.14821243, w: 0.9412075}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000023283064, y: 0.03225316, z: 0.000000026077032}
+    rotation: {x: -0.0002522319, y: 0.088967435, z: -0.019940408, w: 0.9958349}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000058673322, y: 0.02507875, z: -0.00000007660128}
+    rotation: {x: 0.047620047, y: 0.0008190496, z: 0.05368123, w: 0.99742174}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.020282153, y: 0.08017236, z: -0.03623743}
+    rotation: {x: -0.052648406, y: -0.37080818, z: 0.12169829, w: 0.91919476}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -2.910383e-10, y: 0.019421294, z: 0.000000024883775}
+    rotation: {x: -0.0010239331, y: 0.060515605, z: -0.022065902, w: 0.99792284}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000011292286, y: 0.0144970715, z: -0.000000022933818}
+    rotation: {x: 0.006231754, y: 0.013202881, z: 0.02838842, w: 0.9994904}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.0070011737, y: 0.08908672, z: -0.02671499}
+    rotation: {x: 0.0042680423, y: -0.36637414, z: 0.15903884, w: 0.9167652}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000005820766, y: 0.027907517, z: 0.000000003608875}
+    rotation: {x: -0.033842377, y: 0.108401634, z: -0.028403394, w: 0.99312496}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.00000004377216, y: 0.023487082, z: -0.00000008405186}
+    rotation: {x: 0.062808916, y: -0.018500026, z: 0.06721935, w: 0.99558747}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.008179878, y: 0.038835205, z: 0.017603293}
+    rotation: {x: -0.39161438, y: 0.80842286, z: 0.3902468, w: -0.20198573}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000008381903, y: 0.029977797, z: -0.000000007450581}
+    rotation: {x: 0.4658078, y: -0.2426378, z: -0.000366345, w: 0.85097003}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000027939677, y: 0.033941954, z: -0.0000000037252903}
+    rotation: {x: 0.14489904, y: -0.21260378, z: -0.1263767, w: 0.95803595}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.030967396, y: 0.3066157, z: 0.07540643}
+    rotation: {x: -0.030403312, y: -0.010581809, z: -0.71904206, w: 0.6942206}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.00000004284084, y: 0.15018538, z: -0.000000009080395}
+    rotation: {x: 0.29931355, y: -0.17285103, z: 0.44060466, w: 0.82849354}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000008381903, y: 0.25397316, z: -0.0000000013969839}
+    rotation: {x: 0.06654574, y: 0.0060545057, z: 0.013762247, w: 0.9976702}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000019557774, y: 0.2497322, z: -0.000000026775524}
+    rotation: {x: 0.090570316, y: 0.36712858, z: 0.009607964, w: 0.9257004}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.008220252, y: 0.099402174, z: 0.0108649125}
+    rotation: {x: 0.040702645, y: -0.17547615, z: 0.12513945, w: -0.9756493}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.00000000448199, y: 0.023028487, z: 0.000000006693881}
+    rotation: {x: 0.023848873, y: 0.045359965, z: 0.013149967, w: -0.99859947}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000036670826, y: 0.020934157, z: 0.000000011059456}
+    rotation: {x: -0.054475676, y: -0.03322034, z: 0.05521619, w: -0.9964337}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.0018004626, y: 0.095790744, z: -0.011148418}
+    rotation: {x: 0.000104166545, y: -0.3077796, z: 0.15430611, w: -0.9388617}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.00000002910383, y: 0.031672828, z: -0.000000025262125}
+    rotation: {x: -0.00008594989, y: 0.09020787, z: -0.020259237, w: -0.9957169}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000011641532, y: 0.024441648, z: 0.00000002537854}
+    rotation: {x: -0.048502766, y: 0.00085437286, z: 0.054317683, w: -0.9973447}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.020444537, y: 0.07920157, z: -0.035727713}
+    rotation: {x: 0.047214326, y: -0.37531918, z: 0.12744592, w: -0.9168772}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000033760443, y: 0.018924134, z: -0.00000007185736}
+    rotation: {x: 0.00084011245, y: 0.062485598, z: -0.022477848, w: -0.9977924}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.0000000034924597, y: 0.014145181, z: 0.000000023050234}
+    rotation: {x: -0.0063382387, y: 0.014214426, z: 0.029070705, w: -0.9994562}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.007427627, y: 0.088152416, z: -0.026163574}
+    rotation: {x: -0.0098236045, y: -0.37082276, z: 0.16527595, w: -0.913826}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000005355105, y: 0.027248185, z: 0.000000044179615}
+    rotation: {x: 0.035732113, y: 0.10984555, z: -0.028525136, w: -0.99289656}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000016530976, y: 0.023233667, z: -0.0000000034924597}
+    rotation: {x: -0.065285936, y: -0.019264605, z: 0.06765555, w: -0.9953841}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.007897372, y: 0.03842374, z: 0.017555885}
+    rotation: {x: -0.39999714, y: -0.8047665, z: -0.3905479, w: -0.19956365}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.00000008754432, y: 0.029752906, z: 0.000000011175871}
+    rotation: {x: -0.46623808, y: -0.2439335, z: -0.0001501143, w: -0.85036373}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000028871, y: 0.033172924, z: -0.000000029802322}
+    rotation: {x: -0.14683045, y: -0.21537623, z: -0.12997758, w: -0.9566398}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.013847721, y: 0.378013, z: 0.06812014}
+    rotation: {x: 0.17529084, y: -0.0025773942, z: -0.045927446, w: 0.98344153}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 6.9849193e-10, y: 0.098417565, z: 0.0000000037252903}
+    rotation: {x: -0.15373877, y: 0.0022659153, z: 0.010502458, w: 0.9880531}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.1081337, y: 0.00266559, z: -0.009480963}
+    rotation: {x: 0.9796439, y: 0.035110146, z: 0.15301983, w: -0.12510039}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 4.656613e-10, y: 0.4343856, z: -0.000000007450581}
+    rotation: {x: 0.07908717, y: -0.19108169, z: 0.040544875, w: 0.97754246}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000037252903, y: 0.39384255, z: 0}
+    rotation: {x: -0.14845634, y: 0.066825345, z: -0.0069524157, w: 0.98663414}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.000000007683411, y: 0.13714018, z: -0.000000022351742}
+    rotation: {x: -0.6529072, y: -0.0228963, z: 0.096026525, w: 0.7509773}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.108136065, y: 0.002682084, z: -0.009479581}
+    rotation: {x: 0.9800499, y: -0.0304899, z: -0.15250306, w: -0.12375552}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.0000000057043508, y: 0.4292319, z: 0}
+    rotation: {x: 0.081829615, y: 0.18415157, z: -0.037146285, w: 0.978781}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000014901161, y: 0.4017571, z: 0.0000000018626451}
+    rotation: {x: -0.15054104, y: -0.075745955, z: 0.008620489, w: 0.98566}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.000000015366822, y: 0.13410398, z: 0.000000007450581}
+    rotation: {x: -0.65139985, y: 0.022438794, z: -0.102612905, w: 0.7514289}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0, y: 0, z: 0}
+    rotation: {x: 0, y: -0, z: -0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+  blendShapePaths: []
+  blendShapeValues: []

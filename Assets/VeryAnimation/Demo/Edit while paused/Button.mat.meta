@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6caffd794be298540954fd8b3aca0d53
+timeCreated: 1503641436
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/Edit while paused/Button.mat
+  uploadId: 801660

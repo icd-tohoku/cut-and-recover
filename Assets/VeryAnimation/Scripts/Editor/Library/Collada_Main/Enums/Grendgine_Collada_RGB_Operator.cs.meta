@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c5f8db71b1597dc43a159bd8714f9aef
+timeCreated: 1496726846
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Enums/Grendgine_Collada_RGB_Operator.cs
+  uploadId: 801660

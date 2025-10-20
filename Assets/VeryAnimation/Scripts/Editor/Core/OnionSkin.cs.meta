@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c7acec28cd7b2fa489684e5e70807a56
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Core/OnionSkin.cs
+  uploadId: 801660

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eea38d1584a974f4b85bb97309b0f2cf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/AdditiveReferencePose/HumanNoARP.controller
+  uploadId: 801660

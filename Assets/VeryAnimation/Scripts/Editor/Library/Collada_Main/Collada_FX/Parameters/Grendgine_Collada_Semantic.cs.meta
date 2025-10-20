@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5f283c2e10faf684c8ee4462e1a82909
+timeCreated: 1496726843
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_FX/Parameters/Grendgine_Collada_Semantic.cs
+  uploadId: 801660

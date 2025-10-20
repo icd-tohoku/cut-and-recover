@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e90696316afc2cc4ab7defbb43762a83
+timeCreated: 1496726847
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_B_Rep/Geometry/Grendgine_Collada_B_Rep.cs
+  uploadId: 801660

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 36d5532f34beff444aa1c7dc2868443b
+timeCreated: 1496726841
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_FX/Texturing/Grendgine_Collada_SamplerDEPTH.cs
+  uploadId: 801660

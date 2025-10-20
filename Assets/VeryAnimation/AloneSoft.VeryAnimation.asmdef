@@ -1,0 +1,22 @@
+{
+    "name": "AloneSoft.VeryAnimation",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Animation.Rigging"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.animation.rigging",
+            "expression": "1.1",
+            "define": "VERYANIMATION_ANIMATIONRIGGING"
+        }
+    ],
+    "noEngineReferences": false
+}

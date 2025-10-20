@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e57520c34fb947b4593c21188d5a842e
+timeCreated: 1502160731
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/ParameterRelatedCurves/ParameterRelatedCurves.controller
+  uploadId: 801660
