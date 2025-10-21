@@ -18,6 +18,9 @@ public class ProcessManager : MonoBehaviour
     [SerializeField] PlayableDirector _nokogiriTimeline;
     [SerializeField] bool isNokogiri = false;
 
+    [SerializeField] GameObject _katanaObj;
+    [SerializeField] GameObject _nokogiriObj;
+
     [SerializeField] InputAction _startCut;
 
     [SerializeField] GameObject _rHandMoveObj;
@@ -81,6 +84,21 @@ public class ProcessManager : MonoBehaviour
                 {
                     ChangeState(GameState.Cut);
                 }
+                if (Keyboard.current.shiftKey.wasPressedThisFrame)
+                {
+                    isNokogiri = !isNokogiri;
+                    if (isNokogiri)
+                    {
+                        _nokogiriObj.SetActive(true);
+                        _katanaObj.SetActive(false);
+                    }
+                    else
+                    {
+                        _nokogiriObj.SetActive(false);
+                        _katanaObj.SetActive(true);
+                    }
+                }
+                
 
                 //待機中切る人がランダムにモーションをとる
                 _time += Time.deltaTime;
@@ -189,8 +207,16 @@ public class ProcessManager : MonoBehaviour
             Debug.Assert(_katanaTimeline != null);
             Debug.Assert(_nokogiriTimeline != null);
 
-            _katanaTimeline.time = 0;
-            _katanaTimeline.Play();
+            if (isNokogiri)
+            {
+                _nokogiriTimeline.time = 0;
+                _nokogiriTimeline.Play();
+            }
+            else
+            {
+                _katanaTimeline.time = 0;
+                _katanaTimeline.Play();
+            }
         }
         else if(nextState == GameState.Recover)
         {
