@@ -14,7 +14,9 @@ public class ProcessManager : MonoBehaviour
     }
     public static GameState gameState;
 
-    [SerializeField] PlayableDirector _cutTimeline;
+    [SerializeField] PlayableDirector _katanaTimeline;
+    [SerializeField] PlayableDirector _nokogiriTimeline;
+    [SerializeField] bool isNokogiri = false;
 
     [SerializeField] InputAction _startCut;
 
@@ -51,7 +53,8 @@ public class ProcessManager : MonoBehaviour
     {
         gameState = GameState.Ready;
         _startCut.Enable();
-        _cutTimeline.Stop();
+        _katanaTimeline.Stop();
+        _nokogiriTimeline.Stop();
         _rHandMoveObj.SetActive(false);
         _animator = _cutManObj.GetComponent<Animator>();
 
@@ -183,10 +186,11 @@ public class ProcessManager : MonoBehaviour
 
         if(nextState == GameState.Cut)
         {
-            Debug.Assert(_cutTimeline != null);
+            Debug.Assert(_katanaTimeline != null);
+            Debug.Assert(_nokogiriTimeline != null);
 
-            _cutTimeline.time = 0;
-            _cutTimeline.Play();
+            _katanaTimeline.time = 0;
+            _katanaTimeline.Play();
         }
         else if(nextState == GameState.Recover)
         {

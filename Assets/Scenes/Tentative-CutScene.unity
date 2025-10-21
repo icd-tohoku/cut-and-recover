@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 749311506}
   - component: {fileID: 749311505}
   m_Layer: 0
-  m_Name: CRTimeline
+  m_Name: CRKatanaTimeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -918,7 +918,7 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -8768743625670202288, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 941435077}
   - key: {fileID: -2960764811794854109, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
     value: {fileID: 2046990613}
@@ -3846,6 +3846,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -1195421226893747004, guid: 4c41e7864b6592244886800333fe433c, type: 3}
   m_PrefabInstance: {fileID: 216495536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1800312826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800312828}
+  - component: {fileID: 1800312827}
+  m_Layer: 0
+  m_Name: CRNokogiriTimeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1800312827
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800312826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 941435077}
+  - key: {fileID: -2960764811794854109, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 2046990613}
+  - key: {fileID: 2952272788828814289, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 1209636214}
+  - key: {fileID: -6302672079406452762, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 941435077}
+  - key: {fileID: 8036057274969367782, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 1890415675}
+  - key: {fileID: 3444186297523920105, guid: 21010ac5db5bb5a448fce3e2a447e2f6, type: 2}
+    value: {fileID: 1074823109}
+  m_ExposedReferences:
+    m_References:
+    - 4251fe8dfbc67c34592058118502b63f: {fileID: 2046990610}
+--- !u!4 &1800312828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800312826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.04, y: -0.07, z: -2.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848884003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 201381133903767479, guid: b7f4153afee46bb4ab930b22a4caf471, type: 3}
@@ -4501,6 +4563,7 @@ SceneRoots:
   - {fileID: 2106533685}
   - {fileID: 979510126}
   - {fileID: 749311506}
+  - {fileID: 1800312828}
   - {fileID: 5914159559310796635}
   - {fileID: 2074761369}
   - {fileID: 1890415673}
