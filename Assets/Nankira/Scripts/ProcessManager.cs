@@ -148,7 +148,7 @@ public class ProcessManager : MonoBehaviour
                 if (!_isStop && _pressure <= 0)
                 {
                     _serialManager.SendCommandToAllPairs("STOP;");
-                    _serialManager.SendCommandToAllPairs("STOP;");
+                    // _serialManager.SendCommandToAllPairs("STOP;");
                     _isStop = true;
                     _sentC5 = false;
                     _sentC6 = false;
@@ -191,11 +191,21 @@ public class ProcessManager : MonoBehaviour
                 if (_syncronizer.percent <= 0f && !_isFinish)
                 {
                     _serialManager.SendCommandToAllPairs("STOP;");
-                    _serialManager.SendCommandToAllPairs("STOP;");
-                    _isFinish = true;                
+                    // _serialManager.SendCommandToAllPairs("STOP;");
+                    _isFinish = true;
                     _recoverEffect.Play();
                     ChangeState(GameState.End);
                     _soundManager.PlaySE("Cue_2");
+                }
+                if (Keyboard.current.rKey.wasPressedThisFrame)
+                {
+                    gameState = GameState.Ready;
+                    _syncronizer.SetSpeed(0);
+                    _sentC5 = false;
+                    _sentC6 = false;
+                    _sentC7 = false;
+                    _isStop = false;
+                    _isFinish=false;
                 }
 
                 break;

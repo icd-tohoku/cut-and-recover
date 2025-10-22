@@ -26,7 +26,7 @@ public class SerialManager : MonoBehaviour
 
     [Header("Serial Settings")]
     [Tooltip("Baud rate for all serial connections")]
-    [SerializeField] private int baudRate = 9600;
+    [SerializeField] private int baudRate = 115200;
 
     // 振動子用SerialHandlerを管理
     private Dictionary<string, SerialHandler> vibratorHandlers = new Dictionary<string, SerialHandler>();
@@ -142,35 +142,6 @@ public class SerialManager : MonoBehaviour
         serialHandler.OpenPort();
     }
 
-    // void OnMultiplePressureDataReceived(string sensorPort, Dictionary<int, float> sensorData)
-    // {
-    //     if (!pressureData.TryGetValue(sensorPort, out var portDict))
-    //     {
-    //         portDict = new Dictionary<int, float>();
-    //         pressureData[sensorPort] = portDict;
-    //     }
-
-    //     foreach (var kvp in sensorData)
-    //     {
-    //         portDict[kvp.Key] = kvp.Value;
-    //         OnSinglePressureDataUpdated?.Invoke(sensorPort, kvp.Key, kvp.Value);
-    //         Debug.Log($"[Sensor:{sensorPort}] Sensor {kvp.Key}: {kvp.Value:F3}");
-    //     }
-
-    //     OnPressureDataUpdated?.Invoke(sensorPort, new Dictionary<int, float>(portDict));
-
-    //     if (portDict.Count > 0)
-    //     {
-    //         float sum = 0f;
-    //         foreach (var v in portDict.Values) sum += v;
-    //         _avgPressure[sensorPort] = sum / (30 * portDict.Count);
-    //         Debug.Log($"[Sensor:{sensorPort}] Average pressure: {_avgPressure[sensorPort]:F3} (from {portDict.Count} sensors)");
-    //     }
-    //     else
-    //     {
-    //         _avgPressure[sensorPort] = 0f;
-    //     }
-    // }
     void OnMultiplePressureDataReceived(string sensorPort, Dictionary<int, float> sensorData)
     {
         if (!pressureData.TryGetValue(sensorPort, out var portDict))
@@ -221,17 +192,20 @@ public class SerialManager : MonoBehaviour
         }
     }
 
+
     /// <summary>
     /// 全ペアの振動子にコマンドを送信
     /// </summary>
+
     public void SendCommandToAllPairs(string command)
+{
+    // 並列で送信して遅延を削減
+    System.Threading.Tasks.Parallel.ForEach(vibratorHandlers, kvp => 
     {
-        foreach (var kvp in vibratorHandlers)
-        {
-            kvp.Value.Write(command);
-            Debug.Log($"[Vibrator:{kvp.Key}] Command: {command}");
-        }
-    }
+        kvp.Value.Write(command);
+        Debug.Log($"[Vibrator:{kvp.Key}] Command: {command}");
+    });
+}
 
     /// <summary>
     /// 特定の振動子ポートにコマンドを送信
@@ -247,6 +221,14 @@ public class SerialManager : MonoBehaviour
         {
             Debug.LogWarning($"Vibrator port '{vibratorPort}' not found.");
         }
+    }
+
+    /// <summary>
+    /// 特定の振動子ポートにコマンドを送信
+    /// </summary>
+    public void SendCommandToSpecificVibrator(string command)
+    {
+        SendCommandToVibrator(vibratorPort: esp32Pairs[0].vibratorPort, command: command);
     }
 
     // === 振動制御メソッド ===
@@ -274,7 +256,7 @@ public class SerialManager : MonoBehaviour
     /// </summary>
     public void StopPair(string pairName)
     {
-        SendCommandToPair(pairName, "S;");
+        SendCommandToPair(pairName, "STOP;");
     }
 
     /// <summary>
@@ -282,7 +264,7 @@ public class SerialManager : MonoBehaviour
     /// </summary>
     public void StopAllPairs()
     {
-        SendCommandToAllPairs("S;");
+        SendCommandToAllPairs("STOP;");
     }
 
     /// <summary>

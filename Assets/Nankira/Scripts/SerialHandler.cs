@@ -17,7 +17,7 @@ public class SerialHandler : MonoBehaviour
 
     // portNameはprivateにして、外部から設定可能にする
     private string portName;
-    [SerializeField] private int baudRate = 9600;
+    [SerializeField] private int baudRate = 115200;
 
     private SerialPort serialPort_;
     private Thread thread_;
