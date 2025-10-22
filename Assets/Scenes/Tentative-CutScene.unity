@@ -2048,7 +2048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5737086668194256524, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: esp32Pairs.Array.data[0].vibratorPort
-      value: COM4
+      value: COM10
       objectReference: {fileID: 0}
     - target: {fileID: 8741377942846831972, guid: 8c3b62c9658da0346b7bac311ff3981d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2151,7 +2151,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1074823108}
           m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
-          m_MethodName: SendImmediateCommandToAllPorts
+          m_MethodName: SendCommandToSpecificVibrator
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2165,7 +2165,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1074823108}
           m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
-          m_MethodName: SendImmediateCommandToAllPorts
+          m_MethodName: SendCommandToSpecificVibrator
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2179,7 +2179,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1074823108}
           m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
-          m_MethodName: SendImmediateCommandToAllPorts
+          m_MethodName: SendCommandToSpecificVibrator
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2875,43 +2875,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.299
+      value: -0.294
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.402
+      value: 0.408
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.026
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.771824
+      value: 0.7488098
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.46846715
+      value: -0.5044379
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.42892152
+      value: -0.42706117
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.029200444
+      value: -0.049448673
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -48.434
+      value: -52.91
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -73.077
+      value: -77.909
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 32.532
+      value: 36.273
       objectReference: {fileID: 0}
     - target: {fileID: 7718207923272260688, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_Name

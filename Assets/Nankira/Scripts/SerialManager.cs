@@ -21,7 +21,7 @@ public class SerialManager : MonoBehaviour
     [Tooltip("振動子と圧力センサのペアリスト")]
     [SerializeField] private ESP32Pair[] esp32Pairs = new ESP32Pair[]
     {
-        new ESP32Pair { vibratorPort = "COM3", sensorPort = "COM7", pairName = "Pair1" }
+        new ESP32Pair { vibratorPort = "COM10", sensorPort = "COM7", pairName = "Pair1" }
     };
 
     [Header("Serial Settings")]
