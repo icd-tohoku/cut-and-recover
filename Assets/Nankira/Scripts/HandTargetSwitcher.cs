@@ -25,10 +25,7 @@ public class HandTargetSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            ChangeTrack(!isTrack);
-        }
+        
     }
 
     public void ChangeTrack(bool isTrack)

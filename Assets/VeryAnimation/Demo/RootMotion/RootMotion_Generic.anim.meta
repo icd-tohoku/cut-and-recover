@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5ef1690be7fe89d49bfa386200df9ac8
+timeCreated: 1502005155
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/RootMotion/RootMotion_Generic.anim
+  uploadId: 801660

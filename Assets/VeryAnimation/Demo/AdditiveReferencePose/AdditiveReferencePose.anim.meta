@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d54befb9ef52b045aa733e8dbf11ae1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/AdditiveReferencePose/AdditiveReferencePose.anim
+  uploadId: 801660

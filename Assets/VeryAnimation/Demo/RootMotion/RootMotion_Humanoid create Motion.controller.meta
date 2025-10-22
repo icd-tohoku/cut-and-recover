@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 893e0fb7df998874b9b52d890f6e5678
+timeCreated: 1502001783
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/RootMotion/RootMotion_Humanoid create Motion.controller
+  uploadId: 801660

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6900f90db924c7247a23ef6fc89e2438
+timeCreated: 1496726843
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Library/Collada_Main/Collada_Core/Geometry/Grendgine_Collada_Linestrips.cs
+  uploadId: 801660

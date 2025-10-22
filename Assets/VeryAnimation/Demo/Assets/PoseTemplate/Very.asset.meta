@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 144b904560e7de842a2c3d15fcda2c43
+timeCreated: 1505459538
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/Assets/PoseTemplate/Very.asset
+  uploadId: 801660

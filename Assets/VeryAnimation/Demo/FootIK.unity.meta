@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c3889e63f5e7e664b9438d7d4a6c4e7a
+timeCreated: 1502000990
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Demo/FootIK.unity
+  uploadId: 801660

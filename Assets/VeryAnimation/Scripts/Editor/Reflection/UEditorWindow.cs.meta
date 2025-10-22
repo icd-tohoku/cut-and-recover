@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 25c0c69f39d501d44bdc78aa6e62a343
+timeCreated: 1492057258
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96826
+  packageName: Very Animation
+  packageVersion: 1.3.6
+  assetPath: Assets/VeryAnimation/Scripts/Editor/Reflection/UEditorWindow.cs
+  uploadId: 801660
