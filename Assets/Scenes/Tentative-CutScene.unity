@@ -2113,6 +2113,9 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 659515299cfa7614a9e6ca4f33be0f44, type: 2}
+    - {fileID: 11400000, guid: 0172b313331886c43ab5fb9a66fc258c, type: 2}
+    - {fileID: 11400000, guid: 66aeaba19ad9e714da359ee28afb76f2, type: 2}
+    - {fileID: 11400000, guid: adbfb25e7907d0b4cbd4bcd0fadcca5e, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2126,6 +2129,48 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: P1;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendImmediateCommandToAllPorts
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P2;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendImmediateCommandToAllPorts
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P3;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendImmediateCommandToAllPorts
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P4;
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1089991800 stripped
@@ -3027,7 +3072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.39
+      value: 1.3900003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalScale.y
@@ -3035,7 +3080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.39
+      value: 1.3900003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3047,7 +3092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.4981217
+      value: 2.498122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3071,7 +3116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 185.186
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e5e4bf86216d144b9b1da86646a9462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3993,9 +4038,14 @@ PlayableDirector:
     value: {fileID: 1890415675}
   - key: {fileID: -196987837394949201, guid: fee8e5e0ab3d6f942b1f4c4d7bbb9e01, type: 2}
     value: {fileID: 1074823109}
+  - key: {fileID: 5824144816597052644, guid: fee8e5e0ab3d6f942b1f4c4d7bbb9e01, type: 2}
+    value: {fileID: 941435077}
   m_ExposedReferences:
     m_References:
     - 4251fe8dfbc67c34592058118502b63f: {fileID: 2046990610}
+    - a671a8841a8298c498b8e798c9805679: {fileID: 941435076}
+    - 6f1cc598a24b81a4b93ac427d9d5398f: {fileID: 941435076}
+    - 6defc968cb210224fb755e2693e1b8a6: {fileID: 941435076}
 --- !u!4 &1800312828
 Transform:
   m_ObjectHideFlags: 0
@@ -4268,7 +4318,7 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 150
+            m_FloatArgument: 180
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
