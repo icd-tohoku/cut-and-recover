@@ -2116,6 +2116,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0172b313331886c43ab5fb9a66fc258c, type: 2}
     - {fileID: 11400000, guid: 66aeaba19ad9e714da359ee28afb76f2, type: 2}
     - {fileID: 11400000, guid: adbfb25e7907d0b4cbd4bcd0fadcca5e, type: 2}
+    - {fileID: 11400000, guid: ac2118fa518e93e488f8764758fa4df7, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2171,6 +2172,20 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: P4;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823107}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1089991800 stripped
@@ -2903,7 +2918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7718207923272260688, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4325,6 +4340,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0a219822c995c884d858fcb40747111a, type: 2}
     - {fileID: 11400000, guid: 541a2923608857b49b56a8407d2354f1, type: 2}
     - {fileID: 11400000, guid: 418e0e914fd7ccb418738139c3e9b7a7, type: 2}
+    - {fileID: 11400000, guid: 34f6c58508048ce4cb696b3889c8abcb, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -4336,7 +4352,7 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 180
+            m_FloatArgument: 220
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -4379,6 +4395,20 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 600
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2046990612}
+          m_TargetAssemblyTypeName: CRAnimationSyncronizer, Assembly-CSharp
+          m_MethodName: SetSpeed
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
