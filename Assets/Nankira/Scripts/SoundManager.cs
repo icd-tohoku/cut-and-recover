@@ -19,15 +19,12 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ProcessManager.gameState == ProcessManager.GameState.Recover)
-        {
-            _percent = _syncronizer.percent;
-            // 0〜1に正規化
-            float t = _percent / 100f;
+        _percent = _syncronizer.percent;
+        // 0〜1に正規化
+        float t = _percent / 100f;
 
-            _atomsource.SetAisacControl("AisacControl_00", t);
-        }
-        
+        _atomsource.SetAisacControl("AisacControl_00", t);
+
     }
 
     public void CutSoundEffect()
