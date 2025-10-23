@@ -2133,6 +2133,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 66aeaba19ad9e714da359ee28afb76f2, type: 2}
     - {fileID: 11400000, guid: adbfb25e7907d0b4cbd4bcd0fadcca5e, type: 2}
     - {fileID: 11400000, guid: ac2118fa518e93e488f8764758fa4df7, type: 2}
+    - {fileID: 11400000, guid: 661c2739390fc5f4d8382c3ec6409d19, type: 2}
+    - {fileID: 11400000, guid: 75fc141baf3a21243bce993e7b6dfefb, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2192,16 +2194,44 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1074823107}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendCommandToSpecificVibrator
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: P11;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendCommandToSpecificVibrator
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P9;
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1074823108}
+          m_TargetAssemblyTypeName: SerialManager, Assembly-CSharp
+          m_MethodName: SendCommandToSpecificVibrator
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: P10;
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1089991800 stripped
@@ -2890,43 +2920,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.294
+      value: -0.339
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.408
+      value: 0.359
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.018
+      value: 0.067
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7488098
+      value: 0.757648
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5044379
+      value: -0.45585147
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.42706117
+      value: -0.4567297
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.049448673
+      value: -0.0978105
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -52.91
+      value: -51.269
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -77.909
+      value: -74.501
       objectReference: {fileID: 0}
     - target: {fileID: 1403962506595711532, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 36.273
+      value: 25.382
       objectReference: {fileID: 0}
     - target: {fileID: 7718207923272260688, guid: 0877e8b04ed474248a7c96c129510c92, type: 3}
       propertyPath: m_Name

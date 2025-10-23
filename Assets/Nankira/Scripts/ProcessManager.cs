@@ -145,7 +145,7 @@ public class ProcessManager : MonoBehaviour
                 _syncronizer.SetSpeed(_pressure);
                 Debug.Log(_pressure);
 
-                if (!_isStop && _pressure <= 0)
+                if (!_isStop && _pressure <= 0.0f)
                 {
                     _serialManager.SendCommandToAllPairs("STOP;");
                     _serialManager.SendCommandToAllPairs("STOP;");
@@ -158,7 +158,7 @@ public class ProcessManager : MonoBehaviour
                 
 
                 // pressure > 0 のとき、現在の区間に応じて一度だけ送る
-                if (_pressure > 0)
+                if (_pressure > 0.0f)
                 {
                     _isStop = false;
                     // 100~50
@@ -192,6 +192,7 @@ public class ProcessManager : MonoBehaviour
                 {
                     _serialManager.SendCommandToAllPairs("STOP;");
                     _serialManager.SendCommandToAllPairs("STOP;");
+                    Debug.Log("STOP sent");
                     _isFinish = true;
                     _recoverEffect.Play();
                     ChangeState(GameState.End);
