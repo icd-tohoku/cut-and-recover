@@ -1,6 +1,8 @@
 # cut-and-recover
 IVRC2025提出作品『豆|頁：なんかきられてももどるやつ』の開発リポジトリ．
 
+Google Driveリンク：https://drive.google.com/drive/folders/1KvYWx4rpzhcD5TQM9MyRKLe3K8uxGdDX?usp=sharing
+
 
 ## 使用方法
 Unityのエディター画面でのPlayでのみ動作します．
